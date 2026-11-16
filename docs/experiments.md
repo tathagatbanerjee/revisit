@@ -15,6 +15,20 @@ inspection and downloaded dynamic playback were stepping stones, not proof of
 our own faithful event reconstruction. Observed recordings, reconstructed states
 and guessed missing transitions must remain distinguishable.
 
+## How to read and extend this history
+
+Start each detailed experiment card with three short statements:
+
+- **Question:** what were we trying to establish?
+- **Outcome:** what actually happened, including failures and stopped stages?
+- **Lesson:** what should someone do differently or investigate next?
+
+Put inputs, configurations, metrics and logs in linked supporting detail. The
+family table below is an initial overview; converting it into readable per-attempt
+cards remains planned work. Keep the source-view versus novel-view distinction,
+failed gates and unavailable evidence explicit. Further quality experiments wait
+until the complete supported static onboarding journey is qualified.
+
 ## Results
 
 

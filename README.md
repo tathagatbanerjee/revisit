@@ -34,6 +34,30 @@ camera. Experimental dynamic replay will be labelled separately. Static models
 cannot preserve the motion of people in a recording. Neither useful source-view
 renders nor plausible unseen surfaces establish physical or novel-view accuracy.
 
+## First release priorities
+
+The first release completes one supported static reconstruction journey:
+
+**Clone → start locally → explore a real sample → upload a suitable video →
+reconstruct on Runpod → inspect locally → confirm worker terminated.**
+
+- Include a cleared real reconstruction in the first five-minute experience;
+  the synthetic sample remains a diagnostic fixture.
+- Offer one supported recipe for a short, continuous video of mostly stationary
+  surroundings, with a capture guide and suitable example input. Advanced depth,
+  tracker and training settings stay out of the main flow.
+- Explain failures with the stage, diagnostic and a concrete next action.
+- Make worker status visible and qualify cleanup across cancellation, laptop
+  disconnection and failed retrieval before inviting users to spend on jobs.
+- Present experiments as question, outcome and lesson, with detailed evidence
+  linked separately.
+- Have a new user rehearse the public instructions from scratch and record
+  actual setup times and every intervention before claiming quick setup.
+
+Further reconstruction-quality research and new-video dynamic fitting follow
+qualification of this complete static journey. Existing short dynamic samples
+can still demonstrate independent time and viewpoint controls.
+
 ## Research context
 
 Work to date includes frozen-frame inference, static multi-view reconstruction,

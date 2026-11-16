@@ -16,6 +16,31 @@ is the tested engineering baseline. Short dynamic example playback is useful
 immediately; reliable reconstruction of arbitrary moving people is not a promise.
 New-video dynamic fitting is an experimental, separately gated capability.
 
+## Agreed first-release priorities
+
+Updated 16 November 2026 after the owner's review. The first release milestone is:
+
+**Clone → start locally → explore a real sample → upload a suitable video →
+reconstruct on Runpod → inspect locally → confirm worker terminated.**
+
+Deliver and qualify this entire static workflow before expanding new-video dynamic
+reconstruction or conducting further reconstruction-quality research. Repairs
+necessary to make the supported static recipe function are within this milestone;
+new prior-model comparisons and quality-tuning programs are deferred.
+
+| Priority | Required delivery | Release evidence |
+| --- | --- | --- |
+| Convincing first five minutes | One cleared, accessible real reconstruction with guided navigation; synthetic fixture retained for diagnostics | Fresh user loads the real sample without cloud credentials; capture download size, first-load time and visual limitations |
+| One supported recipe | Short continuous capture of mostly stationary surroundings, capture guide and suitable example input | Main flow chooses the qualified recipe; depth/tracker/training controls are confined to documented advanced configuration |
+| Useful failures | Plain-language cause, stage diagnostic, saved evidence and concrete next action | Camera recovery and motion-support failures are explained; retries create distinct attempts without rewriting failed evidence |
+| Cleanup before public compute use | Persistent visible worker state, cancellation/recovery and independent termination verification | Exercise cancellation, laptop/network disconnection and failed retrieval; prove the independent deadline and recovery behavior before inviting users to run paid jobs |
+| Readable experiment history | Question, outcome and lesson first; settings and measurements behind links | A reader can understand each trial without opening its configuration/logs; incomplete evidence stays explicit |
+| Independent onboarding rehearsal | A person other than the implementer follows the public instructions from a fresh environment | Record OS, prerequisites, first-run timings and every intervention; resolve undocumented dependencies before claiming quick setup |
+
+The local five-minute demonstration target starts after documented prerequisites;
+record total fresh-install time separately. If download/render times exceed the
+target, report the result honestly and address the sample-delivery problem.
+
 ## User journey and timing goals
 
 | Step | User sees/does | Release target and evidence |
@@ -98,7 +123,7 @@ tests/                 local integration, failure and lifecycle tests
 Local data/credentials/caches are ignored and kept outside distribution artifacts.
 Use a distinct local port, proposed 4320, and Compose project `revisit` so existing
 research viewers remain undisturbed. Docker is the primary reproducible startup
-route; native development instructions are secondary. Bind to127.0.0.1 by default.
+route; native development instructions are secondary. Bind to 127.0.0.1 by default.
 The GPU worker is separate; no CUDA requirement for basic local viewing.
 
 ## Phase 0 — documentation, provenance and a clean boundary
@@ -109,9 +134,11 @@ monorepo/history or ignored working trees wholesale. Retain original notices on
 adapted components and identify patches. Audit backend source/weight/renderer
 terms before distributing an image or derivative asset.
 
-Migrate the history into durable experiment cards. Each has an ID, question,
-status, parent/control IDs, source interval, capture/frame clocks, settings,
-measurements, failed gates, visual defects, conclusion and evidence references.
+Migrate the history into durable experiment cards. Lead with the question,
+outcome and lesson in a short readable summary. Link configuration, metrics and
+logs as supporting detail. Each card also has an ID, status, parent/control IDs,
+source interval, capture/frame clocks, settings, measurements, failed gates,
+visual defects, conclusion and evidence references.
 Separate family/attempt/export IDs so counts are meaningful. Include plans marked
 NOT RUN. Make every public link resolve within Revisit or to an accessible source;
 private/local evidence is explicitly unavailable rather than a broken link.
@@ -134,9 +161,12 @@ versioned timestamped sequence manifest, preserving all source observations.
 Validate relative paths, hashes, finite/increasing timestamps, camera intrinsics,
 poses, coordinate conventions, duration and file availability.
 
-Provide a small procedural splat sequence labelled SYNTHETIC / INTERACTION TEST.
-Prepare a separate real sample pack only after permission review. Sample manifests
-include origin, allowed uses, hashes, download size, point counts, observed times
+Make a cleared real reconstruction the guided first-use experience, delivered as
+an accessible sample pack with an obvious open/download action. Provide a separate
+small procedural splat sequence labelled SYNTHETIC / INTERACTION TEST for local
+diagnostics and automated tests. Complete permission review before shipping the
+real sample; a synthetic-only viewer does not complete this first-use milestone.
+Sample manifests include origin, allowed uses, hashes, download size, point counts, observed times
 and known defects. Do not claim that the real-pack experience is complete until
 users can actually acquire it.
 
@@ -149,7 +179,10 @@ need distinct labels if comparison media is later added.
 Acceptance:
 
 - A fresh clone on documented supported hosts starts with one documented command.
-- No Runpod key or local historical folder is required to render the synthetic test.
+- No Runpod key or local historical folder is required to render either the real
+  demonstration or the synthetic diagnostic.
+- A new user can acquire and explore the cleared real sample within the stated
+  first-use target; measure downloads and loading as well as interface startup.
 - A browser test freezes time, moves camera, changes time and verifies pose retention.
 - Missing models, failed downloads and lack of WebGL2 produce useful messages.
 - Sequence changes do not leak GPU memory or flash a stale frame after reselection.
@@ -172,7 +205,11 @@ policy and its effect on intrinsics.
 
 Start with tested static baseline settings: at most 30s,640×360,12Hz and the fixed
 camera/scale-only recipe. Not every shorter/aspect-ratio input has been validated;
-unsupported cases must fail clearly until qualified. Keep source, priors and map
+unsupported cases must fail clearly until qualified. This is the single supported
+recipe in the main flow. Keep depth-model, tracker and training choices in an
+advanced configuration reference, rather than making beginners choose them.
+Publish a capture guide with a suitable example input and explain that static
+reconstruction does not preserve moving people. Keep source, priors and map
 review receipts; do not replace mandatory reviews with synthetic success markers.
 
 Acceptance:
@@ -180,7 +217,9 @@ Acceptance:
 - A user can prepare their own suitable video entirely through the UI.
 - A bad/cut/undecodable/insufficient-coverage clip stops before GPU allocation.
 - Original timestamps and camera conventions survive extraction and reload.
-- Mapping failure returns a report and useful capture advice; reruns get new IDs.
+- Mapping failure says what happened (for example, camera recovery failed), shows
+  its diagnostic and suggests a concrete next action such as choosing a sharper
+  continuous interval or capturing more overlapping views. Reruns get new IDs.
 - Upload paths, filenames and invoked commands cannot escape the project directory.
 - Cancelling preparation stops owned processes and retains an intelligible status.
 
@@ -253,6 +292,13 @@ Acceptance with a fake provider:
   checks remain visible/retried. Completion never hides a live resource.
 - User can list/reconcile owned jobs and explicitly retry cleanup after restart.
 
+Before inviting public users to supply credentials for paid reconstruction,
+qualify cancellation, laptop/network disconnection and failed retrieval with
+bounded real-provider validation as well as the fake provider. Demonstrate that
+the independent deadline still terminates owned compute when the local controller
+cannot run, and that restart reconciles its actual state. Always show whether
+compute is running, terminated or unknown; unknown is never presented as off.
+
 A paid real-provider validation requires a separately declared budget/runtime.
 Publishing this plan does not launch or authorize any billed trial.
 
@@ -281,9 +327,23 @@ Acceptance:
 - One reference static run and one genuinely new-video static run complete under
   explicit bounded validation allocations; capture full cold-start timings.
 - At least one intentionally unsuitable input fails before rental.
-- One exercised remote failure/cancel path demonstrably terminates the owned worker.
+- Cancellation, laptop/network disconnection and failed-download scenarios have
+  recorded cleanup outcomes under bounded validation. Exercise independent deadline
+  termination and verify provider absence; no paid-job invitation before this gate.
+- A failed job reports its stage, saved diagnostic, resource state and concrete
+  next action. A motion-support failure in the later experimental path must follow
+  the same contract rather than returning a generic error.
 - Documentation matches actual UI/commands; there are no hidden manual environment
   repairs, local paths, credentials, source archives or pre-existing checkpoints.
+
+A person other than the implementer must rehearse both the real-example and
+personal-video paths from a fresh environment using only public instructions and
+their own credentials. Record prerequisites, platform, downloads/setup durations,
+time to first useful view, every manual intervention, failed inputs and cleanup.
+Fix undocumented dependencies and repeat the affected steps. An implementer's
+fresh-container run is useful engineering evidence but does not replace this
+independent usability rehearsal. Obtain measured results before claiming quick
+setup. Live rehearsals require their own declared compute allocation.
 
 This is the first release that can advertise the intended personal-video journey.
 
@@ -291,8 +351,10 @@ This is the first release that can advertise the intended personal-video journey
 
 Expose existing short dynamic example playback from phase 1 separately from
 new-video dynamic reconstruction. Add motion/foreground stages only after the
-static path is qualified. Declare motion-support intervals before fitting and
-retain failed coverage, including the historical 87-frame and116/120-frame failures.
+complete static journey and independent onboarding rehearsal are qualified.
+Further quality research also waits for that milestone. Declare motion-support
+intervals before fitting and retain failed coverage, including the historical
+87-frame and 116/120-frame failures.
 Never relabel a static fit or camera animation as reconstructed motion.
 
 Keep failed gates strict. An exploratory override, if offered later, must be an
@@ -333,8 +395,11 @@ experimental motion and polish. Preparation and provider work can proceed once
 their contracts are frozen; live integration follows both. Do not publish quick
 start commands or success claims until they work from the public repository.
 
-The core release is complete when a fresh user can understand the idea, try a
-real cleared example, submit a suitable personal video with their own credentials,
-inspect the result or useful failure, and verify that compute is gone. The targets
-must be measured. If the backend or real assets cannot be cleared, publish the
-viewer/docs honestly but do not claim the complete reconstruction journey.
+The core release is complete when an independent new user can understand the
+idea, try a real cleared example, submit a suitable personal video using the one
+supported recipe and their own credentials, inspect the result or useful failure,
+and verify that compute is gone. Keep the public-use cleanup qualification,
+independent rehearsal record and measured onboarding times with the release.
+Further quality research and dynamic fitting begin only after this milestone.
+If the backend or real assets cannot be cleared, publish the viewer/docs honestly
+but do not claim the complete reconstruction journey.
