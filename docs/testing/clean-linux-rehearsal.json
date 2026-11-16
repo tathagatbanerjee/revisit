@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-16T04:06:20.397Z",
+  "platform": "linux",
+  "freshEmptyCache": true,
+  "sourceVideoAndFirstState": true,
+  "exactOriginalModelHash": true,
+  "cloudKeyRequired": false,
+  "paidWorkerAllocated": false,
+  "seconds": 1.38,
+  "setup": [
+    {
+      "name": "Local service",
+      "ok": true,
+      "message": "The local service is reachable."
+    },
+    {
+      "name": "Sample storage",
+      "ok": true,
+      "message": "Enough free space for the first Guildhall state. Allow 12 GB for the complete expanded local cache."
+    }
+  ],
+  "scope": "Automated clean Docker data-volume test. Image build is timed separately; not an independent human or Windows/macOS desktop rehearsal.",
+  "workflow": "https://github.com/tathagatbanerjee/revisit/actions/runs/43801831616",
+  "imageBuildSeconds": 76.0,
+  "implementationCommit": "616cf200bad4a1811b2aa4c6a63a85d1a00bb46e"
+}

@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-16",
+  "sourceCommit": "616cf200bad4a1811b2aa4c6a63a85d1a00bb46e",
+  "workflow": "https://github.com/tathagatbanerjee/revisit/actions/runs/43801758234",
+  "jobs": [
+    {
+      "conclusion": "success",
+      "name": "portable (macos-latest)"
+    },
+    {
+      "conclusion": "success",
+      "name": "portable (windows-latest)"
+    },
+    {
+      "conclusion": "success",
+      "name": "portable (ubuntu-latest)"
+    }
+  ],
+  "scope": "Automated Node contracts, manifest imports, cache integrity/isolation/cancellation and hosted build. Not a human or Docker Desktop/browser rehearsal."
+}

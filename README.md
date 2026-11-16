@@ -32,6 +32,9 @@ cd revisit
 docker compose up --build -d
 ```
 
+If Git is not installed, use GitHub’s **Code → Download ZIP**, extract it and open
+a terminal in that folder, then run `docker compose up --build -d`.
+
 Open **http://localhost:4320**. **Guildhall is the main example of our work:**
 
 1. Watch the original interior walkaround.

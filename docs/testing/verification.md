@@ -45,7 +45,10 @@ hosted proxy's public allowlist/read-only boundary.
 
 The [30-second tour](readme-tour.json) uses the actual source clip and four captured
 viewer states, with explanatory captions. It is not a loading-performance benchmark.
-Portable CI and a fresh Linux Docker workflow supplement the
+[Portable CI passed on all three systems](portable-platforms.json). A
+[fresh GitHub Linux Docker rehearsal](clean-linux-rehearsal.json) built the image
+in 76 seconds, then downloaded and verified the source/first state in 1.38 seconds.
+Those are runner-specific timings, excluding browser graphics startup. These supplement the
 [independent walkthrough checklist](fresh-install.md). Automated OS tests do not
 qualify Windows/macOS Docker Desktop or an independent person's first run.
 

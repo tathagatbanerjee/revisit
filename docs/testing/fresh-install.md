@@ -47,3 +47,11 @@ cache/image pull time is separate from the receipt's first-download timing.
 For a local isolated rehearsal, use a different Compose project, port and empty
 volume, then run `node scripts/rehearse.mjs http://127.0.0.1:YOUR_PORT`.
 The script refuses a nonempty cache and never clears existing data.
+
+## Recorded automated run — 16 November 2026
+
+[Linux, Windows and macOS portable checks passed](portable-platforms.json).
+The [fresh Linux Docker run](clean-linux-rehearsal.json) passed with an empty data
+volume and no cloud key: 76s image build, then 1.38s for public video/model download
+and hash verification. These runner-specific timings exclude browser initialization.
+The independent human/Desktop walkthrough above remains open.
