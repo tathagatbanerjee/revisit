@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-16",
+  "status": "succeeded",
+  "access": "public",
+  "url": "https://revisit-guildhall.elephant-str-5431.chatgpt.site",
+  "projectId": "appgprj_6afa79dbe3688191b9f2d153a4c79daa",
+  "version": 1,
+  "sourceCommit": "a8505dd9a113f1d13516f1df1304797986f99039",
+  "scope": "Native Sites deployment success; public access configured. Browser model/offline QA used the identical Worker build locally."
+}

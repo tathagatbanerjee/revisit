@@ -28,6 +28,11 @@ in `examples/guildhall.json`; large assets live in the `guildhall-fixedworld-v1`
 GitHub release and cache locally outside Git. No pretrained weights, training
 checkpoints or native renderer code are included in this sample.
 
+The 30-second README tour and its poster combine the source excerpt with four
+recorded full-density viewer states and captions. They also retain CC BY-SA 4.0;
+`DEMO-NOTICE.txt` accompanies them in the same sample release. No real-time loading
+performance is implied by the six-second explanatory segments.
+
 ## Real example attribution
 
 “Houseplant” photographic capture and reconstruction by Marcel Padilla, from

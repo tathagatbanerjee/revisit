@@ -13,8 +13,11 @@ Git repository linked to https://github.com/tathagatbanerjee/revisit .
 | runbooks/operations/ | Local startup, capture and Runpod instructions |
 | testing/ | Verification records and limitations |
 
+- [Setup help](runbooks/operations/setup.md)
+- [Fresh-install rehearsal](testing/fresh-install.md)
+- [Hosted viewer](../hosted/README.md)
 - [Experiments and outcomes](experiments.md), with [full records](../experiments/README.md)
 - [Implementation plan](implementation-plan.md)
 - [Licensing and asset provenance](licensing.md)
 - [Historical native worker](../core-pipeline/README.md)
-- [Latest change](changelog/2026.11.16/2026.11.16.2.md)
+- [Latest change](changelog/2026.11.16/2026.11.16.3.md)

@@ -11,6 +11,19 @@ upload/prepare your video, recover static cameras on CPU and package a native
 worker handoff. Paid reconstruction is disabled until independent lifecycle and
 fresh GPU qualification pass. See [current state](docs/architecture/current-state.md).
 
+## See it first
+
+**[Try Guildhall in your browser](https://revisit-guildhall.elephant-str-5431.chatgpt.site)** —
+no installation, account or cloud key. Watch the original recording, enter our
+reconstruction, freeze time and move your viewpoint.
+
+[![Watch the 30-second Guildhall walkthrough](https://github.com/tathagatbanerjee/revisit/releases/download/guildhall-fixedworld-v1/revisit-tour-poster.jpg)](https://github.com/tathagatbanerjee/revisit/releases/download/guildhall-fixedworld-v1/revisit-30-second-tour.mp4)
+
+[Watch the 30-second walkthrough](https://github.com/tathagatbanerjee/revisit/releases/download/guildhall-fixedworld-v1/revisit-30-second-tour.mp4)
+(about 2.1 MB). Source footage followed by recorded full-density viewer states;
+this illustrates the controls rather than real-time loading performance.
+Footage and derived media: Acabashi / Wikimedia Commons, CC BY-SA 4.0.
+
 ## Run locally
 
 ```bash
@@ -36,6 +49,31 @@ Houseplant remains under **Other samples and interaction checks**, alongside a
 separately labelled synthetic interaction test. It is a community capture, not
 our reconstruction.
 
+Use **Check my setup** for graphics and storage guidance. The download panel shows
+progress, cache usage and how much remains. **Download Guildhall for offline use**
+fetches the complete sample explicitly; cancel/resume keeps completed files.
+**Clear Guildhall cache** removes sample files while retaining local uploads.
+
+| Path | Installation | Sample storage |
+| --- | --- | --- |
+| Hosted viewer | Open the link above; WebGL2 required | About 1.7 GB for all sample parts, plus the small viewer; browser storage may be evicted |
+| Docker app | Docker Engine/Desktop + Compose v2 | Local data volume; up to about 11.5 GB for parts and expanded model files |
+| Native app | Node 24+, ffmpeg/ffprobe, Python for preparation | Ignored `data/` folder or your `REVISIT_DATA` location |
+
+The hosted viewer caches its interface and visited sample states for offline
+reloads. Keep the tab open while downloading the full pack; after an interrupted
+download, click Download again to resume. Your own video preparation runs locally.
+
+An optional host check, if Node 24+ is already installed:
+
+```bash
+node scripts/setup-check.mjs
+```
+
+It checks Docker, Compose, disk space and the local port without showing keys.
+Node is not required on the host for the Docker setup. If startup fails before
+you can open the app, see [setup troubleshooting](docs/runbooks/operations/setup.md).
+
 For native startup, prerequisites, video preparation, imports and checks, follow
 the [local app runbook](docs/runbooks/operations/local-app.md).
 
@@ -49,6 +87,7 @@ experiments/         historical project research/result records and evidence ind
 examples/            real sample provenance, download hash and attribution
 schemas/             versioned artifact contracts
 scripts/             import, documentation and publication-audit tools
+hosted/              reproducible public viewer build and hosting identity
 working/             ignored temporary work; never published
 data/                ignored uploads, model downloads, project state and results
 ```
@@ -59,6 +98,7 @@ run `python3 scripts/audit-publication.py` and the [documented checks](docs/runb
 
 ## Start here
 
+- [Fresh-install rehearsal](docs/testing/fresh-install.md): independent desktop checklist and automated platform coverage.
 - [Documentation index](docs/README.md): architecture, runbooks, verification and change history.
 - [Implementation plan](docs/implementation-plan.md): milestones, architecture,
   onboarding, acceptance tests and release criteria.

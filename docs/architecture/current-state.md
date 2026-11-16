@@ -31,6 +31,27 @@ account key is never sent to the browser or GPU worker. File routes are confined
 mutation endpoints require a local session token and cross-origin requests are
 rejected. This is a single-user localhost application, not an internet service.
 
+## Easier onboarding and hosted preview
+
+The README leads with a browser-only Guildhall viewer and a 30-second walkthrough.
+The public viewer reuses the same full-density renderer and keeps model assembly,
+hash verification and sample caching in the browser. Its Worker streams only pinned
+public files; it accepts no uploads, cloud keys or paid compute requests.
+Service-worker caching supports offline reloads and previously visited states.
+A full offline pack downloads about 1.7 GB without storing 305 expanded models.
+Browser storage limits/eviction apply; keeping the tab open and resuming interrupted
+downloads is required. Local Node caching can expand to about 11.5 GB.
+
+Both interfaces show cache usage, remaining bytes and transfer progress, and offer
+explicit offline download, cancellation/resume, sample-only clearing and a setup
+check. The optional host script checks Docker/Compose, disk and port availability.
+An alternative local port is configurable with REVISIT_PORT.
+
+Portable contracts/cache/build checks run on Linux, Windows and macOS. A separate
+clean Docker workflow rehearses the first public download on fresh Linux. These
+are automated checks; an independent human's Windows/macOS Desktop walkthrough
+remains outstanding, with a checklist and installation issue form provided.
+
 ## Incomplete: paid upload-to-reconstruction workflow
 
 Paid allocation is disabled. The historical project-owned native stage code and

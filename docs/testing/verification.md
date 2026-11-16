@@ -2,7 +2,7 @@
 
 ## Completed checks
 
-- JavaScript syntax and15 Node tests: run timestamp/path contracts, manifest import
+- JavaScript syntax and22 Node tests: run timestamp/path contracts, manifest import
   without unrelated files, byte ranges, file confinement/symlink rejection,
   localhost origin/session checks, interrupted-state recovery, read-only credential
   verification, owned termination semantics and actual short/full360-state video extraction.
@@ -34,6 +34,20 @@
 The real-video extraction test uses generated ffmpeg test imagery as a technical
 fixture, not reconstruction evidence. The browser uses actual downloaded CC BY
 captured geometry and a separately labelled synthetic playback fixture.
+
+## Onboarding update
+
+The hosted viewer has passed first/middle/final full-density states and a normal
+page reload with network disabled, loading the cached first state again. See
+[hosted receipt](hosted-smoke.json). Tests also cover corrupted downloads,
+cancellation/resume, exact browser assembly, sample-only cache deletion and the
+hosted proxy's public allowlist/read-only boundary.
+
+The [30-second tour](readme-tour.json) uses the actual source clip and four captured
+viewer states, with explanatory captions. It is not a loading-performance benchmark.
+Portable CI and a fresh Linux Docker workflow supplement the
+[independent walkthrough checklist](fresh-install.md). Automated OS tests do not
+qualify Windows/macOS Docker Desktop or an independent person's first run.
 
 ## Still required
 

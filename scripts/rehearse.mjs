@@ -1,0 +1,8 @@
+// Run against a NEW, isolated cache. Never clears or modifies an existing cache.
+import {mkdir,writeFile} from 'node:fs/promises';import {createHash} from 'node:crypto';
+const base=process.argv[2]??'http://127.0.0.1:4321',start=Date.now();let healthy=false;
+for(let i=0;i<120;i++){try{const r=await fetch(base+'/health');if(r.ok){healthy=true;break;}}catch{}await new Promise(r=>setTimeout(r,500));}if(!healthy)throw Error('Service did not start');
+const cache=await(await fetch(base+'/api/cache')).json();if(cache.cachedFiles!==0)throw Error('Rehearsal requires a fresh empty cache; existing data was left untouched.');
+const spec=(await(await fetch(base+'/api/catalog')).json()).showcase,setup=await(await fetch(base+'/api/setup')).json();
+for(const name of [spec.video,spec.run.frames[0].model]){const response=await fetch(base+'/showcase/'+name);if(!response.ok)throw Error('Public download failed');const bytes=new Uint8Array(await response.arrayBuffer());if(createHash('sha256').update(bytes).digest('hex')!==spec.assets[name].sha256)throw Error('Public download hash mismatch');}
+const report={date:new Date().toISOString(),platform:process.platform,freshEmptyCache:true,sourceVideoAndFirstState:true,exactOriginalModelHash:true,cloudKeyRequired:false,paidWorkerAllocated:false,seconds:Number(((Date.now()-start)/1000).toFixed(2)),setup:setup.checks,scope:'Automated clean Docker data-volume test. Image build is timed separately; not an independent human or Windows/macOS desktop rehearsal.'};await mkdir(new URL('../working/',import.meta.url),{recursive:true});await writeFile(new URL('../working/rehearsal.json',import.meta.url),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));

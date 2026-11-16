@@ -1,0 +1,31 @@
+name: Installation or first-viewer problem
+description: Help make the first run easier on your machine.
+title: 'Setup: '
+body:
+  - type: input
+    id: platform
+    attributes:
+      label: OS and browser versions
+      placeholder: Windows 11, Edge; macOS, Safari; Ubuntu, Chrome
+    validations:
+      required: true
+  - type: dropdown
+    id: path
+    attributes:
+      label: Setup path
+      options:
+        - Hosted browser viewer
+        - Docker local app
+        - Native Node app
+  - type: textarea
+    id: stage
+    attributes:
+      label: Where did you get stuck?
+      description: Include the step, visible error and setup-check result. Omit credentials and private recordings.
+    validations:
+      required: true
+  - type: textarea
+    id: timing
+    attributes:
+      label: Time to first source video / reconstructed view
+      description: Include download speed if known, and any help or undocumented steps needed.

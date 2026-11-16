@@ -1,0 +1,3 @@
+import http from 'node:http';import {readFile} from 'node:fs/promises';
+const module=await import('data:text/javascript;base64,'+Buffer.from(await readFile(new URL('./dist/server/index.js',import.meta.url))).toString('base64'));
+const server=http.createServer(async(req,res)=>{try{const reply=await module.default.fetch(new Request('http://'+req.headers.host+req.url,{method:req.method,headers:req.headers}));res.writeHead(reply.status,Object.fromEntries(reply.headers));if(req.method==='HEAD'){res.end();return;}for await(const chunk of reply.body??[])res.write(chunk);res.end();}catch{res.writeHead(500);res.end('Preview failed');}});server.listen(4323,'127.0.0.1',()=>console.log('Hosted viewer preview: http://localhost:4323'));

@@ -1,0 +1,16 @@
+import {readFile,writeFile,mkdir,readdir,rm,copyFile} from 'node:fs/promises';import path from 'node:path';import {createHash} from 'node:crypto';import {fileURLToPath} from 'node:url';
+const here=path.dirname(fileURLToPath(import.meta.url)),root=path.dirname(here),out=path.join(process.argv.includes('--site-root')?root:here,'dist');await rm(out,{recursive:true,force:true});await mkdir(path.join(out,'server'),{recursive:true});await mkdir(path.join(out,'.openai'),{recursive:true});
+const assets={},types={'.js':'text/javascript; charset=utf-8','.html':'text/html; charset=utf-8','.css':'text/css','.json':'application/json','.md':'text/plain; charset=utf-8'};
+async function add(url,file){assets[url]={type:types[path.extname(file)]??'text/plain',body:await readFile(file,'utf8')};}
+for(const name of await readdir(path.join(root,'app/public')))if(/\.(js|css|html)$/.test(name))await add('/'+name,path.join(root,'app/public',name));
+for(const name of ['three.module.js','three.core.js'])await add('/vendor/three/build/'+name,path.join(root,'app/node_modules/three/build',name));
+await add('/vendor/three/examples/jsm/controls/OrbitControls.js',path.join(root,'app/node_modules/three/examples/jsm/controls/OrbitControls.js'));
+await add('/vendor/three/examples/jsm/postprocessing/Pass.js',path.join(root,'app/node_modules/three/examples/jsm/postprocessing/Pass.js'));
+await add('/vendor/spark/spark.module.js',path.join(root,'app/node_modules/@sparkjsdev/spark/dist/spark.module.js'));
+for(const doc of ['experiments.md','implementation-plan.md','licensing.md'])await add('/docs/'+doc,path.join(root,'docs',doc));await add('/THIRD_PARTY_NOTICES.md',path.join(root,'THIRD_PARTY_NOTICES.md'));await add('/LICENSE',path.join(root,'LICENSE'));
+const showcase=JSON.parse(await readFile(path.join(root,'examples/guildhall.json'),'utf8')),sample=JSON.parse(await readFile(path.join(root,'examples/houseplant.json'),'utf8'));const catalog={hosted:true,showcase,sample:{...sample,installed:false},runs:[]};
+function json(url,obj){assets[url]={type:'application/json',body:JSON.stringify(obj)};}
+json('/api/catalog',catalog);json('/api/session',{token:'0'.repeat(64)});json('/api/compute',{configured:false,reason:'Hosted sample viewer. Run locally to prepare your own video.'});json('/api/projects',{projects:[]});json('/health',{status:'ok',mode:'hosted-demo',paidAllocationEnabled:false});
+const version=createHash('sha256').update(JSON.stringify(assets)).digest('hex').slice(0,16);assets['/sw.js'].body=assets['/sw.js'].body.replace("'revisit-shell-v1'",JSON.stringify('revisit-shell-'+version));
+json('/offline-files.json',['/',...Object.keys(assets).filter(x=>x!=='/index.html'&&x!=='/sw.js')]);
+const handler=(await readFile(path.join(here,'worker.mjs'),'utf8')).replace('export function worker','function worker');await writeFile(path.join(out,'server/index.js'),`const ASSETS=${JSON.stringify(assets)};\nconst CATALOG=${JSON.stringify(catalog)};\n${handler}\nexport default worker(ASSETS,CATALOG);\n`);await copyFile(path.join(here,'.openai/hosting.json'),path.join(out,'.openai/hosting.json'));console.log('Hosted viewer built:',Object.keys(assets).length,'public paths; no local data or environment embedded.');

@@ -1,0 +1,21 @@
+name: Portable import and cache checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  portable:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+        working-directory: app
+      - run: node --test test/contracts.test.mjs test/import.test.mjs test/showcase.test.mjs test/onboarding.test.mjs
+        working-directory: app
+      - run: node hosted/build.mjs

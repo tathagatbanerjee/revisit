@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-16",
+  "hosted": true,
+  "offlineReload": true,
+  "sourceBeforeViewer": true,
+  "gaussiansPerState": 475357,
+  "loadedFrames": [
+    0,
+    152,
+    304
+  ],
+  "translationAtFixedTime": true,
+  "seekCameraMaxDelta": 0,
+  "recordedCameraReset": true,
+  "renderer": "Chromium headless SwiftShader; 160px inspection viewport",
+  "scope": "Retained first/middle/final Guildhall states, not a new reconstruction or quality qualification."
+}

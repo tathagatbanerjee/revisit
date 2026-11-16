@@ -1,0 +1,28 @@
+name: Clean Docker rehearsal
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  clean-linux:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      RUNPOD_API_KEY: ''
+      REVISIT_PORT: '4321'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node scripts/setup-check.mjs --json
+      - run: docker compose -p revisit-rehearsal up --build -d
+      - name: Verify empty cache and first public download
+        run: node scripts/rehearse.mjs http://127.0.0.1:4321
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: linux-docker-rehearsal
+          path: working/rehearsal.json
+      - if: always()
+        run: docker compose -p revisit-rehearsal down --volumes

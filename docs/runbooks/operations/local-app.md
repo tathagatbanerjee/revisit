@@ -37,6 +37,15 @@ may normalize the exact prefix). `docker compose down` stops the app and preserv
 that volume. `docker compose down --volumes` removes uploads/results; use it only
 when you intentionally want to erase that local data.
 
+## Download and setup controls
+
+The download panel shows current transfer progress, cache usage and offline bytes
+remaining. Start a full offline pack explicitly, cancel/resume it, or clear only
+Guildhall sample files. Uploads and imported runs are preserved. “Check my setup”
+reports WebGL and storage; the [setup guide](setup.md) covers Docker/port problems
+before startup. REVISIT_PORT changes the host port without modifying Compose.
+The [hosted viewer](../../../hosted/README.md) requires no local installation.
+
 ## Native development
 
 Requires Node24+, ffmpeg, ffprobe and Python3.11+ for frame extraction.

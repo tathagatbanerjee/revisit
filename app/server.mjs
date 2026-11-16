@@ -8,6 +8,7 @@ import {validateRun} from './lib/contracts.mjs';
 import {ensureSample,sampleSpec,syntheticSplat} from './lib/sample.mjs';
 import {Projects} from './lib/projects.mjs';
 import {Runpod} from './lib/runpod.mjs';
+import {setupReport} from './lib/setup.mjs';
 import {showcaseSpec,createShowcaseCache} from './lib/showcase.mjs';
 const appDir=path.dirname(fileURLToPath(import.meta.url));
 export async function createApp({dataRoot=process.env.REVISIT_DATA??path.join(appDir,'../data'),provider=new Runpod()}={}){
@@ -42,6 +43,11 @@ export async function createApp({dataRoot=process.env.REVISIT_DATA??path.join(ap
    if(p==='/api/sample'&&req.method==='POST'){
     downloading??=ensureSample(dataRoot).finally(()=>{downloading=null;});await downloading;return json(res,200,{installed:true});
    }
+   if(p==='/api/setup'&&req.method==='GET')return json(res,200,await setupReport(dataRoot));
+   if(p==='/api/cache'&&req.method==='GET')return json(res,200,await showcaseAsset.info());
+   if(p==='/api/cache/download'&&req.method==='POST')return json(res,202,await showcaseAsset.downloadAll());
+   if(p==='/api/cache/cancel'&&req.method==='POST')return json(res,200,await showcaseAsset.cancel());
+   if(p==='/api/cache/clear'&&req.method==='POST')return json(res,200,await showcaseAsset.clear());
    if(p==='/api/compute'&&req.method==='GET')return json(res,200,{configured:Boolean(provider.key),paidAllocationEnabled:false,reason:'Worker packaging and independent termination qualification are incomplete. This preview cannot allocate paid workers.'});
    if(p==='/api/compute/verify'&&req.method==='POST')return json(res,200,await provider.verify());
    if(p==='/api/compute/offers'&&req.method==='GET')return json(res,200,{gpus:await provider.offers(),scope:'Advisory GPU list rates; storage/setup additional. No worker allocated.'});
