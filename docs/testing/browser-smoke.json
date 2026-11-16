@@ -6,6 +6,6 @@
   "translation": true,
   "playback": true,
   "mobileOverflow": false,
-  "renderer": "Chromium headless SwiftShader",
+  "renderer": "Chromium headless SwiftShader; 160px inspection viewport",
   "scope": "Real sample loading, navigation, synthetic time/camera independence and mobile layout. No real reconstruction or paid allocation."
 }

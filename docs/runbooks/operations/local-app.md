@@ -14,11 +14,23 @@ The first build downloads CPU dependencies; allow for network/image setup time.
 No NVIDIA/CUDA GPU is needed locally to view a sample. A WebGL2-capable browser is
 required. Unsupported graphics still leave project preparation available.
 
-Click **Explore Houseplant**. The app downloads3.5MiB once from its pinned public
-source, verifies its byte count and SHA256, then opens the real reconstruction.
-Inspect leaf boundaries and missing surfaces. Orbit, translate and reset. This
-static capture has no event timeline. Choose **Synthetic interaction test** to
-test independent time and camera controls; it is expressly not captured evidence.
+Start with the **Guildhall** source video, then choose **Enter the Guildhall
+reconstruction**. The video is about 13 MB; the first full-density state needs about 31 MiB.
+The app downloads only visited states from the pinned public release, checks SHA-256
+and caches them in its data folder. All 305 states are available. Lossless sharing of the static room cuts each additional
+state to about 5 MiB: about 1.7 GB total download and 11.5 GB expanded cache.
+Watch the network/data usage if playing the entire sequence. Playback waits for
+state loading and may run slower than the source recording. Cached states work offline.
+Source footage and reconstruction retain their displayed CC BY-SA 4.0 notice;
+Revisit code is MIT.
+
+Move with orbit/pan or W A S D / Q E. Pause the event and move independently; reset
+to one of three recorded camera positions. This full-interior result remains
+exploratory, with ghosted people, weak motion support and incomplete unseen surfaces.
+
+**Other samples and interaction checks** contains **Explore Houseplant** (3.5 MiB,
+Marcel Padilla, CC BY 4.0). The **Synthetic interaction test** in the scene selector
+works without downloads and tests independent time/camera controls.
 
 Persistent Docker data lives in the `revisit_revisit-data` named volume (Compose
 may normalize the exact prefix). `docker compose down` stops the app and preserves
@@ -72,7 +84,8 @@ The importer copies only the manifest and referenced model files into
 absolute/traversal paths and model symlinks escaping the source root. Reload the
 app. On Docker, import to an explicit host folder with `REVISIT_DATA` and copy the
 reviewed run folder into the app's data volume, or use native startup for local
-research assets. No historical asset is auto-imported or publicly redistributed.
+research assets. Only the explicitly selected Guildhall showcase is publicly
+distributed; importing other historical runs remains a local action.
 
 ## Checks
 
@@ -89,11 +102,14 @@ docker compose config --quiet
 For real Chromium/WebGL checks while the app runs:
 
 ```bash
+CHROME_PATH=/path/to/chrome TEST_GUILDHALL=1 node app/test/browser-smoke.mjs
 CHROME_PATH=/path/to/chrome node app/test/browser-smoke.mjs
 ```
 
 Screenshots go to ignored `working/`; a small verification receipt goes to
-`docs/testing/`. The browser test downloads the real sample if needed. It does
+`docs/testing/`. The two invocations check Guildhall first/middle/final states and secondary
+community/synthetic fixtures in separate browser contexts, downloading as needed. Software-rendered checks use a 160px inspection viewport
+while retaining every Gaussian; the normal app uses its full viewer layout. It does
 not allocate compute. Tested platforms/limits are in the verification record;
 a Linux rehearsal does not establish universal Docker Desktop compatibility.
 

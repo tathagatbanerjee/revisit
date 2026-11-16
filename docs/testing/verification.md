@@ -2,13 +2,19 @@
 
 ## Completed checks
 
-- JavaScript syntax and12 Node tests: run timestamp/path contracts, manifest import
+- JavaScript syntax and15 Node tests: run timestamp/path contracts, manifest import
   without unrelated files, byte ranges, file confinement/symlink rejection,
   localhost origin/session checks, interrupted-state recovery, read-only credential
   verification, owned termination semantics and actual short/full360-state video extraction.
 - Chromium software-WebGL smoke:113,648-Gaussian real Houseplant sample, camera
   translation,650-Gaussian synthetic sequence, seeking with exactly unchanged camera
   position, playback and390px mobile layout. See [receipt](browser-smoke.json).
+- Guildhall main example: source video before viewer, full-density first/middle/final
+  states (475,357 Gaussians), translation with event time unchanged and seeking
+  with camera unchanged. See [Guildhall receipt](guildhall-smoke.json). Shared static
+  bytes are identical across all 305 states; each assembled PLY is checked against
+  its original export hash. Downloader tests cover deduplication, offline cache,
+  corrupted data and lossless assembly. MP4 range requests pass.
 - Docker image builds on Linux amd64; pinned CPU mapping dependencies install.
   Docker Compose config validates; app/doctor starts without a Runpod key.
 - Five CPU camera/stage contract tests pass, including ordered identities,

@@ -19,10 +19,22 @@ cd revisit
 docker compose up --build -d
 ```
 
-Open **http://localhost:4320**, then choose **Explore Houseplant** for a real,
-attributed community capture. No cloud key or local CUDA GPU is required. The
-3.5MiB sample downloads once and is checksum verified. It is not a model trained
-by Revisit. Use the labelled synthetic sequence to test playback independently.
+Open **http://localhost:4320**. **Guildhall is the main example of our work:**
+
+1. Watch the original interior walkaround.
+2. Choose **Enter the Guildhall reconstruction** to move around the same event.
+3. Pause, scrub the observed timeline, change your viewpoint and reset to a recorded camera.
+
+No cloud key or local CUDA GPU is required. The first model state is about 31 MiB;
+additional states download about 5 MiB each on demand from our public sample release, with SHA-256
+verification and local caching. All 305 states and 475,357 Gaussians per state are
+retained; the complete download is about 1.7 GB (about 11.5 GB expanded cache). This is our exploratory full-interior
+fixed-world result: room structure is recognizable, but people ghost, the turn
+blurs and unseen surfaces are incomplete. It is not validated novel-view geometry.
+
+Houseplant remains under **Other samples and interaction checks**, alongside a
+separately labelled synthetic interaction test. It is a community capture, not
+our reconstruction.
 
 For native startup, prerequisites, video preparation, imports and checks, follow
 the [local app runbook](docs/runbooks/operations/local-app.md).
@@ -103,8 +115,9 @@ A 30-second static pipeline completed on tested indoor and outdoor clips.
 
 The research record contains 143 project-authored evidence documents and 103 published model records, including controls and
 rejected diagnostics; that is not 103 successful independent reconstructions.
-Historical model files, footage, SDKs, credentials and cloud execution state have
-not been published here.
+The Guildhall example is distributed separately as checksummed release assets;
+large media stays outside Git. Other historical model files, footage, SDKs,
+credentials and cloud execution state are not included.
 
 ## License
 

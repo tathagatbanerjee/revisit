@@ -13,6 +13,21 @@ Packages are installed from pinned manifests; downloaded assets stay outside Git
 | COLMAP/pycolmap4.2.1 | CPU camera mapping | BSD3-Clause and dependencies; https://github.com/colmap/colmap |
 | NumPy/OpenCV/Pillow | Optional CPU preparation | Their respective upstream licenses, retained in installed packages |
 
+## Main research example: Guildhall
+
+Guildhall interior walkaround by **Acabashi / Wikimedia Commons**, source:
+[original recording](https://commons.wikimedia.org/wiki/File:Guildhall_City_of_London_England_interior_walkaround_video.webm),
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+The source excerpt is trimmed from original 50–75.433 seconds, resized to 1280×720
+and has no audio. The interactive reconstruction derives from the interior
+observations through original 75.333 seconds using the fixed-world MoSca experiment;
+all 305 exported states retain all 475,357 Gaussians (viewer displays DC colour).
+The footage and derived reconstruction are distributed under CC BY-SA 4.0,
+separately from Revisit's MIT app code. Download hashes and saved timestamps are
+in `examples/guildhall.json`; large assets live in the `guildhall-fixedworld-v1`
+GitHub release and cache locally outside Git. No pretrained weights, training
+checkpoints or native renderer code are included in this sample.
+
 ## Real example attribution
 
 “Houseplant” photographic capture and reconstruction by Marcel Padilla, from
@@ -33,7 +48,8 @@ The migrated adapter/patch files are project-owned. MoSca author source and its
 priors/native renderers are fetched separately by an opt-in research setup draft.
 MoSca's own MIT grant does not blanket-license its upstream priors/renderers;
 native rasterizer terms and weights require separate review. No upstream source,
-SDK, pretrained weight or historical derived model has been vendored in this repo.
+SDK or pretrained weight has been vendored in this repo. The separately released
+Guildhall reconstruction is an output asset, not a redistribution of that stack.
 Retain all notices when using or distributing any advanced worker image, and do
 not advertise the complete stack as commercially unrestricted until that review
 is complete.

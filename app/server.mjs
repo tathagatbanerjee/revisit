@@ -8,9 +8,11 @@ import {validateRun} from './lib/contracts.mjs';
 import {ensureSample,sampleSpec,syntheticSplat} from './lib/sample.mjs';
 import {Projects} from './lib/projects.mjs';
 import {Runpod} from './lib/runpod.mjs';
+import {showcaseSpec,createShowcaseCache} from './lib/showcase.mjs';
 const appDir=path.dirname(fileURLToPath(import.meta.url));
 export async function createApp({dataRoot=process.env.REVISIT_DATA??path.join(appDir,'../data'),provider=new Runpod()}={}){
  await mkdir(dataRoot,{recursive:true});const projects=new Projects(dataRoot);await projects.recover();
+ const showcaseAsset=createShowcaseCache(dataRoot);
  const csrf=randomBytes(32).toString('hex');let downloading=null;
  function trusted(req){
   const host=req.headers.host;if(!host||!['localhost','127.0.0.1','[::1]'].includes(host.replace(/:\d+$/,'')))return false;
@@ -35,7 +37,7 @@ export async function createApp({dataRoot=process.env.REVISIT_DATA??path.join(ap
    if(p==='/health')return json(res,200,{status:'ok',mode:'local-preview',paidAllocationEnabled:false});
    if(p==='/api/catalog'&&req.method==='GET'){
     const sample=await sampleSpec();let installed=false;try{const info=await stat(path.join(dataRoot,'samples/houseplant.splat'));installed=info.size===sample.bytes;}catch{}
-    return json(res,200,{sample:{...sample,installed,model:'/samples/houseplant.splat'},runs:await runs()});
+    return json(res,200,{sample:{...sample,installed,model:'/samples/houseplant.splat'},showcase:await showcaseSpec(),runs:await runs()});
    }
    if(p==='/api/sample'&&req.method==='POST'){
     downloading??=ensureSample(dataRoot).finally(()=>{downloading=null;});await downloading;return json(res,200,{installed:true});
@@ -49,6 +51,7 @@ export async function createApp({dataRoot=process.env.REVISIT_DATA??path.join(ap
    const project=p.match(/^\/api\/projects\/([a-zA-Z0-9_-]+)(?:\/(prepare|cancel|review|map|freeze))?$/);
    if(project){const [,id,action]=project;if(!action&&req.method==='GET')return json(res,200,await projects.get(id));if(req.method!=='POST')throw Object.assign(Error('Method unavailable'),{status:405});if(action==='prepare')return json(res,202,await projects.prepare(id,await readJSON(req)));if(action==='cancel')return json(res,202,await projects.cancel(id));if(action==='review')return json(res,200,await projects.review(id));if(action==='map')return json(res,202,await projects.map(id));if(action==='freeze')return json(res,202,await projects.freeze(id));}
    if(!['GET','HEAD'].includes(req.method))throw Object.assign(Error('Route unavailable'),{status:404});
+   if(p.startsWith('/showcase/')){const name=p.slice(10);await showcaseAsset(name);return await sendFile(req,res,path.join(dataRoot,'showcase'),name,['.ply','.mp4','.jpg']);}
    if(p.startsWith('/samples/'))return await sendFile(req,res,path.join(dataRoot,'samples'),p.slice(9),['.splat']);
    if(p.startsWith('/synthetic/')){const match=/^\/synthetic\/(\d+)\.splat$/.exec(p);if(!match||Number(match[1])>39)throw Object.assign(Error('Observation unavailable'),{status:404});const b=syntheticSplat(Number(match[1])/10);res.writeHead(200,{'Content-Type':'application/octet-stream','Content-Length':b.length});res.end(req.method==='HEAD'?undefined:b);return;}
    if(p.startsWith('/artifacts/'))return await sendFile(req,res,path.join(dataRoot,'runs'),p.slice(11),['.ply','.splat']);

@@ -7,9 +7,13 @@ tracking or pushing files inside Revisit.
 
 ## Implemented local preview
 
-The Node/Three.js/Spark app on localhost:4320 downloads a pinned, hash-verified real
-Houseplant reconstruction by Marcel Padilla (CC BY 4.0), and offers a separate
-labelled synthetic sequence for interaction tests. It supports static PLY/splat
+The Node/Three.js/Spark app on localhost:4320 leads with our Guildhall full-interior
+fixed-world experiment: source video first, then an interactive viewer. A pinned
+release supplies all 305 full-density observed states on demand, with SHA-256
+verification and local caching (about 31 MiB initially, 5 MiB per additional state; 1.7 GB total download). The source and
+derived reconstruction retain CC BY-SA 4.0 attribution. Ghosted people, turn blur
+and failed motion coverage remain visible limitations. Houseplant by Marcel Padilla
+(CC BY 4.0) and a labelled synthetic sequence are secondary checks. It supports static PLY/splat
 import, timestamped imported run bundles, recorded camera reset, orbit/pan,
 translation and playback with camera pose preserved across time changes.
 
@@ -48,7 +52,8 @@ There are 143 migrated project-authored research/result records plus a 103-expor
 inventory. These include rejected results, controls and overlapping reports,
 not 143 unique trials or 103 successful fits. Their private media/logs remain
 unavailable. Historical plans and resource instructions are not current runbooks.
-No original footage, pretrained weights, SDK, local checkpoints or credentials
+The selected Guildhall source excerpt and reconstruction are separate public
+release assets. No pretrained weights, SDK, training checkpoints or credentials
 were migrated. The real community sample downloads into ignored local storage;
 it is separately attributed and is not a Revisit-trained model.
 

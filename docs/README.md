@@ -17,4 +17,4 @@ Git repository linked to https://github.com/tathagatbanerjee/revisit .
 - [Implementation plan](implementation-plan.md)
 - [Licensing and asset provenance](licensing.md)
 - [Historical native worker](../core-pipeline/README.md)
-- [Latest change](changelog/2026.11.16/2026.11.16.1.md)
+- [Latest change](changelog/2026.11.16/2026.11.16.2.md)
