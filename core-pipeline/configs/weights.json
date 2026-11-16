@@ -1,0 +1,32 @@
+[
+  {
+    "file": "metric_depth_vit_small_800k.pth",
+    "sha256": "b34b2a2be9148054991cef7e417930e1320602ba7bc503b0ee4e7888543728f6",
+    "bytes": 150120967,
+    "url": "https://huggingface.co/JUGGHM/Metric3D/resolve/80d2d1410afb4b23cd9d18c6be9144483d4b70b6/metric_depth_vit_small_800k.pth"
+  },
+  {
+    "file": "metric_depth_vit_large_800k.pth",
+    "sha256": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972",
+    "bytes": 1647972663,
+    "url": "https://huggingface.co/JUGGHM/Metric3D/resolve/80d2d1410afb4b23cd9d18c6be9144483d4b70b6/metric_depth_vit_large_800k.pth"
+  },
+  {
+    "file": "scaled_online.pth",
+    "sha256": "205d34789f19699d64b22cf93f9b697f15f28d4025240e31532e504109837218",
+    "bytes": 101695610,
+    "url": "https://huggingface.co/facebook/cotracker3/resolve/bf55ea50d4390e1820a267f131cd6587240fb2c5/scaled_online.pth"
+  },
+  {
+    "file": "bootstapir_checkpoint_v2.pt",
+    "sha256": "8493c7a69e02c85b9382fbb3c7b8b539b36bc08ede744b9e99feb739a0129f4b",
+    "bytes": 218886140,
+    "url": "https://storage.googleapis.com/dm-tapnet/bootstap/bootstapir_checkpoint_v2.pt"
+  },
+  {
+    "file": "raft-models.zip",
+    "sha256": "4be6101b271f58ec49866da5cf609fd17e86e9cae2483f70630ef4a295dc66bd",
+    "bytes": 81977417,
+    "url": "https://dl.dropboxusercontent.com/s/4j4z58wuv8o0mfz/models.zip"
+  }
+]

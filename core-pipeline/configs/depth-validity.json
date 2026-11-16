@@ -1,0 +1,12 @@
+{
+  "nearDepth": 0.001,
+  "minimumGlobalPairFraction": 0.9,
+  "minimumPositiveInputDepthPairFraction": 0.995,
+  "maximumPerTargetSupportDrop": 0.05,
+  "minimumIndependentTracks": 32,
+  "cases": {},
+  "helperSha256": "38b85ad5cd26c68bb28fc8905ae5251899366035bebc468dce89b4eaa6fcd37a",
+  "patcherSha256": "d0629f2e92d36d3eba137ce38be4cb127dbe947e265adf55722ae1cca4b4972b",
+  "cudaSmokeSha256": "1e3e53901dec9513f05365fb417fa64aac685850fd2a35c5438baabf7b0c23a0",
+  "interpretation": "Positive projected/source/target depths only; no new loss weights. Freeze each case initial all-target support before optimization; retain global and per-target support gates."
+}

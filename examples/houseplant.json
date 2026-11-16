@@ -1,0 +1,14 @@
+{
+  "id": "houseplant",
+  "title": "Houseplant · phone capture",
+  "representation": "static",
+  "url": "https://raw.githubusercontent.com/marcelpadilla/splats/c3e5ec0a8ddb3ab26f28a067a29d272fe1a23411/data/plant/plant.splat",
+  "sha256": "ce9d490b18f16d6730d832227bf541431b8b1a5d167c5a3fe89af4f324c0d8fd",
+  "bytes": 3636736,
+  "gaussianCount": 113648,
+  "license": "CC-BY-4.0",
+  "creator": "Marcel Padilla",
+  "source": "https://github.com/marcelpadilla/splats/tree/c3e5ec0a8ddb3ab26f28a067a29d272fe1a23411/data/plant",
+  "attribution": "Houseplant by Marcel Padilla, CC BY 4.0. Original capture reconstruction; unmodified .splat file. Displayed in Revisit. https://creativecommons.org/licenses/by/4.0/",
+  "notes": "A real phone-captured static reconstruction by Marcel Padilla, not a reconstruction trained by Revisit. Rotate to inspect leaf edges and missing surfaces. Static scene: time controls are unavailable."
+}

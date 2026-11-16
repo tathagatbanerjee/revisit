@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-16",
+  "realSampleGaussians": 113648,
+  "syntheticGaussians": 650,
+  "seekCameraMaxDelta": 0,
+  "translation": true,
+  "playback": true,
+  "mobileOverflow": false,
+  "renderer": "Chromium headless SwiftShader",
+  "scope": "Real sample loading, navigation, synthetic time/camera independence and mobile layout. No real reconstruction or paid allocation."
+}

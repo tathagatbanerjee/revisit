@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {validateRun,observationAt,interval} from '../lib/contracts.mjs';
+const valid={schemaVersion:1,id:'scene',title:'Scene',representation:'sequence',frames:[{time:0,model:'frames/0.splat'},{time:.11,model:'frames/1.splat'}],durationSeconds:.2};
+test('observations use actual irregular timestamps and preceding state',()=>{assert.equal(observationAt(valid.frames,.109),0);assert.equal(observationAt(valid.frames,.11),1);assert.equal(observationAt(valid.frames,.2),1);});
+test('rejects unordered observations, invalid clocks and escaping model paths',()=>{assert.equal(validateRun(valid),valid);for(const r of [{...valid,frames:[valid.frames[1],valid.frames[0]]},{...valid,durationSeconds:.01},{...valid,representation:'static',model:'../secret.ply'},{...valid,representation:'static',model:'https://evil.example/x.ply'}])assert.throws(()=>validateRun(r));});
+test('interval rejects out-of-source and unsupported durations',()=>{assert.equal(interval({startSeconds:2,durationSeconds:3},10).mode,'static');for(const c of [{startSeconds:-1,durationSeconds:3},{startSeconds:9,durationSeconds:3},{startSeconds:0,durationSeconds:31}])assert.throws(()=>interval(c,10));});

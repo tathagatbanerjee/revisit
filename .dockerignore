@@ -1,0 +1,12 @@
+.git
+.secrets
+.env*
+working
+data
+output
+outputs
+app/node_modules
+app/.cache
+app/samples
+app/runs
+**/__pycache__

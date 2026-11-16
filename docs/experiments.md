@@ -123,3 +123,12 @@ The family-level table above is an initial summary, not a replacement for the
 planned per-attempt evidence ledger. Source hashes, selected configuration details
 and reviewed portable evidence should accompany that migration, with explicit
 availability/provenance status and no inaccessible machine-path links.
+
+## Supporting research records
+
+The [historical evidence index](../experiments/README.md) provides the143
+project-authored research/result records behind these summaries. The
+[published-run inventory](archive/published-run-inventory.json) lists all103
+historical exports without models/media; the [catalog](archive/experiment-catalog.json)
+includes planned methods and original status strings. Later results supersede
+stale catalog/handoff text.

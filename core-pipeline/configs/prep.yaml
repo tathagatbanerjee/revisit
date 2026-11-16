@@ -1,0 +1,14 @@
+dep_mode: metric3d
+metric3d_depth_version: large
+tap_mode: bootstapir
+flow_mode: raft
+align_metric_flag: false
+boundary_enhance_th: -1.0
+depth_boundary_th: 1.0
+epi_th: 0.0001
+tap_chunk_size: 128
+n_track_uniform: 512
+n_track_pdynamic: 2048
+flow_steps: [1]
+epi_num_threads: 4
+seed: 12345

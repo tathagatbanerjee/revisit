@@ -1,0 +1,28 @@
+name: Local checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  local:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: npm ci
+        working-directory: app
+      - run: npm run check && npm test
+        working-directory: app
+      - run: python3 -m pip install numpy==1.26.4
+      - run: python3 -m unittest discover -s core-pipeline/tests -v
+      - run: python3 scripts/check-docs.py && python3 scripts/audit-publication.py
+      - run: docker compose config --quiet

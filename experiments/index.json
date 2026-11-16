@@ -1,0 +1,1294 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-16",
+  "scope": "143 project-authored research/result records; overlapping reports, not 143 unique experiments. Historical links to excluded local material are explicit text references.",
+  "records": [
+    {
+      "id": "evidence-001",
+      "title": "Investigation \u2014 Coordinate composition and covariance controls",
+      "source": "archive/2026-10-19/brush-guided-mosca-registration/01-transform-controls/investigation.md",
+      "originalSha256": "d264f492f4254be5114909c5a398f02a1e498fc9ce6b852a26c9fddbfaf00132",
+      "document": "001-archive-2026-10-19-brush-guided-mosca-registration-01-transform-controls-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-002",
+      "title": "Result",
+      "source": "archive/2026-10-19/brush-guided-mosca-registration/01-transform-controls/result.md",
+      "originalSha256": "628b505ae90128f0514d26e02dd95209179b9bc9cdfb615be26b3b94c4295ca9",
+      "document": "002-archive-2026-10-19-brush-guided-mosca-registration-01-transform-controls-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-003",
+      "title": "Investigation \u2014 Independent inputs, masks and per-video bridges",
+      "source": "archive/2026-10-19/brush-guided-mosca-registration/02-inputs-and-bridges/investigation.md",
+      "originalSha256": "bcdff35863d574c143b352101750b19839fa23a758f9f966220d5fe84bbb8c17",
+      "document": "003-archive-2026-10-19-brush-guided-mosca-registration-02-inputs-and-bridges-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-004",
+      "title": "Result",
+      "source": "archive/2026-10-19/brush-guided-mosca-registration/02-inputs-and-bridges/result.md",
+      "originalSha256": "bb25c1f2176198486b7451ae4e5ed1b4f176d77ed43da49bb9a3db1bf948871b",
+      "document": "004-archive-2026-10-19-brush-guided-mosca-registration-02-inputs-and-bridges-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-005",
+      "title": "Investigation \u2014 Build and inspect independent Brush backgrounds",
+      "source": "archive/2026-10-19/brush-guided-mosca-registration/03-independent-brush-fits/investigation.md",
+      "originalSha256": "d816d462903f2609fadfbc9bbca491b6b0b736385982484452deb578ca272424",
+      "document": "005-archive-2026-10-19-brush-guided-mosca-registration-03-independent-brush-fits-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-006",
+      "title": "Result",
+      "source": "archive/2026-10-19/brush-guided-mosca-registration/03-independent-brush-fits/result.md",
+      "originalSha256": "b3aa1c2013359e1731a8634c54b97d0f45b6f7207b897fef071dbc46a7cb12f8",
+      "document": "006-archive-2026-10-19-brush-guided-mosca-registration-03-independent-brush-fits-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-007",
+      "title": "Investigation \u2014 Known-copy, overlap and ambiguity controls",
+      "source": "archive/2026-10-19/brush-guided-mosca-registration/04-brush-registration-controls/investigation.md",
+      "originalSha256": "ebf42b846130caff8ff2af4d524d0159ab47a5732c173d7a11d71bd3b3e3374f",
+      "document": "007-archive-2026-10-19-brush-guided-mosca-registration-04-brush-registration-controls-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-008",
+      "title": "Result",
+      "source": "archive/2026-10-19/brush-guided-mosca-registration/04-brush-registration-controls/result.md",
+      "originalSha256": "0d5cd46061da4230f101eefa2a2f242af9cec6411ed57a77e6bfb5ecd66ef4c9",
+      "document": "008-archive-2026-10-19-brush-guided-mosca-registration-04-brush-registration-controls-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-009",
+      "title": "Investigation \u2014 Blind registration of the two Brush proxies",
+      "source": "archive/2026-10-19/brush-guided-mosca-registration/05-blind-brush-registration/investigation.md",
+      "originalSha256": "b6787ecdbe62299064ef95131e07195d151d00c311ac4dd15b7142e8a09010ca",
+      "document": "009-archive-2026-10-19-brush-guided-mosca-registration-05-blind-brush-registration-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-010",
+      "title": "Result",
+      "source": "archive/2026-10-19/brush-guided-mosca-registration/05-blind-brush-registration/result.md",
+      "originalSha256": "0d5cd46061da4230f101eefa2a2f242af9cec6411ed57a77e6bfb5ecd66ef4c9",
+      "document": "010-archive-2026-10-19-brush-guided-mosca-registration-05-blind-brush-registration-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-011",
+      "title": "Investigation \u2014 Transfer the Brush alignment to unchanged full MoSca",
+      "source": "archive/2026-10-19/brush-guided-mosca-registration/06-transfer-to-mosca/investigation.md",
+      "originalSha256": "2f2b09e8cb76fe15ad2699a9f24efe20f83564d07dac1529f7c3ea99e0ddeb7c",
+      "document": "011-archive-2026-10-19-brush-guided-mosca-registration-06-transfer-to-mosca-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-012",
+      "title": "Result",
+      "source": "archive/2026-10-19/brush-guided-mosca-registration/06-transfer-to-mosca/result.md",
+      "originalSha256": "0d5cd46061da4230f101eefa2a2f242af9cec6411ed57a77e6bfb5ecd66ef4c9",
+      "document": "012-archive-2026-10-19-brush-guided-mosca-registration-06-transfer-to-mosca-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-013",
+      "title": "Investigation \u2014 Separate masking effects from the Brush proxy effect",
+      "source": "archive/2026-10-19/brush-guided-mosca-registration/07-input-ablation/investigation.md",
+      "originalSha256": "8ba2cb0a9b7d57bdc0a4e74583c6151bb637eea47bac691dbc4072fe706d166e",
+      "document": "013-archive-2026-10-19-brush-guided-mosca-registration-07-input-ablation-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-014",
+      "title": "Result",
+      "source": "archive/2026-10-19/brush-guided-mosca-registration/07-input-ablation/result.md",
+      "originalSha256": "0d5cd46061da4230f101eefa2a2f242af9cec6411ed57a77e6bfb5ecd66ef4c9",
+      "document": "014-archive-2026-10-19-brush-guided-mosca-registration-07-input-ablation-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-015",
+      "title": "Investigation \u2014 Constant-transform timeline and viewer integration",
+      "source": "archive/2026-10-19/brush-guided-mosca-registration/08-timeline-and-integration/investigation.md",
+      "originalSha256": "0c62fde88e3c381136532efe3d24bb766a8f6543052ff29077efabeacebc4f97",
+      "document": "015-archive-2026-10-19-brush-guided-mosca-registration-08-timeline-and-integration-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-016",
+      "title": "Result",
+      "source": "archive/2026-10-19/brush-guided-mosca-registration/08-timeline-and-integration/result.md",
+      "originalSha256": "0d5cd46061da4230f101eefa2a2f242af9cec6411ed57a77e6bfb5ecd66ef4c9",
+      "document": "016-archive-2026-10-19-brush-guided-mosca-registration-08-timeline-and-integration-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-017",
+      "title": "Investigation \u2014 19 October 2026",
+      "source": "archive/2026-10-19/brush-guided-mosca-registration/investigation.md",
+      "originalSha256": "f4ef4e14c032eba7c0b9346903092098c4881e00f8a645e1984dae20723971b3",
+      "document": "017-archive-2026-10-19-brush-guided-mosca-registration-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-018",
+      "title": "Controlled seed-retention result",
+      "source": "archive/2026-10-19/brush-guided-mosca-registration/proxy-seed-retention/result.md",
+      "originalSha256": "d1e30c3be37febd58cb8097c7985da090adbcf12c697ad511db7f60a3497da09",
+      "document": "018-archive-2026-10-19-brush-guided-mosca-registration-proxy-seed-retention-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-019",
+      "title": "Execution result \u2014 19 October 2026",
+      "source": "archive/2026-10-19/brush-guided-mosca-registration/result.md",
+      "originalSha256": "6d3e4c18fef26f91f6c6e38024e00e409e7820b44988b259d70af09ba38d2865",
+      "document": "019-archive-2026-10-19-brush-guided-mosca-registration-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-020",
+      "title": "Put the strongest compatible pieces together",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/assembled-hybrid/investigation.md",
+      "originalSha256": "0fbb62dc87018d6656de821583be501b6be877f5d7bac148ba25e969180a5487",
+      "document": "020-archive-2026-10-19-brush-mosca-multiphone-assembled-hybrid-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-021",
+      "title": "Assembled multi-view hybrid: result",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/assembled-hybrid/result.md",
+      "originalSha256": "3a03f421c7e752d3828cc8e0da0bbd2792404fd87629f6bc016525af3c81dab4",
+      "document": "021-archive-2026-10-19-brush-mosca-multiphone-assembled-hybrid-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-022",
+      "title": "Background seed filtering",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/background-seeds/investigation.md",
+      "originalSha256": "329000ce298a9ffc8674128fa38bcf287a980ceefaeb31524a1c83a7e64893c3",
+      "document": "022-archive-2026-10-19-brush-mosca-multiphone-background-seeds-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-023",
+      "title": "Background seed and optimization results",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/background-seeds/result.md",
+      "originalSha256": "31e7c5d3944eee283bcd635d88ee7767f086824f980253e91e20abd87622cce5",
+      "document": "023-archive-2026-10-19-brush-mosca-multiphone-background-seeds-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-024",
+      "title": "Calibrated multi-view feasibility trial",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/calibrated-multiview/investigation.md",
+      "originalSha256": "c1c6e90b353afadefe747894728f284a8ca8c98b7edfed5f34a66f2816864f18",
+      "document": "024-archive-2026-10-19-brush-mosca-multiphone-calibrated-multiview-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-025",
+      "title": "First calibrated two-camera refinement: result",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/calibrated-multiview/result.md",
+      "originalSha256": "db91989241066404ef9f0bb29805ce776c14bd39404c142c170f25556924f48a",
+      "document": "025-archive-2026-10-19-brush-mosca-multiphone-calibrated-multiview-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-026",
+      "title": "Selected baseline and development path",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/decision.md",
+      "originalSha256": "b444645eda5742250542d67d6286c5c96bf38c73a1a87848b2f2f47cbb8e75a2",
+      "document": "026-archive-2026-10-19-brush-mosca-multiphone-decision-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-027",
+      "title": "Seven scene reconstruction batch",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/investigation.md",
+      "originalSha256": "9b30edd467217dbd7dad059fb43e5219082ffe7a4936ad9ed57a11cfe04d27d9",
+      "document": "027-archive-2026-10-19-brush-mosca-multiphone-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-028",
+      "title": "Verify phone SLAM priors and shared geometry",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/pose-priors/investigation.md",
+      "originalSha256": "ae75eae7ddaf300a59ce37c112d7633ccca33051aca93f9ef62cb92de32f478f",
+      "document": "028-archive-2026-10-19-brush-mosca-multiphone-pose-priors-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-029",
+      "title": "Phone-pose priors: verified, not promoted",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/pose-priors/result.md",
+      "originalSha256": "d5017737f0aa6590b9f0ef2225debd92e72f95cdb00b38bfb37daf2c76252f9f",
+      "document": "029-archive-2026-10-19-brush-mosca-multiphone-pose-priors-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-030",
+      "title": "Seven-scene test results",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/result.md",
+      "originalSha256": "bb0a40cba3e8f16fdf6468c71ec9cab312e1543733207c44bf2262e198b16cb8",
+      "document": "030-archive-2026-10-19-brush-mosca-multiphone-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-031",
+      "title": "Shared-coordinate recovery trial",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/shared-coordinates/investigation.md",
+      "originalSha256": "ebc9458f16578552565f22b5bfa2374e38cabbc4e445c11c0ef6660d4dcc224b",
+      "document": "031-archive-2026-10-19-brush-mosca-multiphone-shared-coordinates-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-032",
+      "title": "Shared-coordinate recovery: first tests",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/shared-coordinates/result.md",
+      "originalSha256": "8716b215d2a231c309518ea91c30fea52ae8eeb2f0aa34bb2691e6fa8dcea217",
+      "document": "032-archive-2026-10-19-brush-mosca-multiphone-shared-coordinates-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-033",
+      "title": "Camera13 input audit and fixed-setting pair comparison",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/shared-person/camera13-investigation.md",
+      "originalSha256": "35a72eedd02b8c32aad106a60ac20f10152f3294069ba34366ac0410066d75ed",
+      "document": "033-archive-2026-10-19-brush-mosca-multiphone-shared-person-camera13-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-034",
+      "title": "Camera 13 coverage audit and pair result",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/shared-person/camera13-result.md",
+      "originalSha256": "e5478bd5ddae69be4086d36e28173a4943f7d7ebfbfc80684255dc2470610ca0",
+      "document": "034-archive-2026-10-19-brush-mosca-multiphone-shared-person-camera13-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-035",
+      "title": "Dense foreground initialization: calibrated plane sweep",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/shared-person/dense-investigation.md",
+      "originalSha256": "c086d180b5bbd4dfae2ed38c07c6967a265ae2d3073601d11cdb28910941769a",
+      "document": "035-archive-2026-10-19-brush-mosca-multiphone-shared-person-dense-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-036",
+      "title": "Dense foreground initialization result",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/shared-person/dense-result.md",
+      "originalSha256": "eaec4769b67161465bb076b672077fc8af37bfb1dc9030e472ea21d4c3da210b",
+      "document": "036-archive-2026-10-19-brush-mosca-multiphone-shared-person-dense-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-037",
+      "title": "Shared-person initialization: controlled architecture comparison",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/shared-person/investigation.md",
+      "originalSha256": "44e6db3bd3a080de4c49f14d5c44da20e1507906265ce7917443209303d550ba",
+      "document": "037-archive-2026-10-19-brush-mosca-multiphone-shared-person-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-038",
+      "title": "Source-detail audit \u2014 19 October 2026",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/shared-person/landmark-investigation.md",
+      "originalSha256": "219a9ebfa59f118488ed711dec616054bada28d698414bc3d2fdeaea9c5780c3",
+      "document": "038-archive-2026-10-19-brush-mosca-multiphone-shared-person-landmark-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-039",
+      "title": "MASt3R descriptors with calibrated triangulation",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/shared-person/mast3r-investigation.md",
+      "originalSha256": "9103ae6b92201e4ef7315c92538d3efefaaf5d93321ca1cc3d1b06ef85871d50",
+      "document": "039-archive-2026-10-19-brush-mosca-multiphone-shared-person-mast3r-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-040",
+      "title": "Learned matching trial: working inference, restrictive confidence policy",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/shared-person/mast3r-result.md",
+      "originalSha256": "9665f6d9590d5329841804dfff7767bb0008dba35cf471b748ff6ebb1a9aba9a",
+      "document": "040-archive-2026-10-19-brush-mosca-multiphone-shared-person-mast3r-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-041",
+      "title": "Single-instant foreground readiness result",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/shared-person/result.md",
+      "originalSha256": "f2e9b9fe6d7bdaa7763a195630bee94cde0bde28c166640dc8372b65061d1a31",
+      "document": "041-archive-2026-10-19-brush-mosca-multiphone-shared-person-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-042",
+      "title": "One targeted21/02 pair \u2014 19 October 2026",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/shared-person/targeted-feet-investigation.md",
+      "originalSha256": "951f4bb9b553f798f542c9bc754046fdfd863dd9176476c28a0646299055be36",
+      "document": "042-archive-2026-10-19-brush-mosca-multiphone-shared-person-targeted-feet-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-043",
+      "title": "Native detail audit and targeted shoe check \u2014 19 October 2026",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/shared-person/targeted-feet-result.md",
+      "originalSha256": "64e118c9f5ccdf46079274c650cb0210aa9466674ef758f6bb5c32818163396d",
+      "document": "043-archive-2026-10-19-brush-mosca-multiphone-shared-person-targeted-feet-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-044",
+      "title": "Seen three-view acceptance check \u2014 19 October 2026",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/shared-person/threeview-investigation.md",
+      "originalSha256": "dcf2ab9dcaa93af375bd509abc968f58caa061bcaf4e47e1d56433c934fc71d3",
+      "document": "044-archive-2026-10-19-brush-mosca-multiphone-shared-person-threeview-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-045",
+      "title": "Seen three-view check \u2014 19 October 2026",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/shared-person/threeview-result.md",
+      "originalSha256": "29280999b80b386f1fffc1999d31555e553b7e215b5c9ebea2d9550fc6b6c258",
+      "document": "045-archive-2026-10-19-brush-mosca-multiphone-shared-person-threeview-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-046",
+      "title": "Whole-person layer follow-up",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/whole-person-layer/investigation.md",
+      "originalSha256": "16b1c535de8761a0f64954ec738bce61168482b3273c1bc6d1bcd9b7a3a45675",
+      "document": "046-archive-2026-10-19-brush-mosca-multiphone-whole-person-layer-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-047",
+      "title": "Complete-person layer: result",
+      "source": "archive/2026-10-19/brush-mosca-multiphone/whole-person-layer/result.md",
+      "originalSha256": "f8fb41a4d790e4b66430b764f440de41aedb2d0124ef707232661bce55bb3527",
+      "document": "047-archive-2026-10-19-brush-mosca-multiphone-whole-person-layer-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-048",
+      "title": "Reusable components and first experiments",
+      "source": "archive/2026-10-19/docs/reuse-research.md",
+      "originalSha256": "966fbdd8077678d978881cd985848d3fe62996f3eab6f71d7483976dcdbcbc2d",
+      "document": "048-archive-2026-10-19-docs-reuse-research-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-049",
+      "title": "Fresh video reconstruction and learned alignment",
+      "source": "archive/2026-10-19/fresh-video-mosca-alignment/investigation.md",
+      "originalSha256": "2ccfa3d7b119c5cd7b7c7c5e8519bf6f1b175188d0a56eda25f60d4e85274a72",
+      "document": "049-archive-2026-10-19-fresh-video-mosca-alignment-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-050",
+      "title": "Fresh original-video batch \u2014 19 October 2026",
+      "source": "archive/2026-10-19/fresh-video-mosca-alignment/result.md",
+      "originalSha256": "6b82220a37beef3a619c980da415bb267c9fe40a070714d8eff6e7037ae75bf1",
+      "document": "050-archive-2026-10-19-fresh-video-mosca-alignment-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-051",
+      "title": "Matched saved Guildhall comparison \u2014 19 October 2026",
+      "source": "archive/2026-10-19/guildhall-comparison/investigation.md",
+      "originalSha256": "004ba7f370a3b6308dc3744c3fa7a6e02887ce651d2c629b3996dfb63f0ccb6f",
+      "document": "051-archive-2026-10-19-guildhall-comparison-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-052",
+      "title": "Full Guildhall procedure and cost basis",
+      "source": "archive/2026-10-19/guildhall-full-video/investigation.md",
+      "originalSha256": "13102668772dc25e1ea73862cb2e84d14611a4266f08677cb85902b5634dc605",
+      "document": "052-archive-2026-10-19-guildhall-full-video-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-053",
+      "title": "Full Guildhall result \u2014 19 October 2026",
+      "source": "archive/2026-10-19/guildhall-full-video/result.md",
+      "originalSha256": "965637d3f27c5184fa907436d44d4f91e71cd466c316064f6b0ae04bccb63b6d",
+      "document": "053-archive-2026-10-19-guildhall-full-video-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-054",
+      "title": "Late-upload Gaussian enrichment \u2014 19 October 2026",
+      "source": "archive/2026-10-19/incremental-scene-fusion/investigation.md",
+      "originalSha256": "615e1bf6738147180fed9796d1f6b34ecc013061a56978c479b5e217d2f37522",
+      "document": "054-archive-2026-10-19-incremental-scene-fusion-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-055",
+      "title": "First late-upload enrichment result \u2014 19 October 2026",
+      "source": "archive/2026-10-19/incremental-scene-fusion/result.md",
+      "originalSha256": "97e0989dc13d062a3d23b39719f5f109259e4d4a3faa80b93ca88f66c9c64448",
+      "document": "055-archive-2026-10-19-incremental-scene-fusion-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-056",
+      "title": "Independent full-MoSca fusion \u2014 19 October 2026",
+      "source": "archive/2026-10-19/independent-mosca-fusion/investigation.md",
+      "originalSha256": "b3ac58bd4cacff041df4cf9c443b0ba35cec7862a417fcdee75e37aafcd90f31",
+      "document": "056-archive-2026-10-19-independent-mosca-fusion-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-057",
+      "title": "One scene-balanced registration diagnostic \u2014 19 October 2026",
+      "source": "archive/2026-10-19/independent-mosca-fusion/registration/balanced-investigation.md",
+      "originalSha256": "001236d0ac48f0d886ec4044c3fc4f3c9f5139072c8ae21333740e63d79f9414",
+      "document": "057-archive-2026-10-19-independent-mosca-fusion-registration-balanced-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-058",
+      "title": "Direct background registration \u2014 19 October 2026",
+      "source": "archive/2026-10-19/independent-mosca-fusion/registration/investigation.md",
+      "originalSha256": "f45106d54a7c106b6a8671a1882924b7d00ba43beb9d2fb488b2795c4a3df246",
+      "document": "058-archive-2026-10-19-independent-mosca-fusion-registration-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-059",
+      "title": "Registration result \u2014 19 October 2026",
+      "source": "archive/2026-10-19/independent-mosca-fusion/registration/result.md",
+      "originalSha256": "2f2c0f48595014afda38cfb2b4f6fcf09fc9c222ca840be4ef55aec34428eb9a",
+      "document": "059-archive-2026-10-19-independent-mosca-fusion-registration-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-060",
+      "title": "Two independent full MoSca fits, then raw splat fusion",
+      "source": "archive/2026-10-19/independent-mosca-fusion/result.md",
+      "originalSha256": "7cf30b7fb0ce2cbb63a5a0b0b1955b1feb5be7d33145e84963a1f352dd87df5f",
+      "document": "060-archive-2026-10-19-independent-mosca-fusion-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-061",
+      "title": "GaussReg implementation investigation",
+      "source": "archive/2026-10-19/learned-splat-registration/gaussreg/investigation.md",
+      "originalSha256": "2fa212abc9a5020368b6f5f93ef8e9b21ec5cf1dca9f5073a0ad24ea6abfacd8",
+      "document": "061-archive-2026-10-19-learned-splat-registration-gaussreg-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-062",
+      "title": "GaussReg coarse result",
+      "source": "archive/2026-10-19/learned-splat-registration/gaussreg/result.md",
+      "originalSha256": "ddf3e9dd2ae02e25b4712ebde111ffe9e13d15b21d4480c959933742b19f60af",
+      "document": "062-archive-2026-10-19-learned-splat-registration-gaussreg-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-063",
+      "title": "Investigation \u2014 19 October 2026",
+      "source": "archive/2026-10-19/learned-splat-registration/investigation.md",
+      "originalSha256": "5f2202ae0a625a92259e214907873d9495b7dc901c8ab17c0c5b11c5b6c53348",
+      "document": "063-archive-2026-10-19-learned-splat-registration-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-064",
+      "title": "Learned splat registration results \u2014 19 October 2026",
+      "source": "archive/2026-10-19/learned-splat-registration/result.md",
+      "originalSha256": "2055d061a9c4392ad4714cc59199105f1186e420a432ffad5bdd2ad33e43464c",
+      "document": "064-archive-2026-10-19-learned-splat-registration-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-065",
+      "title": "splatreg / BUFFER-X implementation investigation",
+      "source": "archive/2026-10-19/learned-splat-registration/splatreg-bufferx/investigation.md",
+      "originalSha256": "3d51f1f73d2cb2bdd7b60f09aef63c976ee6309db285c6b6df681dd49f8e7a37",
+      "document": "065-archive-2026-10-19-learned-splat-registration-splatreg-bufferx-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-066",
+      "title": "splatreg + BUFFER-X result",
+      "source": "archive/2026-10-19/learned-splat-registration/splatreg-bufferx/result.md",
+      "originalSha256": "ec9ebe630c88064ff7b2b5c7c5b9e3471466f667164965325d717e2a80deefcc",
+      "document": "066-archive-2026-10-19-learned-splat-registration-splatreg-bufferx-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-067",
+      "title": "Learned background registration result \u2014 19 October 2026",
+      "source": "archive/2026-10-19/mosca-observation-registration/learned-bufferx/result.md",
+      "originalSha256": "a94ce365cc1465bc5ffb8bb579ba77f267c06a22c7e1ca55a918debaa4346b7c",
+      "document": "067-archive-2026-10-19-mosca-observation-registration-learned-bufferx-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-068",
+      "title": "Result \u2014 19 October 2026",
+      "source": "archive/2026-10-19/mosca-observation-registration/result.md",
+      "originalSha256": "0b2d9b55d2055d9ae262e74841c0b9b281294148b08a82dd234a2cb03353558a",
+      "document": "068-archive-2026-10-19-mosca-observation-registration-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-069",
+      "title": "Brush + MoSca investigation",
+      "source": "archive/2026-10-19/pipeline/brush-mosca/investigation.md",
+      "originalSha256": "210667518e68a85176a3dadbe551c87e37f5fee9d2b3f21f1616e0e235bc6b07",
+      "document": "069-archive-2026-10-19-pipeline-brush-mosca-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-070",
+      "title": "Visitor-mask follow-up",
+      "source": "archive/2026-10-19/pipeline/brush-mosca/person-masks-investigation.md",
+      "originalSha256": "1fd8dc1782f457093a2ab4a70b29479bfdaec0c73b47da4a3f4b16d80cff2ab1",
+      "document": "070-archive-2026-10-19-pipeline-brush-mosca-person-masks-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-071",
+      "title": "Visitor-mask follow-up result",
+      "source": "archive/2026-10-19/pipeline/brush-mosca/person-masks-result.md",
+      "originalSha256": "eb6b4b1c42e722ff7f6f9c826ece273cc19a965f13cc29e5d14ec3b0f193a9a7",
+      "document": "071-archive-2026-10-19-pipeline-brush-mosca-person-masks-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-072",
+      "title": "H1 result: Brush background + reused MoSca motion",
+      "source": "archive/2026-10-19/pipeline/brush-mosca/result.md",
+      "originalSha256": "f87cf3478ef42a1c42c1dd29c79fb2b79d897f8b994fe4906841a2769e6e8bfb",
+      "document": "072-archive-2026-10-19-pipeline-brush-mosca-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-073",
+      "title": "Brush investigation: a multi-view static scene from video",
+      "source": "archive/2026-10-19/pipeline/brush-static/investigation.md",
+      "originalSha256": "af7ee03387ec028633411c3788dcce55a509143b34398efc1ee86b384b8ec9e8",
+      "document": "073-archive-2026-10-19-pipeline-brush-static-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-074",
+      "title": "Brush first trial: result",
+      "source": "archive/2026-10-19/pipeline/brush-static/result.md",
+      "originalSha256": "3e83d2e0b8aa1ada33cceb2e00a6d229e8ceb521cfaa1afd1198563f49c2b002",
+      "document": "074-archive-2026-10-19-pipeline-brush-static-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-075",
+      "title": "Milestone 2: independent time and viewpoint",
+      "source": "archive/2026-10-19/pipeline/dynamic-playback/investigation.md",
+      "originalSha256": "defad4ed79c87c4e420ab2536aa4aa16d23ec5f491e32769baad4938a417e51f",
+      "document": "075-archive-2026-10-19-pipeline-dynamic-playback-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-076",
+      "title": "Milestone 2 result: independent time and viewpoint",
+      "source": "archive/2026-10-19/pipeline/dynamic-playback/result.md",
+      "originalSha256": "9c5e859bdff0308576011b6e286b01728b2d38854c439f2b6ca3beef906298aa",
+      "document": "076-archive-2026-10-19-pipeline-dynamic-playback-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-077",
+      "title": "MoSca investigation and bounded first trial",
+      "source": "archive/2026-10-19/pipeline/mosca-dynamic/investigation.md",
+      "originalSha256": "cdae25ba89522fed0aae923a2da03428d2191770ae424ee793c53e56f3f76727",
+      "document": "077-archive-2026-10-19-pipeline-mosca-dynamic-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-078",
+      "title": "MoSca bounded trial result",
+      "source": "archive/2026-10-19/pipeline/mosca-dynamic/result.md",
+      "originalSha256": "aa7d5f917a594f72b983aa77b375f156e44e808d20cc5ce1cdf4aa1a91d3df38",
+      "document": "078-archive-2026-10-19-pipeline-mosca-dynamic-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-079",
+      "title": "Milestone 3 investigation: reconstruct a short event from our video",
+      "source": "archive/2026-10-19/pipeline/rigs-dynamic/investigation.md",
+      "originalSha256": "ed1ee8e876188c809979a970e44f6a86493dcffad261983b1b15ac04c59920fd",
+      "document": "079-archive-2026-10-19-pipeline-rigs-dynamic-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-080",
+      "title": "SHARP frozen-frame investigation and execution plan",
+      "source": "archive/2026-10-19/pipeline/sharp-frozen/investigation.md",
+      "originalSha256": "793c751c5014621d52b65b007536b81e222b2bf4da7654ee1c1afb1956de41d6",
+      "document": "080-archive-2026-10-19-pipeline-sharp-frozen-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-081",
+      "title": "A40 compatibility trial",
+      "source": "archive/2026-10-19/runpod/investigation.md",
+      "originalSha256": "10d5fbcfb9c84252ee29846e0dc491612d16d455d19b9356e43205b02a00a4b4",
+      "document": "081-archive-2026-10-19-runpod-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-082",
+      "title": "Runpod A40 compatibility result",
+      "source": "archive/2026-10-19/runpod/result.md",
+      "originalSha256": "605d0b8322be8845f074690372189c4dfb1a4ed2d464d56870f865a77ea6fa00",
+      "document": "082-archive-2026-10-19-runpod-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-083",
+      "title": "Separate direct-edge control \u2014 scoped after sparse matcher readiness failure",
+      "source": "archive/2026-10-19/splat-edge-registration/01-known-transform/dense-investigation.md",
+      "originalSha256": "48a17e8fc82d661ff10d0f8c4a3d0d2542aac3c73eab16ef5be1fb90e8429ef2",
+      "document": "083-archive-2026-10-19-splat-edge-registration-01-known-transform-dense-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-084",
+      "title": "Trial preparation: Can edges recover a known transform?",
+      "source": "archive/2026-10-19/splat-edge-registration/01-known-transform/investigation.md",
+      "originalSha256": "f1e0cc5ba39957560f8f0b659ca0d66637570e0c171281e8f5c46f13de5f1931",
+      "document": "084-archive-2026-10-19-splat-edge-registration-01-known-transform-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-085",
+      "title": "Result",
+      "source": "archive/2026-10-19/splat-edge-registration/01-known-transform/result.md",
+      "originalSha256": "01516f72dbb8fca961c804121fedfe445af3b450a7d3f6b857346c3184f65f71",
+      "document": "085-archive-2026-10-19-splat-edge-registration-01-known-transform-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-086",
+      "title": "Trial preparation: Are there credible matching edges in the independent fits?",
+      "source": "archive/2026-10-19/splat-edge-registration/02-edge-evidence/investigation.md",
+      "originalSha256": "e25894c54af4fe3991e0097616aefb9068472565596cce1a22bd2966553da3d5",
+      "document": "086-archive-2026-10-19-splat-edge-registration-02-edge-evidence-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-087",
+      "title": "Native-resolution diagnostic, scoped before execution",
+      "source": "archive/2026-10-19/splat-edge-registration/02-edge-evidence/native-resolution-investigation.md",
+      "originalSha256": "fde23a87bfafb2490bb419446cfe676bc1ce6e913704d1d28da30452d2f3c968",
+      "document": "087-archive-2026-10-19-splat-edge-registration-02-edge-evidence-native-resolution-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-088",
+      "title": "Result",
+      "source": "archive/2026-10-19/splat-edge-registration/02-edge-evidence/result.md",
+      "originalSha256": "1ef4ddcab68b6a27660dcaab80949470a29a8d40f85f7b80af97cdc63d7f333e",
+      "document": "088-archive-2026-10-19-splat-edge-registration-02-edge-evidence-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-089",
+      "title": "Same-threshold temporal edge evidence audit \u2014 scoped before any real fit",
+      "source": "archive/2026-10-19/splat-edge-registration/02-edge-evidence/temporal-audit-investigation.md",
+      "originalSha256": "c586721eb35c2f730e744b03a94bd439f2b1d689e678043fcdca4f390063ba0a",
+      "document": "089-archive-2026-10-19-splat-edge-registration-02-edge-evidence-temporal-audit-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-090",
+      "title": "Trial preparation: Can edge matching improve the whole-scene alignment?",
+      "source": "archive/2026-10-19/splat-edge-registration/03-global-edge-alignment/investigation.md",
+      "originalSha256": "298e0b0550427ebff413b132fb14e3309fba267d114d2e5e2190d07c50980347",
+      "document": "090-archive-2026-10-19-splat-edge-registration-03-global-edge-alignment-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-091",
+      "title": "Result",
+      "source": "archive/2026-10-19/splat-edge-registration/03-global-edge-alignment/result.md",
+      "originalSha256": "8646cf7ba6303158bc1a9006a36c330bc4c17e0609ee9f48d828d7d60bf8df41",
+      "document": "091-archive-2026-10-19-splat-edge-registration-03-global-edge-alignment-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-092",
+      "title": "Trial preparation: Is the remaining mismatch object placement or internal shape?",
+      "source": "archive/2026-10-19/splat-edge-registration/04-person-separate/investigation.md",
+      "originalSha256": "d88609f0f5296d8eb814dc74efee5368f1d6476513c12e8cc6039d3ce14a8e84",
+      "document": "092-archive-2026-10-19-splat-edge-registration-04-person-separate-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-093",
+      "title": "Result",
+      "source": "archive/2026-10-19/splat-edge-registration/04-person-separate/result.md",
+      "originalSha256": "0cd3964debcc9b74ee71ab0dbaea7e62bf7ce6116e3b404b9bc2158bdee8d969",
+      "document": "093-archive-2026-10-19-splat-edge-registration-04-person-separate-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-094",
+      "title": "Trial preparation: Does the method detect a misleading one-view match?",
+      "source": "archive/2026-10-19/splat-edge-registration/05-viewpoint-ambiguity/investigation.md",
+      "originalSha256": "c3efb46f5d5985c8bcd82053c3ae806e5944a8f67c07b51255c7223379ca9f23",
+      "document": "094-archive-2026-10-19-splat-edge-registration-05-viewpoint-ambiguity-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-095",
+      "title": "Result",
+      "source": "archive/2026-10-19/splat-edge-registration/05-viewpoint-ambiguity/result.md",
+      "originalSha256": "a7e9052592a18d7b9771b04cedbe14ab196e543a6cd9d3a86608925f9aec3405",
+      "document": "095-archive-2026-10-19-splat-edge-registration-05-viewpoint-ambiguity-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-096",
+      "title": "Trial preparation: Will cropping, repetition and lighting create false matches?",
+      "source": "archive/2026-10-19/splat-edge-registration/06-overlap-and-false-edges/investigation.md",
+      "originalSha256": "60667b8244b5407c6c126f6f14f756a39efbe4b87aafdef6432673aa408a4aa1",
+      "document": "096-archive-2026-10-19-splat-edge-registration-06-overlap-and-false-edges-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-097",
+      "title": "Result",
+      "source": "archive/2026-10-19/splat-edge-registration/06-overlap-and-false-edges/result.md",
+      "originalSha256": "deabf2067327700e7e950e3128cd1997003525ec2198f4c909f82e44e8e6c5b9",
+      "document": "097-archive-2026-10-19-splat-edge-registration-06-overlap-and-false-edges-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-098",
+      "title": "Trial preparation: Does the alignment remain valid through movement?",
+      "source": "archive/2026-10-19/splat-edge-registration/07-motion-consistency/investigation.md",
+      "originalSha256": "3fd3e967faddf72066909fee6310e58c9e2dc84db24b0304e19f0292ef06831f",
+      "document": "098-archive-2026-10-19-splat-edge-registration-07-motion-consistency-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-099",
+      "title": "Result",
+      "source": "archive/2026-10-19/splat-edge-registration/07-motion-consistency/result.md",
+      "originalSha256": "7a91811e1586f45d85d4ac1ba5dcb0c74a4eb14a8b4dee6643fcb9e71a2b1e46",
+      "document": "099-archive-2026-10-19-splat-edge-registration-07-motion-consistency-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-100",
+      "title": "Trial preparation: Does edge registration help the actual merge workflow?",
+      "source": "archive/2026-10-19/splat-edge-registration/08-integration/investigation.md",
+      "originalSha256": "8074a7ec33adf935f860855d81789fbba0aa6a3100dd6aac8186f2f85fa7a080",
+      "document": "100-archive-2026-10-19-splat-edge-registration-08-integration-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-101",
+      "title": "Result",
+      "source": "archive/2026-10-19/splat-edge-registration/08-integration/result.md",
+      "originalSha256": "229d65642e92d0354678a1b3b9bf5f521122a56d97083f4fe0de36fc0e8f1be5",
+      "document": "101-archive-2026-10-19-splat-edge-registration-08-integration-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-102",
+      "title": "Edge registration investigation and proposed bounds \u2014 19 October 2026",
+      "source": "archive/2026-10-19/splat-edge-registration/investigation.md",
+      "originalSha256": "894fe9f0f27ebd71cd9284035807704aa82d8306781ce077a545932526781907",
+      "document": "102-archive-2026-10-19-splat-edge-registration-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-103",
+      "title": "Edge registration results \u2014 19 October 2026",
+      "source": "archive/2026-10-19/splat-edge-registration/result.md",
+      "originalSha256": "df5e9001b5ca0aa318bcb62680ea8db9a1d0707317ae62bffba66c0de227d113",
+      "document": "103-archive-2026-10-19-splat-edge-registration-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-104",
+      "title": "Integrated cached-upload prototype \u2014 19 October 2026",
+      "source": "archive/2026-10-19/splat-fusion-prototype/investigation.md",
+      "originalSha256": "2231b201788b960ce67f2589dd710ed9076acf61229be1b879b12be1f9b0c717",
+      "document": "104-archive-2026-10-19-splat-fusion-prototype-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-105",
+      "title": "Integrated prototype result \u2014 19 October 2026",
+      "source": "archive/2026-10-19/splat-fusion-prototype/result.md",
+      "originalSha256": "746abe55ac96bb4a1a74693ef30e134b27bf342c92eebf7d7ce45251723830a1",
+      "document": "105-archive-2026-10-19-splat-fusion-prototype-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-106",
+      "title": "Known-transform recovery \u2014 frozen procedure, 19 October 2026",
+      "source": "archive/2026-10-19/splat-fusion-validation/01-export-transforms/investigation.md",
+      "originalSha256": "acafeea9465aa4f6c55aabbde55955f34440d596626916d3e1ce9b3d84600753",
+      "document": "106-archive-2026-10-19-splat-fusion-validation-01-export-transforms-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-107",
+      "title": "Result",
+      "source": "archive/2026-10-19/splat-fusion-validation/01-export-transforms/result.md",
+      "originalSha256": "d5f1b24d2f1f634ebd5c68e307596ac6d258f83930d067d502a56b1bee6f43bc",
+      "document": "107-archive-2026-10-19-splat-fusion-validation-01-export-transforms-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-108",
+      "title": "Independent-scene registration \u2014 frozen procedure, 19 October 2026",
+      "source": "archive/2026-10-19/splat-fusion-validation/02-independent-registration/investigation.md",
+      "originalSha256": "0a13f975fc1b8b8e60176615686a5e1aefd022eb9906e6bf6df99e914dd64970",
+      "document": "108-archive-2026-10-19-splat-fusion-validation-02-independent-registration-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-109",
+      "title": "Result",
+      "source": "archive/2026-10-19/splat-fusion-validation/02-independent-registration/result.md",
+      "originalSha256": "c5a06cad57511ac1d0adb85b546a53418b7555a727d1901ea4be1b85fd54cc37",
+      "document": "109-archive-2026-10-19-splat-fusion-validation-02-independent-registration-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-110",
+      "title": "Persistence and change \u2014 frozen procedure, 19 October 2026",
+      "source": "archive/2026-10-19/splat-fusion-validation/03-persistence-and-change/investigation.md",
+      "originalSha256": "ae2bbecfebfbbc29b23ffcf9dc3228ca8b657934d616bd1429c06cc34c99bb1f",
+      "document": "110-archive-2026-10-19-splat-fusion-validation-03-persistence-and-change-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-111",
+      "title": "Result",
+      "source": "archive/2026-10-19/splat-fusion-validation/03-persistence-and-change/result.md",
+      "originalSha256": "37e707f7e4cfd2644459f7f9f967f0b483dae25b15bbc00551a9978e15baf156",
+      "document": "111-archive-2026-10-19-splat-fusion-validation-03-persistence-and-change-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-112",
+      "title": "Overlap consolidation \u2014 frozen procedure, 19 October 2026",
+      "source": "archive/2026-10-19/splat-fusion-validation/04-overlap-consolidation/investigation.md",
+      "originalSha256": "4c5b1b3e034e8483da67f44f6b6fd335bc3d232654703615785d4e99f32b81e1",
+      "document": "112-archive-2026-10-19-splat-fusion-validation-04-overlap-consolidation-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-113",
+      "title": "Result",
+      "source": "archive/2026-10-19/splat-fusion-validation/04-overlap-consolidation/result.md",
+      "originalSha256": "6a9310b216335d9ae16efd43eb1aad96801b4cb1164b7b9b60e2f5cca5842738",
+      "document": "113-archive-2026-10-19-splat-fusion-validation-04-overlap-consolidation-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-114",
+      "title": "Additional local geometry refinement \u2014 scoped before execution",
+      "source": "archive/2026-10-19/splat-fusion-validation/05-fusion-refinement/geometry-investigation.md",
+      "originalSha256": "d38ac3e65bd0b486a32da78d8e076e0ca8c2630a99afd78b984629750b69f057",
+      "document": "114-archive-2026-10-19-splat-fusion-validation-05-fusion-refinement-geometry-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-115",
+      "title": "Fusion refinement \u2014 frozen procedure, 19 October 2026",
+      "source": "archive/2026-10-19/splat-fusion-validation/05-fusion-refinement/investigation.md",
+      "originalSha256": "c5df3ecfe4d9af2bbc5188c62782f4ebf50909abe9d85965955632b747754635",
+      "document": "115-archive-2026-10-19-splat-fusion-validation-05-fusion-refinement-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-116",
+      "title": "Result",
+      "source": "archive/2026-10-19/splat-fusion-validation/05-fusion-refinement/result.md",
+      "originalSha256": "ccae081d698f3610f381e6fb03ed5d762dc5f53c92ca0e7b406e73d6492701a1",
+      "document": "116-archive-2026-10-19-splat-fusion-validation-05-fusion-refinement-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-117",
+      "title": "Result",
+      "source": "archive/2026-10-19/splat-fusion-validation/06-time-alignment/initial-result.md",
+      "originalSha256": "0a369d54b8ac609cc3a958062c7caff9fb1c022d2fccee9a0f1e468891eeada4",
+      "document": "117-archive-2026-10-19-splat-fusion-validation-06-time-alignment-initial-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-118",
+      "title": "Time alignment \u2014 frozen procedure, 19 October 2026",
+      "source": "archive/2026-10-19/splat-fusion-validation/06-time-alignment/investigation.md",
+      "originalSha256": "65198ca310d1f4261cf6de53ef10f75fc5ae3b3fc141f047e3a7313051bf090c",
+      "document": "118-archive-2026-10-19-splat-fusion-validation-06-time-alignment-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-119",
+      "title": "Result",
+      "source": "archive/2026-10-19/splat-fusion-validation/06-time-alignment/result.md",
+      "originalSha256": "3c9a3f2b6d7e756d499ac14bf4372b070c615715d4ab7743546f347cb2e04301",
+      "document": "119-archive-2026-10-19-splat-fusion-validation-06-time-alignment-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-120",
+      "title": "Dynamic fusion \u2014 frozen procedure, 19 October 2026",
+      "source": "archive/2026-10-19/splat-fusion-validation/07-dynamic-fusion/investigation.md",
+      "originalSha256": "e69f76b3c3b2538d137aa1d50010799bdad9f60a2ebaf97ae2eda134155fb77e",
+      "document": "120-archive-2026-10-19-splat-fusion-validation-07-dynamic-fusion-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-121",
+      "title": "Result",
+      "source": "archive/2026-10-19/splat-fusion-validation/07-dynamic-fusion/result.md",
+      "originalSha256": "105c388444f2e1fe505ac544f365920cec71b26725ed7bad92f8f91bf0f42762",
+      "document": "121-archive-2026-10-19-splat-fusion-validation-07-dynamic-fusion-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-122",
+      "title": "Incremental uploads \u2014 frozen procedure, 19 October 2026",
+      "source": "archive/2026-10-19/splat-fusion-validation/08-incremental-uploads/investigation.md",
+      "originalSha256": "de55029ea8c550ff709d211c2a059da43eed68ec79c23ef7694dbad2a9771faf",
+      "document": "122-archive-2026-10-19-splat-fusion-validation-08-incremental-uploads-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-123",
+      "title": "Result",
+      "source": "archive/2026-10-19/splat-fusion-validation/08-incremental-uploads/result.md",
+      "originalSha256": "f8402cf257e31447a98187422304dc1defa488edaa773d55466deda05bf13aaa",
+      "document": "123-archive-2026-10-19-splat-fusion-validation-08-incremental-uploads-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-124",
+      "title": "Sequential validation suite \u2014 19 October 2026",
+      "source": "archive/2026-10-19/splat-fusion-validation/investigation.md",
+      "originalSha256": "6ce550241dc8ed78b148107ed036c1264eaade44527c47891e90fca381679fe8",
+      "document": "124-archive-2026-10-19-splat-fusion-validation-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-125",
+      "title": "Sequential fusion validation results \u2014 19 October 2026",
+      "source": "archive/2026-10-19/splat-fusion-validation/result.md",
+      "originalSha256": "684a63b48e7de260c4e4d63d52cd080eff4387fe57848abcd5e11374402defa7",
+      "document": "125-archive-2026-10-19-splat-fusion-validation-result-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-126",
+      "title": "Standardization results \u2014 29 October 2026",
+      "source": "core-pipeline/docs/validation.md",
+      "originalSha256": "1fc5ca0ddb251d34a883c539bf2608f27019bac2deb1759574dfb5e06aa18a74",
+      "document": "126-core-pipeline-docs-validation-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-127",
+      "title": "Firming up the core pipeline",
+      "source": "guildhall-fixed-world-workflow/docs/core-pipeline-validation.md",
+      "originalSha256": "15dc7c015f7f517ccac325ca0d42db955b2ed9fd88dcaa1cfca2e91264fee0a1",
+      "document": "127-guildhall-fixed-world-workflow-docs-core-pipeline-validation-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-128",
+      "title": "30-second L40S trial: measured results",
+      "source": "guildhall-fixed-world-workflow/docs/sculpture-30s-results.md",
+      "originalSha256": "277048dc88234d932963d03bf4aeb85000dc8724fdeedd0d12b01972b12b0f0a",
+      "document": "128-guildhall-fixed-world-workflow-docs-sculpture-30s-results-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-129",
+      "title": "Deep dive 1: setting up MoSca on Runpod and improving the short result",
+      "source": "mosca-deep-dive/01-runpod-setup/investigation.md",
+      "originalSha256": "11b8d8cff4518e36359f70839df858e80491277106a79476323d28e02769554c",
+      "document": "129-mosca-deep-dive-01-runpod-setup-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-130",
+      "title": "Deep dive 2: longer videos with higher-fidelity dynamic splats",
+      "source": "mosca-deep-dive/02-video-length/investigation.md",
+      "originalSha256": "6a4338793cbfd2624fecec23712576756db88b7389cae54e82a7752ad2666dd6",
+      "document": "130-mosca-deep-dive-02-video-length-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-131",
+      "title": "Deep investigation: feasibility of the recommended MoSca variants",
+      "source": "mosca-deep-dive/03-mosca-variant-tests/investigation.md",
+      "originalSha256": "35c72cb143457f5cbe05119b414861bad3aa67ba876098824fcc9f7b1448260b",
+      "document": "131-mosca-deep-dive-03-mosca-variant-tests-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-132",
+      "title": "Execution results \u201428 October2026",
+      "source": "mosca-deep-dive/04-implementation-plan/results.md",
+      "originalSha256": "fce5bed9a0835e167d92f3f631d54910ceb986216fa01463bcecfcf40965b086",
+      "document": "132-mosca-deep-dive-04-implementation-plan-results-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-133",
+      "title": "Guildhall duration results",
+      "source": "mosca-deep-dive/05-duration-execution/results.md",
+      "originalSha256": "f289ecaef5a8f1b6f9c7b664d313463d0bf9c67b081284e75b9b749ecda87641",
+      "document": "133-mosca-deep-dive-05-duration-execution-results-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-134",
+      "title": "Why the full Guildhall camera solve failed",
+      "source": "mosca-deep-dive/06-l40s-full-guildhall/diagnosis.md",
+      "originalSha256": "bce642e2e79f29b30546c747cf33df3e093b1359a62a472b90dd81b1b47efc12",
+      "document": "134-mosca-deep-dive-06-l40s-full-guildhall-diagnosis-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-135",
+      "title": "L40S full Guildhall results",
+      "source": "mosca-deep-dive/06-l40s-full-guildhall/results.md",
+      "originalSha256": "48d57efa97fedb2da87a520a7e65e810f0e26529eda4392db4dc43c78d625151",
+      "document": "135-mosca-deep-dive-06-l40s-full-guildhall-results-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-136",
+      "title": "Depth-validity correction results",
+      "source": "mosca-deep-dive/07-depth-validity-correction/results.md",
+      "originalSha256": "362588727542544dcd7fabe68e9382169d40fbc71b42bf70e07c3f6c9945aa01",
+      "document": "136-mosca-deep-dive-07-depth-validity-correction-results-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-137",
+      "title": "Windowed camera-geometry results",
+      "source": "mosca-deep-dive/08-windowed-geometry/results.md",
+      "originalSha256": "511de28bd5ec72f2962d9ba4e767a7f1e982d6d3359224d9a16a0cb3c4e7d314",
+      "document": "137-mosca-deep-dive-08-windowed-geometry-results-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-138",
+      "title": "Static-world camera results",
+      "source": "mosca-deep-dive/09-static-world-camera/results.md",
+      "originalSha256": "d5a0931029d302982111f6cba95eab768c1d1b9c984dc515b5f17983c5d7a10b",
+      "document": "138-mosca-deep-dive-09-static-world-camera-results-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-139",
+      "title": "Investigation and controls",
+      "source": "mosca-deep-dive/10-static-anchor-refinement/investigation.md",
+      "originalSha256": "a666f687272463e5ecdfa7a6a2a96d1106705933560bae83345ad7b32de05c3f",
+      "document": "139-mosca-deep-dive-10-static-anchor-refinement-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-140",
+      "title": "Results and verified closure",
+      "source": "mosca-deep-dive/10-static-anchor-refinement/results.md",
+      "originalSha256": "8210cfa6e108c229523a34ed41272b057877475d1205b401b5d65d40c1b1b379",
+      "document": "140-mosca-deep-dive-10-static-anchor-refinement-results-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-141",
+      "title": "Downstream audit and observed limits",
+      "source": "mosca-deep-dive/11-fixed-world-appearance/investigation.md",
+      "originalSha256": "a1dfdc0f7d41c639007b6fc540acc4363080495c377413053019a7e632ddaed4",
+      "document": "141-mosca-deep-dive-11-fixed-world-appearance-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-142",
+      "title": "Full-interior fixed-world appearance results",
+      "source": "mosca-deep-dive/11-fixed-world-appearance/results.md",
+      "originalSha256": "728fb767db7cecfc207abdfcddd143ea58cc1f1726f21a3b23142926e51d24a5",
+      "document": "142-mosca-deep-dive-11-fixed-world-appearance-results-md.md",
+      "kind": "result",
+      "status": "historical evidence; see full result and later superseding records"
+    },
+    {
+      "id": "evidence-143",
+      "title": "Investigation: a reproducible MoSca quality and duration program",
+      "source": "mosca-deep-dive/investigation.md",
+      "originalSha256": "de4dd235c404481f4ab20fb9c46ecd5c4360b73de6df945446a160a552495be6",
+      "document": "143-mosca-deep-dive-investigation-md.md",
+      "kind": "research",
+      "status": "historical evidence; see full result and later superseding records"
+    }
+  ]
+}

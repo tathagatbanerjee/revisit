@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "origin": "Project-owned gaussian-splatting experiment workspace",
+  "date": "2026-11-16",
+  "files": [
+    {
+      "source": "core-pipeline/runner/worker.py",
+      "sourceSha256": "56b09e5809d1d60941268137b266b91bf2399259140232adbadfb49d28faee0c",
+      "destination": "core-pipeline/worker/worker.py",
+      "change": "Worker root relocated from /workspace/compat to /workspace/revisit; no upstream third-party source or credentials copied",
+      "destinationSha256": "583d4ad917e2f4e1eaa5c7e6aeca2c5946122d8e5b87bb8b2cd05f802254c216"
+    },
+    {
+      "source": "core-pipeline/runner/anchor_geometry.py",
+      "sourceSha256": "2d2001c281636161e7d42b0495cd6dc5420da8aee631e7c6a0c50f03140524fc",
+      "destination": "core-pipeline/worker/anchor_geometry.py",
+      "change": "Worker root relocated from /workspace/compat to /workspace/revisit; no upstream third-party source or credentials copied",
+      "destinationSha256": "cb735bffaa3bd997f7b1e461400fff93974f9613ad708b8ae8446315dac31329"
+    },
+    {
+      "source": "core-pipeline/runner/sparse_inspect.py",
+      "sourceSha256": "c20d5a7add9c0c28b90283fb647ebc0046fdb7668eaaa6620073f76649934696",
+      "destination": "core-pipeline/worker/sparse_inspect.py",
+      "change": "Worker root relocated from /workspace/compat to /workspace/revisit; no upstream third-party source or credentials copied",
+      "destinationSha256": "080a82efa82da6d7962fa2b7b7a29aebdc5ee2c783d058e31cc57abe8ca05d3d"
+    },
+    {
+      "source": "core-pipeline/runner/patch_source.py",
+      "sourceSha256": "a7a7bde8b8e748f548192d4773f93e52f195c2c2af7027e68a2d1d383f1040f2",
+      "destination": "core-pipeline/worker/patch_source.py",
+      "change": "Worker root relocated from /workspace/compat to /workspace/revisit; no upstream third-party source or credentials copied",
+      "destinationSha256": "66849f789bec26c57182ecc12f07132412742efd5a1feadc9a146158c0231030"
+    },
+    {
+      "source": "core-pipeline/runner/contracts.py",
+      "sourceSha256": "8676972b70df3941d1d7c85ca3110ab5c5f27da201a1a295a262cb012c925cc1",
+      "destination": "core-pipeline/worker/contracts.py",
+      "change": "Project contracts migrated; obsolete historical global budget helpers removed and cost helper requires an explicit hourly rate",
+      "destinationSha256": "456c0842c4e1708ce549a60e83bf22228b5c9a266e620993c6aa845efff9369a"
+    },
+    {
+      "source": "core-pipeline/runner/dynamic.py",
+      "sourceSha256": "df0ef5c28ab98d0e70551de308d5b428f815ac1223a00a5ca82230f7186c92e6",
+      "destination": "core-pipeline/worker/dynamic.py",
+      "change": "Worker root relocated from /workspace/compat to /workspace/revisit; no upstream third-party source or credentials copied",
+      "destinationSha256": "6ff9abd89b17044d04dcad3ce3366bb9be7f5b2ba151f5ada8469117209b6a8f"
+    },
+    {
+      "source": "mosca-deep-dive/09-static-world-camera/runner/camera_contract.py",
+      "sourceSha256": "00b7db2caab2193d53756314509e7371c53f9505728d252afad91dc8054980bf",
+      "destination": "core-pipeline/worker/camera_contract.py",
+      "change": "Worker root relocated from /workspace/compat to /workspace/revisit; no upstream third-party source or credentials copied",
+      "destinationSha256": "00b7db2caab2193d53756314509e7371c53f9505728d252afad91dc8054980bf"
+    },
+    {
+      "source": "mosca-deep-dive/07-depth-validity-correction/runner/ba_depth_validity.py",
+      "sourceSha256": "c84687dc6389d1879184ab1c7a87a09923ab0f957e251594d9e24a2d6bfa86fc",
+      "destination": "core-pipeline/worker/ba_depth_validity.py",
+      "change": "Worker root relocated from /workspace/compat to /workspace/revisit; no upstream third-party source or credentials copied",
+      "destinationSha256": "38b85ad5cd26c68bb28fc8905ae5251899366035bebc468dce89b4eaa6fcd37a"
+    },
+    {
+      "source": "mosca-deep-dive/07-depth-validity-correction/runner/patch_depth_validity.py",
+      "sourceSha256": "88823fc77e61b7266011fe743e5249210261bc773d3d3f21c1e8c2e1c4f0128e",
+      "destination": "core-pipeline/worker/patch_depth_validity.py",
+      "change": "Worker root relocated from /workspace/compat to /workspace/revisit; no upstream third-party source or credentials copied",
+      "destinationSha256": "d0629f2e92d36d3eba137ce38be4cb127dbe947e265adf55722ae1cca4b4972b"
+    },
+    {
+      "source": "mosca-deep-dive/07-depth-validity-correction/runner/cuda_depth_smoke.py",
+      "sourceSha256": "1e3e53901dec9513f05365fb417fa64aac685850fd2a35c5438baabf7b0c23a0",
+      "destination": "core-pipeline/worker/cuda_depth_smoke.py",
+      "change": "Worker root relocated from /workspace/compat to /workspace/revisit; no upstream third-party source or credentials copied",
+      "destinationSha256": "1e3e53901dec9513f05365fb417fa64aac685850fd2a35c5438baabf7b0c23a0"
+    },
+    {
+      "source": "mosca-deep-dive/04-implementation-plan/runner/patch_worker.py",
+      "sourceSha256": "6b70a27c02b5df56793b5a4e833997b4b1c16d4ffff8999f36fb86ec4deaacd2",
+      "destination": "core-pipeline/worker/patch_worker.py",
+      "change": "Worker root relocated from /workspace/compat to /workspace/revisit; no upstream third-party source or credentials copied",
+      "destinationSha256": "7484f88c548604d3643cbba4d2fef1188562b525196669609179d0b83ededba8"
+    },
+    {
+      "source": "mosca-deep-dive/04-implementation-plan/runner/tracker_adapter.py",
+      "sourceSha256": "c414485c6f5a53019ffad986b67d7da97bf16021e760d733310c6a94b9aa2dd9",
+      "destination": "core-pipeline/worker/tracker_adapter.py",
+      "change": "Worker root relocated from /workspace/compat to /workspace/revisit; no upstream third-party source or credentials copied",
+      "destinationSha256": "c414485c6f5a53019ffad986b67d7da97bf16021e760d733310c6a94b9aa2dd9"
+    },
+    {
+      "source": "mosca-deep-dive/04-implementation-plan/runner/gpu-smoke.py",
+      "sourceSha256": "73a7a08efa1aa8be372699f235a016ec73c2c0d09550c15a4a039b2baf51b696",
+      "destination": "core-pipeline/worker/gpu-smoke.py",
+      "change": "Worker root relocated from /workspace/compat to /workspace/revisit; no upstream third-party source or credentials copied",
+      "destinationSha256": "8c66fbafdce5a48b4082bcb26a6a8c85439333366f9ed7a57f6827cc8bf5ecb9"
+    },
+    {
+      "source": "mosca-deep-dive/04-implementation-plan/runner/preflight_models.py",
+      "sourceSha256": "cb7d5f4116d164b2520b2a10f48389182fdf40f09fb0914131c5ba5ede009492",
+      "destination": "core-pipeline/worker/preflight_models.py",
+      "change": "Worker root relocated from /workspace/compat to /workspace/revisit; no upstream third-party source or credentials copied",
+      "destinationSha256": "2cd5f9f5faca35370d36d4a9a559fba9192bf6ed40576f681b09abb4b11b46cd"
+    },
+    {
+      "source": "mosca-deep-dive/04-implementation-plan/runner/download_worker.py",
+      "sourceSha256": "882aaf39c0182dd69d236406143a721894ea4e880cd5e5eb39e863c097f37b01",
+      "destination": "core-pipeline/worker/download_worker.py",
+      "change": "Worker root relocated from /workspace/compat to /workspace/revisit; no upstream third-party source or credentials copied",
+      "destinationSha256": "1af1804e1afb7c08140ad307140297ad36e0afe82fa7a3c194f81772637aa970"
+    },
+    {
+      "source": "mosca-deep-dive/04-implementation-plan/runner/variant_queries.py",
+      "sourceSha256": "e6c774d6459b6438996bc9069b49ace2062dc76a11597bb961da77b34ced8507",
+      "destination": "core-pipeline/worker/variant_queries.py",
+      "change": "Worker root relocated from /workspace/compat to /workspace/revisit; no upstream third-party source or credentials copied",
+      "destinationSha256": "e6c774d6459b6438996bc9069b49ace2062dc76a11597bb961da77b34ced8507"
+    },
+    {
+      "source": "mosca-deep-dive/04-implementation-plan/runner/geometry.py",
+      "sourceSha256": "8c70fdf2903e3913f991a01bfe7a81ffe00be4a6bccf28b69d3f0cf9ca715ec8",
+      "destination": "core-pipeline/worker/geometry.py",
+      "change": "Worker root relocated from /workspace/compat to /workspace/revisit; no upstream third-party source or credentials copied",
+      "destinationSha256": "8c70fdf2903e3913f991a01bfe7a81ffe00be4a6bccf28b69d3f0cf9ca715ec8"
+    },
+    {
+      "source": "mosca-deep-dive/04-implementation-plan/runner/review-priors.py",
+      "sourceSha256": "f35e0222f2294fbe142b20da27e2b04996ed966e0311b2da0e6a0d3586c29b6a",
+      "destination": "core-pipeline/worker/review-priors.py",
+      "change": "Worker root relocated from /workspace/compat to /workspace/revisit; no upstream third-party source or credentials copied; detect static mode from case configuration rather than historical scene name",
+      "destinationSha256": "6aa5195def947c78a212b74ff731635f19577e3ea23b41c390205991e1f59175"
+    },
+    {
+      "source": "mosca-deep-dive/04-implementation-plan/runner/export-native.py",
+      "sourceSha256": "13180746e079e088be346bf04137b625b27a62cca2c39d86eb6967fbd8084969",
+      "destination": "core-pipeline/worker/export-native.py",
+      "change": "Worker root relocated from /workspace/compat to /workspace/revisit; no upstream third-party source or credentials copied; detect static mode from case configuration rather than historical scene name",
+      "destinationSha256": "c9c0e70b47b00d80ec25036982fecbbd8c06b47c99f6c35664b37f6915fdc9b5"
+    },
+    {
+      "source": "core-pipeline/configs/static-fit.yaml",
+      "sourceSha256": "16a3edbe1865e82d46d6035a159b062ba764a779b20da5972250c0ae0047e8b3",
+      "destination": "core-pipeline/configs/static-fit.yaml",
+      "change": "Copied project recipe/weight URL and hash manifest; no weights",
+      "destinationSha256": "16a3edbe1865e82d46d6035a159b062ba764a779b20da5972250c0ae0047e8b3"
+    },
+    {
+      "source": "core-pipeline/configs/prep.yaml",
+      "sourceSha256": "d49f69e37026d1ff1eb0b0b816381b675f3c2cb721850ce086b11331bca9a33a",
+      "destination": "core-pipeline/configs/prep.yaml",
+      "change": "Copied project recipe/weight URL and hash manifest; no weights",
+      "destinationSha256": "d49f69e37026d1ff1eb0b0b816381b675f3c2cb721850ce086b11331bca9a33a"
+    },
+    {
+      "source": "core-pipeline/configs/weights.json",
+      "sourceSha256": "25c3b7b2cf06635a6be4120e2b324c96acc9eb8616b5b49fb17ada376806c032",
+      "destination": "core-pipeline/configs/weights.json",
+      "change": "Copied project recipe/weight URL and hash manifest; no weights",
+      "destinationSha256": "25c3b7b2cf06635a6be4120e2b324c96acc9eb8616b5b49fb17ada376806c032"
+    },
+    {
+      "source": "core-pipeline/configs/depth-validity.json",
+      "sourceSha256": "ed61afa7f4247c91252cbec601a7efa9424d50d15ef2fa21faa02fa3765d28dc",
+      "destination": "core-pipeline/configs/depth-validity.json",
+      "change": "Project depth policy copied; expected helper hashes refreshed for relocated project-owned helpers",
+      "destinationSha256": "d0d237941d682406f7ac022f1afeda9fe8715906ccf4b4c8f100f81964f0d93a"
+    }
+  ],
+  "limits": "GPU worker source migrated for review; portable setup and native execution have not been validated in Revisit. Historical paid cloud transport not copied. Third-party code/weights/media excluded."
+}

@@ -6,13 +6,48 @@ Revisit explores turning a real recording into a scene you can revisit: pause a
 moment, move your viewpoint, then resume playback from there. It also preserves
 the research record of what worked, what failed, and what remains uncertain.
 
-**Status: planning and research documentation.** The portable app and public
-Runpod workflow are not implemented in this repository yet. There is no working
-quick-start command here today. Earlier local prototypes demonstrated static
-inspection and short dynamic replay, with substantial reconstruction defects.
+**Status: runnable local preview.** Explore a real sample, import saved splats,
+upload/prepare your video, recover static cameras on CPU and package a native
+worker handoff. Paid reconstruction is disabled until independent lifecycle and
+fresh GPU qualification pass. See [current state](docs/architecture/current-state.md).
+
+## Run locally
+
+```bash
+git clone https://github.com/tathagatbanerjee/revisit.git
+cd revisit
+docker compose up --build -d
+```
+
+Open **http://localhost:4320**, then choose **Explore Houseplant** for a real,
+attributed community capture. No cloud key or local CUDA GPU is required. The
+3.5MiB sample downloads once and is checksum verified. It is not a model trained
+by Revisit. Use the labelled synthetic sequence to test playback independently.
+
+For native startup, prerequisites, video preparation, imports and checks, follow
+the [local app runbook](docs/runbooks/operations/local-app.md).
+
+## Repository layout
+
+```text
+app/                 local Node service, browser viewer and tests
+core-pipeline/       CPU preparation, migrated native research worker and recipes
+docs/                architecture, runbooks, provenance, verification and changelog
+experiments/         historical project research/result records and evidence index
+examples/            real sample provenance, download hash and attribution
+schemas/             versioned artifact contracts
+scripts/             import, documentation and publication-audit tools
+working/             ignored temporary work; never published
+data/                ignored uploads, model downloads, project state and results
+```
+
+This follows the original gaussian-splatting experiment's conventions as a
+standalone Git checkout. Keep credentials and footage out of Git. Before pushing,
+run `python3 scripts/audit-publication.py` and the [documented checks](docs/runbooks/operations/local-app.md).
 
 ## Start here
 
+- [Documentation index](docs/README.md): architecture, runbooks, verification and change history.
 - [Implementation plan](docs/implementation-plan.md): milestones, architecture,
   onboarding, acceptance tests and release criteria.
 - [Experiments and outcomes](docs/experiments.md): executed trials, failed
@@ -66,7 +101,7 @@ registration/fusion, depth/tracker comparisons and fixed-world camera correction
 Short dynamic results still ghost; fusion did not pass end-to-end quality gates.
 A 30-second static pipeline completed on tested indoor and outdoor clips.
 
-The research record contains 103 published model records, including controls and
+The research record contains 143 project-authored evidence documents and 103 published model records, including controls and
 rejected diagnostics; that is not 103 successful independent reconstructions.
 Historical model files, footage, SDKs, credentials and cloud execution state have
 not been published here.

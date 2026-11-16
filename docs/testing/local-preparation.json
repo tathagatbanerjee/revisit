@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-16",
+  "environment": "Docker Linux amd64, CPU preparation only",
+  "source": "Locally retained historical sculpture capture; media not published",
+  "observations": 360,
+  "registeredCameras": 360,
+  "minimumObservedAnchors": 171,
+  "medianMappingError": 0.32070712958568853,
+  "seconds": 160.323,
+  "handoffBytes": 136265370,
+  "sourceReview": "Explicit API review receipt after selecting the already reviewed historical control; not an independent user rehearsal",
+  "paidAllocation": false,
+  "nativeGpuFit": false
+}

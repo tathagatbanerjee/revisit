@@ -1,7 +1,9 @@
 # Revisit implementation plan
 
 Prepared 16 November 2026. Owner: Tathagat Banerjee.
-Status: proposed implementation; this initial publication is documentation only.
+Status: implementation in progress. The initial publication was documentation only;
+see [current state](architecture/current-state.md) for the runnable local preview
+and the still-disabled paid reconstruction path.
 Project-owned code and documentation use the [MIT License](../LICENSE).
 
 ## Outcome

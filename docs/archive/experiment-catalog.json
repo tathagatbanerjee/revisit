@@ -1,0 +1,284 @@
+{
+  "scope": "Historical catalog statuses can be stale; full results and later records take precedence. Catalog includes unrun plans.",
+  "experiments": [
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "mipmap-static",
+      "title": "MipMap static map",
+      "description": "Video or 360 capture \u2192 static Gaussian map.",
+      "sourceClip": "01-sculpture-orbit",
+      "status": "planned"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "postshot-static",
+      "title": "Postshot static baseline",
+      "description": "Manual baseline for direct video-to-splat reconstruction.",
+      "sourceClip": "01-sculpture-orbit",
+      "status": "planned"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "brush-static",
+      "title": "Brush static reconstruction",
+      "description": "Open-source reconstruction from estimated cameras.",
+      "sourceClip": "01-sculpture-orbit",
+      "status": "first-trial-completed"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "gsplat-static",
+      "title": "gsplat static baseline",
+      "description": "Python library baseline for controllable training and rendering.",
+      "sourceClip": "01-sculpture-orbit",
+      "status": "planned"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "sharp-frozen",
+      "title": "SHARP frozen moments",
+      "description": "Pause a video and inspect nearby inferred viewpoints.",
+      "sourceClip": "03-guildhall-interior",
+      "status": "first-trial-completed"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "rigs-dynamic",
+      "title": "RiGS dynamic reconstruction",
+      "description": "Single-video reconstruction with motion and independent viewpoint.",
+      "sourceClip": "03-guildhall-interior",
+      "status": "readiness-gaps-found"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "mosca-dynamic",
+      "title": "MoSca dynamic reconstruction",
+      "description": "Alternative monocular motion-scaffold reconstruction.",
+      "sourceClip": "03-guildhall-interior",
+      "status": "first-trial-completed"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "4dgaussians-dynamic",
+      "title": "4DGaussians reference",
+      "description": "Reference implementation for time-dependent Gaussian scenes.",
+      "sourceClip": "03-guildhall-interior",
+      "status": "planned"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "videosplat-multicam",
+      "title": "Multi-camera replay",
+      "description": "Compare reconstruction when multiple simultaneous views exist.",
+      "sourceClip": "04-pedestrians-control",
+      "status": "planned"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "cat4d-feasibility",
+      "title": "CAT4D feasibility",
+      "description": "Assess generated multi-view dynamic reconstruction.",
+      "sourceClip": "04-pedestrians-control",
+      "status": "planned"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "dynamic-playback",
+      "title": "Dynamic output playback",
+      "description": "Pause a published moving scene, explore another viewpoint, then replay from there.",
+      "sourceClip": null,
+      "status": "first-trial-completed"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "brush-mosca",
+      "title": "Brush + MoSca hybrid scene",
+      "description": "Aligned Brush background plus MoSca motion; visitor-mask follow-up improves lower-scene appearance, geometry remains coarse.",
+      "sourceClip": null,
+      "status": "first-trial-completed"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "brush-mosca-multiphone",
+      "title": "Brush + MoSca \u00b7 seven scene tests",
+      "description": "Seven short scene tests: five fresh monocular motion fits plus two static-only motion failures. Compare MoSca controls with hybrids; whole-person masks currently discard stationary people/body parts.",
+      "sourceClip": null,
+      "status": "batch-completed-with-quality-limitations"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "brush-mosca-people",
+      "title": "Brush + MoSca \u00b7 whole-person layer",
+      "description": "Full MoSca quality baseline and corrected hybrid development path. Matched people-layer controls plus separate background seed/optimization candidates; monocular motion, no joint multi-phone fusion.",
+      "sourceClip": null,
+      "status": "partition-completed-with-quality-limitations"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "calibrated-multiview",
+      "title": "Calibrated two-camera trial",
+      "description": "Two synchronized calibrated recordings refine one shared MoSca-initialized Gaussian sequence. Second fitted view improves; elevated held-out person reconstruction fails. Switch recorded cameras without changing event time. Includes native renderer checks.",
+      "sourceClip": null,
+      "status": "two-view-integration-completed-heldout-quality-failed"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "shared-coordinates",
+      "title": "Shared camera coordinates",
+      "description": "Background-only camera recovery: full-resolution known-calibration control passes; Medium joins three phones, Easy fails. Sparse landmarks and camera path glyphs, no dynamic reconstruction.",
+      "sourceClip": null,
+      "status": "partial-three-phone-map-localization-passed"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "phone-pose-priors",
+      "title": "Phone SLAM pose priors",
+      "description": "Verified global SLAM coordinate convention; fixed/refined sparse maps support three phones but do not improve strict later-frame localization. Static diagnostics only; image-only map remains preferred.",
+      "sourceClip": null,
+      "status": "pose-priors-verified-not-promoted"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "assembled-hybrid",
+      "title": "Assembled multi-view hybrid",
+      "description": "Recovered two-camera SfM world, fresh masked Brush background, saved complete-person MoSca layer and shared refinement. Training views/room improve; fresh-view person appearance regresses. Compare matched reference, assembled and refined outputs.",
+      "sourceClip": null,
+      "status": "integrated-compared-fresh-view-person-regression"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "incremental-scene-fusion",
+      "title": "Incremental scene fusion",
+      "sourceClip": null,
+      "description": "Simulated late upload enriches an existing Brush/MoSca scene at one instant. Compare saved A, aligned additions and refined additions; partial coverage gains, graininess and missing stress-view shoes remain.",
+      "status": "single-instant-enrichment-tested-visual-limitations"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "guildhall-comparison",
+      "title": "Guildhall / MoSca vs precise-mask hybrid",
+      "sourceClip": null,
+      "description": "Matched same-event comparison: all-points MoSca, the exact H1 precise-mask hybrid, and the same hybrid without motion subsampling. Same camera, clock and color conventions; saved reconstructions, no retraining.",
+      "status": "comparison-published"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "independent-mosca-fusion",
+      "title": "Independent full MoSca / two-video fusion",
+      "sourceClip": null,
+      "description": "A, independently fitted B, and raw additive union from two studio angles with staggered source intervals. Full density, common clock, similarity alignment; retain any failed alignment and duplicate surfaces.",
+      "status": "raw-union-diagnostic"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "mosca-background-registration",
+      "title": "Full MoSca / background registration",
+      "sourceClip": null,
+      "description": "Five preserved all-point comparisons: A, original union, background registration, local ICP, scene-balanced transform. Room improves but person ghosts persist; no overall alignment winner.",
+      "status": "room-alignment-pass-person-alignment-fail"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "integrated-mosca-fusion",
+      "title": "Integrated fusion prototype / two uploads",
+      "sourceClip": null,
+      "description": "Cached independent A/B uploads, recovered clock, room/person gates, full raw/consolidated/refined candidates. Actor geometry fails; originals retained and candidates rejected.",
+      "status": "integrated-rejected-merge-originals-retained"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "edge-registration",
+      "title": "Edge registration / diagnostics",
+      "sourceClip": null,
+      "description": "Original controls, previous union and room-edge-aligned union. All points and shared clocks/cameras. Geometry/person gates fail; raw candidate rejected, originals retained.",
+      "status": "edge-diagnostics-rejected-merge"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "learned-splat-registration",
+      "title": "Learned splat registration / diagnostics",
+      "sourceClip": null,
+      "description": "Real pretrained GaussReg coarse and splatreg/BUFFER-X on independent full MoSca splats. Both real merges fail room/person gates; all points and shared clocks/cameras retained.",
+      "status": "learned-registration-rejected-merges"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "fresh-video-mosca-alignment",
+      "title": "Fresh original videos / full MoSca + alignment",
+      "sourceClip": null,
+      "description": "Fresh A/B depth, tracks, cameras and full models; one unvalidated learned raw union, controls retained.",
+      "status": "development-diagnostic"
+    },
+    {
+      "catalog": "archive/2026-10-19/pipeline/experiments.json",
+      "id": "guildhall-full-video",
+      "title": "Guildhall full video / fresh shot-aware MoSca",
+      "sourceClip": null,
+      "description": "Full30s source, separate freshly reconstructed interior/outro; dissolve remains source-only. Native comparisons and costs recorded.",
+      "status": "development-diagnostic"
+    },
+    {
+      "catalog": "app/experiments.json",
+      "id": "mosca-variant-tests",
+      "title": "MoSca depth and tracker comparisons",
+      "status": "exploratory-complete",
+      "description": "Three-video model screen: eight complete exports and one retained curve-filter failure. Native fitted-view scores are development evidence; full quality promotion remains unavailable."
+    },
+    {
+      "catalog": "app/experiments.json",
+      "id": "mosca-duration-tests",
+      "title": "MoSca / Guildhall duration ladder",
+      "status": "awaiting-user-review",
+      "description": "Four completed duration exports through12s. Full interior is on hold pending user review of the12s result. Source-view scores do not establish novel-view fidelity."
+    },
+    {
+      "catalog": "app/experiments.json",
+      "id": "mosca-l40s-full",
+      "title": "MoSca / L40S full Guildhall",
+      "status": "failed-geometry-review",
+      "description": "L40S native preflight and full305-frame priors passed, but background-track geometry was inconsistent. Stopped before appearance fitting; no full-interior export. The separate outro was not started."
+    },
+    {
+      "catalog": "app/experiments.json",
+      "id": "mosca-depth-validity",
+      "title": "MoSca / corrected full Guildhall",
+      "status": "failed",
+      "description": "Depth-validity correction improved median geometry to1.75px, but late-after-turn errors failed review. No appearance training, outro or full-length export."
+    },
+    {
+      "catalog": "app/experiments.json",
+      "id": "mosca-windowed-geometry",
+      "title": "MoSca / overlapping Guildhall camera windows",
+      "status": "failed-late-camera-review",
+      "description": "0\u201318s camera BA passes; independently initialized14\u201325.3s fails. No scaffold, appearance, stitching or model export."
+    },
+    {
+      "catalog": "app/experiments.json",
+      "id": "mosca-static-world-camera",
+      "title": "MoSca / static world first",
+      "status": "stopped-at-anchor-coverage-gate",
+      "description": "305 static-map cameras qualify; locked-camera depth BA passes all error gates at1.50px median/5.28px worst-frame median with unchanged poses. Final six frames have58\u201362 static anchors versus64 required. No motion/appearance export."
+    },
+    {
+      "catalog": "app/experiments.json",
+      "id": "mosca-static-anchor-refinement",
+      "title": "MoSca / observed static anchors and depth refinement",
+      "status": "passed-background-geometry",
+      "description": "Identical4000 observed static-map tracks and fixed cameras: full-depth0.76px median/1.06px worst-frame versus scale-only0.97/1.58px. All305 frames have at least288 usable anchors. No appearance, motion or full-length model export."
+    },
+    {
+      "catalog": "app/experiments.json",
+      "id": "mosca-fixed-world-appearance",
+      "title": "MoSca / fixed-world full interior",
+      "status": "exploratory-sparse-motion",
+      "description": "Full0\u201325.3s interior with fixed cameras. Exploratory:87 frames have sparse motion support, so people and novel views remain unvalidated. The edited transition and separate outro are not reconstructed."
+    },
+    {
+      "catalog": "app/experiments.json",
+      "id": "core-pipeline-validation",
+      "title": "Core pipeline / timing controls",
+      "status": "exploratory",
+      "description": "Fresh fixed-world video trials with measured stage time, cost and retained failures. Sculpture is a static control; dynamic replay is not established by it."
+    }
+  ]
+}

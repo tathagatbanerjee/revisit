@@ -1,0 +1,1881 @@
+{
+  "schemaVersion": 1,
+  "scope": "103 historical published model records; assets are not included or cleared for redistribution by this listing. Counts overlap training attempts.",
+  "runs": [
+    {
+      "id": "assembled-hybrid-assembled",
+      "title": "Assembled hybrid \u00b7 before refinement",
+      "experimentId": "assembled-hybrid",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9029,
+      "gaussianCount": 21096,
+      "metrics": {
+        "gaussianCount": 21096
+      },
+      "notes": "End-to-end integration on two fixed indoor cameras: image-recovered SfM poses/points drive fresh masked Brush background, plus saved complete-person two-view MoSca motion and optional shared Gaussian refinement. All outputs use the recovered world and identical inspection cameras, clocks and black compositing. Asset reuse bridge uses its existing supplied training calibration; this is not a fully image-only handheld-phone pipeline or new MoSca scaffold training. Fresh camera21 RGB arrived after candidates froze; camera02 is a previously seen stress diagnostic. No updates followed evaluation. Observe missing surfaces/ghosts; source-view appearance does not establish unseen-view accuracy. No Gaussian thinning.",
+      "modelBytes": 28698860
+    },
+    {
+      "id": "assembled-hybrid-baseline",
+      "title": "MoSca two-view \u00b7 matched reference",
+      "experimentId": "assembled-hybrid",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9029,
+      "gaussianCount": 58706,
+      "metrics": {
+        "gaussianCount": 58706
+      },
+      "notes": "End-to-end integration on two fixed indoor cameras: image-recovered SfM poses/points drive fresh masked Brush background, plus saved complete-person two-view MoSca motion and optional shared Gaussian refinement. All outputs use the recovered world and identical inspection cameras, clocks and black compositing. Asset reuse bridge uses its existing supplied training calibration; this is not a fully image-only handheld-phone pipeline or new MoSca scaffold training. Fresh camera21 RGB arrived after candidates froze; camera02 is a previously seen stress diagnostic. No updates followed evaluation. Observe missing surfaces/ghosts; source-view appearance does not establish unseen-view accuracy. No Gaussian thinning.",
+      "modelBytes": 79848460
+    },
+    {
+      "id": "assembled-hybrid-refined",
+      "title": "Assembled hybrid \u00b7 two-view refined",
+      "experimentId": "assembled-hybrid",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9029,
+      "gaussianCount": 21096,
+      "metrics": {
+        "gaussianCount": 21096
+      },
+      "notes": "End-to-end integration on two fixed indoor cameras: image-recovered SfM poses/points drive fresh masked Brush background, plus saved complete-person two-view MoSca motion and optional shared Gaussian refinement. All outputs use the recovered world and identical inspection cameras, clocks and black compositing. Asset reuse bridge uses its existing supplied training calibration; this is not a fully image-only handheld-phone pipeline or new MoSca scaffold training. Fresh camera21 RGB arrived after candidates froze; camera02 is a previously seen stress diagnostic. No updates followed evaluation. Observe missing surfaces/ghosts; source-view appearance does not establish unseen-view accuracy. No Gaussian thinning.",
+      "modelBytes": 28698860
+    },
+    {
+      "id": "brush-01-sculpture-orbit-60views-10000steps",
+      "title": "Brush sculpture \u00b7 60-view static reconstruction",
+      "experimentId": "brush-static",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 111906,
+      "metrics": {
+        "gaussianCount": 111906,
+        "modelBytes": 26411367,
+        "registeredCameras": 60,
+        "training": {
+          "gpu": {
+            "seconds": 0.11441415900000607,
+            "exitCode": 0,
+            "command": [
+              "nvidia-smi"
+            ]
+          },
+          "vulkan": {
+            "seconds": 21.143386472999993,
+            "exitCode": 0,
+            "command": [
+              "vulkaninfo",
+              "--summary"
+            ]
+          },
+          "brush-help": {
+            "seconds": 0.007723744000031729,
+            "exitCode": 0,
+            "command": [
+              "/opt/brush-trial/brush-app-x86_64-unknown-linux-gnu/brush_app",
+              "--help"
+            ]
+          },
+          "colmap-help": {
+            "seconds": 0.16404130899996971,
+            "exitCode": 0,
+            "command": [
+              "colmap",
+              "-h"
+            ]
+          },
+          "camera-text": {
+            "seconds": 0.9651502709999704,
+            "exitCode": 0,
+            "command": [
+              "colmap",
+              "model_converter",
+              "--input_path",
+              "/opt/brush-trial/dataset/original-sparse",
+              "--output_path",
+              "/opt/brush-trial/output/cameras",
+              "--output_type",
+              "TXT"
+            ]
+          },
+          "camera-analysis": {
+            "seconds": 0.06392715099997304,
+            "exitCode": 0,
+            "command": [
+              "colmap",
+              "model_analyzer",
+              "--path",
+              "/opt/brush-trial/dataset/original-sparse"
+            ]
+          },
+          "smoke": {
+            "seconds": 63.13315623700004,
+            "exitCode": 0,
+            "command": [
+              "/opt/brush-trial/brush-app-x86_64-unknown-linux-gnu/brush_app",
+              "/opt/brush-trial/dataset/undistorted",
+              "--total-steps",
+              "2000",
+              "--max-resolution",
+              "1280",
+              "--max-splats",
+              "1000000",
+              "--growth-stop-iter",
+              "1000",
+              "--eval-split-every",
+              "10",
+              "--eval-every",
+              "1000",
+              "--eval-save-to-disk",
+              "--export-every",
+              "1000",
+              "--export-path",
+              "/opt/brush-trial/output/smoke",
+              "--seed",
+              "42"
+            ]
+          },
+          "main": {
+            "seconds": 318.818471237,
+            "exitCode": 0,
+            "command": [
+              "/opt/brush-trial/brush-app-x86_64-unknown-linux-gnu/brush_app",
+              "/opt/brush-trial/dataset/undistorted",
+              "--total-steps",
+              "10000",
+              "--max-resolution",
+              "1280",
+              "--max-splats",
+              "1000000",
+              "--growth-stop-iter",
+              "5000",
+              "--eval-split-every",
+              "10",
+              "--eval-every",
+              "1000",
+              "--eval-save-to-disk",
+              "--export-every",
+              "1000",
+              "--export-path",
+              "/opt/brush-trial/output/main",
+              "--seed",
+              "42"
+            ]
+          }
+        },
+        "cameraPreparation": {
+          "gpu": {
+            "seconds": 0.11439231500000346,
+            "exitCode": 0,
+            "command": [
+              "nvidia-smi"
+            ]
+          },
+          "vulkan": {
+            "seconds": 20.241008042000033,
+            "exitCode": 0,
+            "command": [
+              "vulkaninfo",
+              "--summary"
+            ]
+          },
+          "brush-help": {
+            "seconds": 0.007705408999981955,
+            "exitCode": 0,
+            "command": [
+              "/opt/brush-trial/brush-app-x86_64-unknown-linux-gnu/brush_app",
+              "--help"
+            ]
+          },
+          "colmap-help": {
+            "seconds": 0.31414539899998317,
+            "exitCode": 0,
+            "command": [
+              "colmap",
+              "-h"
+            ]
+          },
+          "features": {
+            "seconds": 45.567389805999994,
+            "exitCode": 0,
+            "command": [
+              "colmap",
+              "feature_extractor",
+              "--database_path",
+              "/opt/brush-trial/dataset/database.db",
+              "--image_path",
+              "/opt/brush-trial/dataset/images",
+              "--ImageReader.single_camera",
+              "1",
+              "--ImageReader.camera_model",
+              "SIMPLE_RADIAL",
+              "--SiftExtraction.use_gpu",
+              "0",
+              "--SiftExtraction.num_threads",
+              "4",
+              "--SiftExtraction.max_image_size",
+              "1280"
+            ]
+          },
+          "matching": {
+            "seconds": 528.193916542,
+            "exitCode": 0,
+            "command": [
+              "colmap",
+              "exhaustive_matcher",
+              "--database_path",
+              "/opt/brush-trial/dataset/database.db",
+              "--SiftMatching.use_gpu",
+              "0",
+              "--SiftMatching.num_threads",
+              "4"
+            ]
+          },
+          "mapping": {
+            "seconds": 47.78642640099997,
+            "exitCode": 0,
+            "command": [
+              "colmap",
+              "mapper",
+              "--database_path",
+              "/opt/brush-trial/dataset/database.db",
+              "--image_path",
+              "/opt/brush-trial/dataset/images",
+              "--output_path",
+              "/opt/brush-trial/dataset/sparse",
+              "--Mapper.num_threads",
+              "4"
+            ]
+          },
+          "camera-analysis": {
+            "seconds": 0.06382966000001034,
+            "exitCode": 0,
+            "command": [
+              "colmap",
+              "model_analyzer",
+              "--path",
+              "/opt/brush-trial/dataset/sparse/0"
+            ]
+          },
+          "camera-text": {
+            "seconds": 0.9651180070000009,
+            "exitCode": 0,
+            "command": [
+              "colmap",
+              "model_converter",
+              "--input_path",
+              "/opt/brush-trial/dataset/sparse/0",
+              "--output_path",
+              "/opt/brush-trial/output/cameras",
+              "--output_type",
+              "TXT"
+            ]
+          },
+          "undistort": {
+            "seconds": 15.598088942999993,
+            "exitCode": 0,
+            "command": [
+              "colmap",
+              "image_undistorter",
+              "--image_path",
+              "/opt/brush-trial/dataset/images",
+              "--input_path",
+              "/opt/brush-trial/dataset/sparse/0",
+              "--output_path",
+              "/opt/brush-trial/dataset/undistorted",
+              "--output_type",
+              "COLMAP",
+              "--max_image_size",
+              "1280"
+            ]
+          }
+        },
+        "peakProcessRssKiB": {
+          "smoke": 836652,
+          "main": 845652
+        },
+        "sampledPeakGpuMiB": 1149.0
+      },
+      "notes": "One static scene fitted from registered video views. Reset uses the recovered camera at clip 5 s; orbit, zoom and pan are free. Scale is arbitrary. Changing source-video time does not animate this scene. Hidden surfaces are not observed evidence.",
+      "modelBytes": 26411367
+    },
+    {
+      "id": "brush-h1-background",
+      "title": "H1 \u00b7 Brush architectural background",
+      "experimentId": "brush-mosca",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 9912,
+      "metrics": {
+        "gaussianCount": 9912
+      },
+      "notes": "Matched DC-only comparisons; native full Brush model retained separately. No per-frame realignment or scripted actor movement. Conservative masks exclude lower architecture/floor; unknown world units; motion-based foreground may contain erroneous background; geometry is reconstructed.",
+      "modelBytes": 674430
+    },
+    {
+      "id": "brush-h1-background-native",
+      "title": "H1 \u00b7 Brush original SH appearance",
+      "experimentId": "brush-mosca",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 9912,
+      "metrics": {
+        "gaussianCount": 9912
+      },
+      "notes": "Untouched native Brush export, including higher-order SH. Same source camera as matched DC comparisons; conservative architecture-only mask.",
+      "modelBytes": 2340781
+    },
+    {
+      "id": "brush-h1-background-native-person-masks",
+      "title": "H1 precise masks \u00b7 Brush original SH appearance",
+      "experimentId": "brush-mosca",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 9801,
+      "metrics": {
+        "gaussianCount": 9801
+      },
+      "notes": "Untouched native Brush export, including higher-order SH. Same source camera as matched DC comparisons; reviewed mask strategy recorded in provenance.",
+      "modelBytes": 2314585
+    },
+    {
+      "id": "brush-h1-background-person-masks",
+      "title": "H1 precise masks \u00b7 Brush architectural background",
+      "experimentId": "brush-mosca",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 9801,
+      "metrics": {
+        "gaussianCount": 9801
+      },
+      "notes": "Matched DC-only comparisons; native full Brush model retained separately. No per-frame realignment or scripted actor movement. Per-visitor rectangles preserve visible floor; some occluded surfaces and crowd-mask borders remain uncertain; unknown world units; motion-based foreground may contain erroneous background; geometry is reconstructed.",
+      "modelBytes": 666882
+    },
+    {
+      "id": "brush-mosca-h1",
+      "title": "H1 \u00b7 Brush + MoSca hybrid",
+      "experimentId": "brush-mosca",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9166666666666665,
+      "gaussianCount": 24100,
+      "metrics": {
+        "gaussianCount": 24100
+      },
+      "notes": "Matched DC-only comparisons; native full Brush model retained separately. No per-frame realignment or scripted actor movement. Conservative masks exclude lower architecture/floor; unknown world units; motion-based foreground may contain erroneous background; geometry is reconstructed.",
+      "modelBytes": 32784300
+    },
+    {
+      "id": "brush-mosca-h1-person-masks",
+      "title": "H1 precise masks \u00b7 Brush + MoSca hybrid",
+      "experimentId": "brush-mosca",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9166666666666665,
+      "gaussianCount": 23989,
+      "metrics": {
+        "gaussianCount": 23989
+      },
+      "notes": "Matched DC-only comparisons; native full Brush model retained separately. No per-frame realignment or scripted actor movement. Per-visitor rectangles preserve visible floor; some occluded surfaces and crowd-mask borders remain uncertain; unknown world units; motion-based foreground may contain erroneous background; geometry is reconstructed.",
+      "modelBytes": 32633340
+    },
+    {
+      "id": "calibrated-initial",
+      "title": "Calibrated MoSca initializer",
+      "experimentId": "calibrated-multiview",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9029,
+      "gaussianCount": 58706,
+      "metrics": {
+        "gaussianCount": 58706
+      },
+      "notes": "Calibrated studio test, 20 real saved MoSca states over ~3 seconds. Both controls use the same two-view-informed depth/intrinsics calibration and initializer. The one-view control optimizes camera00 only; the two-view model optimizes cameras00 and24 into shared geometry at each timestamp with temporal regularization. Camera02 images were introduced only after both checkpoints were frozen; no held-out refitting. Use Recorded viewpoint to compare the exact calibrated cameras without changing time. Second-view training fidelity improves; held-out view remains visibly fragmented and person-region image error worsens. Body/room holes, unseen surfaces and extrapolation remain. This is experimental refinement of saved MoSca Gaussians, not a jointly trained upstream MoSca scaffold or handheld-phone pipeline. DC appearance, black backfill, no point subsampling. See calibrated-multiview/result.md.",
+      "modelBytes": 79848460
+    },
+    {
+      "id": "calibrated-mono",
+      "title": "One-view refinement \u00b7 control",
+      "experimentId": "calibrated-multiview",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9029,
+      "gaussianCount": 58706,
+      "metrics": {
+        "gaussianCount": 58706
+      },
+      "notes": "Calibrated studio test, 20 real saved MoSca states over ~3 seconds. Both controls use the same two-view-informed depth/intrinsics calibration and initializer. The one-view control optimizes camera00 only; the two-view model optimizes cameras00 and24 into shared geometry at each timestamp with temporal regularization. Camera02 images were introduced only after both checkpoints were frozen; no held-out refitting. Use Recorded viewpoint to compare the exact calibrated cameras without changing time. Second-view training fidelity improves; held-out view remains visibly fragmented and person-region image error worsens. Body/room holes, unseen surfaces and extrapolation remain. This is experimental refinement of saved MoSca Gaussians, not a jointly trained upstream MoSca scaffold or handheld-phone pipeline. DC appearance, black backfill, no point subsampling. See calibrated-multiview/result.md.",
+      "modelBytes": 79848460
+    },
+    {
+      "id": "calibrated-parity-0",
+      "title": "Renderer check \u00b7 Brush SH0 background \u00b7 static",
+      "experimentId": "calibrated-multiview",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 11533,
+      "metrics": {
+        "gaussianCount": 11533
+      },
+      "notes": "Renderer fixture from a saved Brush background. No reconstructed motion. Compare identical native validation camera, degree and black backfill; ordinary harness clear colour is dark green. Static person seed ghosts remain. See calibrated-multiview renderer report; DC roundtrip changes one colour value.",
+      "modelBytes": 646283
+    },
+    {
+      "id": "calibrated-parity-3",
+      "title": "Renderer check \u00b7 Brush SH3 background \u00b7 static",
+      "experimentId": "calibrated-multiview",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 11533,
+      "metrics": {
+        "gaussianCount": 11533
+      },
+      "notes": "Renderer fixture from a saved Brush background. No reconstructed motion. Compare identical native validation camera, degree and black backfill; ordinary harness clear colour is dark green. Static person seed ghosts remain. See calibrated-multiview renderer report; DC roundtrip changes one colour value.",
+      "modelBytes": 2723338
+    },
+    {
+      "id": "calibrated-two",
+      "title": "Two-view refinement \u00b7 experimental",
+      "experimentId": "calibrated-multiview",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9029,
+      "gaussianCount": 58706,
+      "metrics": {
+        "gaussianCount": 58706
+      },
+      "notes": "Calibrated studio test, 20 real saved MoSca states over ~3 seconds. Both controls use the same two-view-informed depth/intrinsics calibration and initializer. The one-view control optimizes camera00 only; the two-view model optimizes cameras00 and24 into shared geometry at each timestamp with temporal regularization. Camera02 images were introduced only after both checkpoints were frozen; no held-out refitting. Use Recorded viewpoint to compare the exact calibrated cameras without changing time. Second-view training fidelity improves; held-out view remains visibly fragmented and person-region image error worsens. Body/room holes, unseen surfaces and extrapolation remain. This is experimental refinement of saved MoSca Gaussians, not a jointly trained upstream MoSca scaffold or handheld-phone pipeline. DC appearance, black backfill, no point subsampling. See calibrated-multiview/result.md.",
+      "modelBytes": 79848460
+    },
+    {
+      "id": "dynamic-boxes-published-20frames",
+      "title": "Moving boxes \u00b7 published dynamic reconstruction",
+      "experimentId": "dynamic-playback",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 3.8,
+      "gaussianCount": null,
+      "metrics": {
+        "nativeSplats": 351422,
+        "exportedSplatsPerFrame": 87856,
+        "nativeTimesteps": 150,
+        "nativeFps": 20,
+        "exportCadenceHz": 5.0,
+        "frameCount": 20,
+        "exportSeconds": 2.789731070995913,
+        "peakProcessRssMiB": 326.41015625,
+        "foregroundSplats": 16977,
+        "foregroundMedianDisplacement": 0.22082644701004028,
+        "backgroundMedianDisplacement": 0.00013474769366439432,
+        "plyBytes": 119493900
+      },
+      "notes": "Published boxes reconstruction by Luiten et al. (3DV 2024), from CMU Panoptic synchronized multiview footage; noncommercial research only. This is not our video reconstruction. 20 snapshots at 5 Hz, deterministic Gaussian index stride 4. No motion interpolation, source recording or UTC calibration attached. Reconstructed states are estimates; best-guess markers are manual annotations.",
+      "modelBytes": 119493900
+    },
+    {
+      "id": "edge-a-control",
+      "title": "A / original control",
+      "experimentId": "edge-registration",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 65507,
+      "metrics": {
+        "gaussianCount": 65507
+      },
+      "notes": "Edge-registration diagnostic using saved independent full MoSca models. A and B controls and previous union are exact copies of the prior prototype. Candidate changes only one global B rotation, translation and scale. All points, colours, opacity, source clocks and source-valid start/end activity are preserved. Room-only physical-edge proxy uses calibration-assisted identities; complete-person fit was not run. Geometry/person gates fail, so the merge is rejected and originals retained. The third camera is a virtual seen-model development view, not fresh RGB evaluation. No consolidation, refinement, retraining or paid compute.",
+      "modelBytes": 160377720
+    },
+    {
+      "id": "edge-b-control",
+      "title": "B / original aligned control",
+      "experimentId": "edge-registration",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 62380,
+      "metrics": {
+        "gaussianCount": 62380
+      },
+      "notes": "Edge-registration diagnostic using saved independent full MoSca models. A and B controls and previous union are exact copies of the prior prototype. Candidate changes only one global B rotation, translation and scale. All points, colours, opacity, source clocks and source-valid start/end activity are preserved. Room-only physical-edge proxy uses calibration-assisted identities; complete-person fit was not run. Geometry/person gates fail, so the merge is rejected and originals retained. The third camera is a virtual seen-model development view, not fresh RGB evaluation. No consolidation, refinement, retraining or paid compute.",
+      "modelBytes": 144239136
+    },
+    {
+      "id": "edge-candidate-union",
+      "title": "A+B / edge alignment / rejected",
+      "experimentId": "edge-registration",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 127887,
+      "metrics": {
+        "gaussianCount": 127887
+      },
+      "notes": "Edge-registration diagnostic using saved independent full MoSca models. A and B controls and previous union are exact copies of the prior prototype. Candidate changes only one global B rotation, translation and scale. All points, colours, opacity, source clocks and source-valid start/end activity are preserved. Room-only physical-edge proxy uses calibration-assisted identities; complete-person fit was not run. Geometry/person gates fail, so the merge is rejected and originals retained. The third camera is a virtual seen-model development view, not fresh RGB evaluation. No consolidation, refinement, retraining or paid compute.",
+      "modelBytes": 304600326
+    },
+    {
+      "id": "edge-previous-union",
+      "title": "A+B / previous alignment / rejected",
+      "experimentId": "edge-registration",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 127887,
+      "metrics": {
+        "gaussianCount": 127887
+      },
+      "notes": "Edge-registration diagnostic using saved independent full MoSca models. A and B controls and previous union are exact copies of the prior prototype. Candidate changes only one global B rotation, translation and scale. All points, colours, opacity, source clocks and source-valid start/end activity are preserved. Room-only physical-edge proxy uses calibration-assisted identities; complete-person fit was not run. Geometry/person gates fail, so the merge is rejected and originals retained. The third camera is a virtual seen-model development view, not fresh RGB evaluation. No consolidation, refinement, retraining or paid compute.",
+      "modelBytes": 304600326
+    },
+    {
+      "id": "fresh-guildhall-interior",
+      "title": "Guildhall / fresh interior shot / 0\u201325.33s",
+      "experimentId": "guildhall-full-video",
+      "representation": "sequence",
+      "states": 154,
+      "durationSeconds": 30,
+      "gaussianCount": 266092,
+      "metrics": {
+        "gaussianCount": 266092
+      },
+      "notes": "Fresh full-source shot-aware MoSca reconstruction, all points. Original video contains a dissolve into a distinct shot; coordinate frames are separate. Original image sampling6fps; native full-SH comparison movie covers all30s with source-only dissolve. DC viewer appearance; unseen geometry/person quality unvalidated. Research-source terms retained.",
+      "modelBytes": 2768485227
+    },
+    {
+      "id": "fresh-guildhall-outro",
+      "title": "Guildhall / fresh separate outro / original27\u201330s",
+      "experimentId": "guildhall-full-video",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 174111,
+      "metrics": {
+        "gaussianCount": 174111
+      },
+      "notes": "Fresh full-source shot-aware MoSca reconstruction, all points. Original video contains a dissolve into a distinct shot; coordinate frames are separate. Original image sampling6fps; native full-SH comparison movie covers all30s with source-only dissolve. DC viewer appearance; unseen geometry/person quality unvalidated. Research-source terms retained.",
+      "modelBytes": 11839964
+    },
+    {
+      "id": "fresh-video-a",
+      "title": "Fresh A / full MoSca / original camera00 video",
+      "experimentId": "fresh-video-mosca-alignment",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 65369,
+      "metrics": {
+        "gaussianCount": 65369
+      },
+      "notes": "Fresh independent fits from original video decoding/depth/tracks/cameras; all points, no Brush/refit/opacity edits. BUFFER-X is one unvalidated diagnostic, including failed controls; no calibration/label-assisted alignment. DC snapshot appearance; native full-SH videos are the appearance reference. Each source contributes only within its actual observed interval. Source-valid clocks are known in this studio test, not unknown-upload synchronization.",
+      "modelBytes": 160039896
+    },
+    {
+      "id": "fresh-video-b",
+      "title": "Fresh B / full MoSca / original camera24 video",
+      "experimentId": "fresh-video-mosca-alignment",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 62489,
+      "metrics": {
+        "gaussianCount": 62489
+      },
+      "notes": "Fresh independent fits from original video decoding/depth/tracks/cameras; all points, no Brush/refit/opacity edits. BUFFER-X is one unvalidated diagnostic, including failed controls; no calibration/label-assisted alignment. DC snapshot appearance; native full-SH videos are the appearance reference. Each source contributes only within its actual observed interval. Source-valid clocks are known in this studio test, not unknown-upload synchronization.",
+      "modelBytes": 144491144
+    },
+    {
+      "id": "fresh-video-union",
+      "title": "Fresh A+B / BUFFER-X raw union / rejected diagnostic",
+      "experimentId": "fresh-video-mosca-alignment",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 127858,
+      "metrics": {
+        "gaussianCount": 127858
+      },
+      "notes": "Fresh independent fits from original video decoding/depth/tracks/cameras; all points, no Brush/refit/opacity edits. BUFFER-X is one unvalidated diagnostic, including failed controls; no calibration/label-assisted alignment. DC snapshot appearance; native full-SH videos are the appearance reference. Each source contributes only within its actual observed interval. Source-valid clocks are known in this studio test, not unknown-upload synchronization.",
+      "modelBytes": 304514510
+    },
+    {
+      "id": "fusion-prototype-a",
+      "title": "A / retained original",
+      "experimentId": "integrated-mosca-fusion",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 65507,
+      "metrics": {
+        "gaussianCount": 65507
+      },
+      "notes": "Cached independent full MoSca A and B, aligned on recovered source-local clocks. Room alignment passes; person alignment fails and the combined outputs are rejected inspection candidates. Keep the two originals as accepted source assets. All A and moving points are retained. Consolidation/refinement touch only selected B background during overlap; B-only tail restores original B, so boundary changes can occur. Same cameras, clock, black/DC rendering. Seen calibrated studio development input, not arbitrary phone upload processing or fresh-view validation. No new reconstruction training or paid compute.",
+      "modelBytes": 160377720
+    },
+    {
+      "id": "fusion-prototype-b",
+      "title": "B / retained original / aligned",
+      "experimentId": "integrated-mosca-fusion",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 62380,
+      "metrics": {
+        "gaussianCount": 62380
+      },
+      "notes": "Cached independent full MoSca A and B, aligned on recovered source-local clocks. Room alignment passes; person alignment fails and the combined outputs are rejected inspection candidates. Keep the two originals as accepted source assets. All A and moving points are retained. Consolidation/refinement touch only selected B background during overlap; B-only tail restores original B, so boundary changes can occur. Same cameras, clock, black/DC rendering. Seen calibrated studio development input, not arbitrary phone upload processing or fresh-view validation. No new reconstruction training or paid compute.",
+      "modelBytes": 144239136
+    },
+    {
+      "id": "fusion-prototype-consolidated",
+      "title": "A+B / consolidated / rejected",
+      "experimentId": "integrated-mosca-fusion",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 127246,
+      "metrics": {
+        "gaussianCount": 127246
+      },
+      "notes": "Cached independent full MoSca A and B, aligned on recovered source-local clocks. Room alignment passes; person alignment fails and the combined outputs are rejected inspection candidates. Keep the two originals as accepted source assets. All A and moving points are retained. Consolidation/refinement touch only selected B background during overlap; B-only tail restores original B, so boundary changes can occur. Same cameras, clock, black/DC rendering. Seen calibrated studio development input, not arbitrary phone upload processing or fresh-view validation. No new reconstruction training or paid compute.",
+      "modelBytes": 303292686
+    },
+    {
+      "id": "fusion-prototype-raw",
+      "title": "A+B / raw union / rejected",
+      "experimentId": "integrated-mosca-fusion",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 127887,
+      "metrics": {
+        "gaussianCount": 127887
+      },
+      "notes": "Cached independent full MoSca A and B, aligned on recovered source-local clocks. Room alignment passes; person alignment fails and the combined outputs are rejected inspection candidates. Keep the two originals as accepted source assets. All A and moving points are retained. Consolidation/refinement touch only selected B background during overlap; B-only tail restores original B, so boundary changes can occur. Same cameras, clock, black/DC rendering. Seen calibrated studio development input, not arbitrary phone upload processing or fresh-view validation. No new reconstruction training or paid compute.",
+      "modelBytes": 304600326
+    },
+    {
+      "id": "fusion-prototype-refined",
+      "title": "A+B / refined / rejected",
+      "experimentId": "integrated-mosca-fusion",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 127246,
+      "metrics": {
+        "gaussianCount": 127246
+      },
+      "notes": "Cached independent full MoSca A and B, aligned on recovered source-local clocks. Room alignment passes; person alignment fails and the combined outputs are rejected inspection candidates. Keep the two originals as accepted source assets. All A and moving points are retained. Consolidation/refinement touch only selected B background during overlap; B-only tail restores original B, so boundary changes can occur. Same cameras, clock, black/DC rendering. Seen calibrated studio development input, not arbitrary phone upload processing or fresh-view validation. No new reconstruction training or paid compute.",
+      "modelBytes": 303292686
+    },
+    {
+      "id": "guildhall-full-mosca",
+      "title": "Guildhall / full MoSca / all points",
+      "experimentId": "guildhall-comparison",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9166666666666665,
+      "gaussianCount": 232566,
+      "metrics": {
+        "gaussianCount": 232566
+      },
+      "notes": "Same saved Guildhall event, fixed H1 alignment/camera/clock and matched DC color. All static and dynamic MoSca points; no Brush. No retraining, new inference, temporal interpolation or claim of an automatic quality winner. Source event original58-61s; Acabashi/Wikimedia Commons, CC BY-SA4.0.",
+      "modelBytes": 316298080
+    },
+    {
+      "id": "guildhall-h1-precise-full-density",
+      "title": "Guildhall / H1 precise masks / full-density hybrid",
+      "experimentId": "guildhall-comparison",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9166666666666665,
+      "gaussianCount": 38177,
+      "metrics": {
+        "gaussianCount": 38177
+      },
+      "notes": "Same saved Guildhall event, fixed H1 alignment/camera/clock and matched DC color. Same precise-mask Brush background; all dynamic MoSca points, no motion subsampling. No retraining, new inference, temporal interpolation or claim of an automatic quality winner. Source event original58-61s; Acabashi/Wikimedia Commons, CC BY-SA4.0.",
+      "modelBytes": 51929020
+    },
+    {
+      "id": "guildhall-h1-precise-original",
+      "title": "Guildhall / H1 precise masks / original hybrid",
+      "experimentId": "guildhall-comparison",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9166666666666665,
+      "gaussianCount": 23989,
+      "metrics": {
+        "gaussianCount": 23989
+      },
+      "notes": "Same saved Guildhall event, fixed H1 alignment/camera/clock and matched DC color. Exact old H1 hybrid; motion stride2 unchanged. No retraining, new inference, temporal interpolation or claim of an automatic quality winner. Source event original58-61s; Acabashi/Wikimedia Commons, CC BY-SA4.0.",
+      "modelBytes": 32633340
+    },
+    {
+      "id": "incremental-fusion-a",
+      "title": "A / saved scene",
+      "experimentId": "incremental-scene-fusion",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": null,
+      "metrics": {
+        "oldGaussians": 21096,
+        "addedGaussians": 0,
+        "newViewPersonMae": 0.12640158996427975
+      },
+      "notes": "One frozen instant. Existing Brush room and MoSca person unchanged; late-upload21 model-inferred depth proposals. Previously seen02 is a post-freeze diagnostic; no fresh evaluation or coherent motion claim. Graininess and missing surfaces remain.",
+      "modelBytes": 1434943
+    },
+    {
+      "id": "incremental-fusion-refined",
+      "title": "A+B / refined additions",
+      "experimentId": "incremental-scene-fusion",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": null,
+      "metrics": {
+        "oldGaussians": 21096,
+        "addedGaussians": 1500,
+        "newViewPersonMae": 0.0901216288250807
+      },
+      "notes": "One frozen instant. Existing Brush room and MoSca person unchanged; late-upload21 model-inferred depth proposals. 1500 additions refined against00/24/21. Previously seen02 is a post-freeze diagnostic; no fresh evaluation or coherent motion claim. Graininess and missing surfaces remain.",
+      "modelBytes": 1536943
+    },
+    {
+      "id": "incremental-fusion-union",
+      "title": "A+B / additions before refinement",
+      "experimentId": "incremental-scene-fusion",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": null,
+      "metrics": {
+        "oldGaussians": 21096,
+        "addedGaussians": 1500,
+        "newViewPersonMae": 0.11916964792445675
+      },
+      "notes": "One frozen instant. Existing Brush room and MoSca person unchanged; late-upload21 model-inferred depth proposals. Previously seen02 is a post-freeze diagnostic; no fresh evaluation or coherent motion claim. Graininess and missing surfaces remain.",
+      "modelBytes": 1536943
+    },
+    {
+      "id": "independent-mosca-a",
+      "title": "A / full MoSca / camera 00",
+      "experimentId": "independent-mosca-fusion",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 65507,
+      "metrics": {
+        "gaussianCount": 65507
+      },
+      "notes": "Two independently fitted full MoSca scenes, every static and moving point; no Brush, Gaussian refit, deduplication or opacity adjustment. Fixed-camera studio control using supplied training calibration and depth correspondences, not handheld-phone fusion. A covers 0\u20132.9029s; B covers 0.5005\u20133.236567s. Inactive fits contribute no points; blank single-video controls outside coverage are intentional. Source clips are independently fitted but mapped onto their common observed event clock. DC export, black backfill, no temporal interpolation. Overlapping splats can duplicate bodies/surfaces; this is the raw additive test, not a claimed improvement. The selected similarity alignment fails its loose validation gate; inspect this as a diagnostic failure, not correct fusion. Panoptic research/noncommercial source; original UTC unknown. Camera20 RGB remains sealed.",
+      "modelBytes": 160377720
+    },
+    {
+      "id": "independent-mosca-b",
+      "title": "B / full MoSca / camera 24 / later interval",
+      "experimentId": "independent-mosca-fusion",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 62380,
+      "metrics": {
+        "gaussianCount": 62380
+      },
+      "notes": "Two independently fitted full MoSca scenes, every static and moving point; no Brush, Gaussian refit, deduplication or opacity adjustment. Fixed-camera studio control using supplied training calibration and depth correspondences, not handheld-phone fusion. A covers 0\u20132.9029s; B covers 0.5005\u20133.236567s. Inactive fits contribute no points; blank single-video controls outside coverage are intentional. Source clips are independently fitted but mapped onto their common observed event clock. DC export, black backfill, no temporal interpolation. Overlapping splats can duplicate bodies/surfaces; this is the raw additive test, not a claimed improvement. The selected similarity alignment fails its loose validation gate; inspect this as a diagnostic failure, not correct fusion. Panoptic research/noncommercial source; original UTC unknown. Camera20 RGB remains sealed.",
+      "modelBytes": 144239136
+    },
+    {
+      "id": "independent-mosca-union",
+      "title": "A+B / full MoSca raw union / alignment gate failed",
+      "experimentId": "independent-mosca-fusion",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 127887,
+      "metrics": {
+        "gaussianCount": 127887
+      },
+      "notes": "Two independently fitted full MoSca scenes, every static and moving point; no Brush, Gaussian refit, deduplication or opacity adjustment. Fixed-camera studio control using supplied training calibration and depth correspondences, not handheld-phone fusion. A covers 0\u20132.9029s; B covers 0.5005\u20133.236567s. Inactive fits contribute no points; blank single-video controls outside coverage are intentional. Source clips are independently fitted but mapped onto their common observed event clock. DC export, black backfill, no temporal interpolation. Overlapping splats can duplicate bodies/surfaces; this is the raw additive test, not a claimed improvement. The selected similarity alignment fails its loose validation gate; inspect this as a diagnostic failure, not correct fusion. Panoptic research/noncommercial source; original UTC unknown. Camera20 RGB remains sealed.",
+      "modelBytes": 304600326
+    },
+    {
+      "id": "learned-a-control",
+      "title": "A / unchanged control",
+      "experimentId": "learned-splat-registration",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 65507,
+      "metrics": {
+        "gaussianCount": 65507
+      },
+      "notes": "Exact-copy frames from the previous edge-registration controls. Shared event clock/cameras with both learned registration candidates; no source changes.",
+      "modelBytes": 160377720
+    },
+    {
+      "id": "learned-b-previous",
+      "title": "B / previous alignment",
+      "experimentId": "learned-splat-registration",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 62380,
+      "metrics": {
+        "gaussianCount": 62380
+      },
+      "notes": "Exact-copy frames from the previous edge-registration controls. Shared event clock/cameras with both learned registration candidates; no source changes.",
+      "modelBytes": 144239136
+    },
+    {
+      "id": "learned-bufferx-union",
+      "title": "A+B / splatreg + BUFFER-X / diagnostic",
+      "experimentId": "learned-splat-registration",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 127887,
+      "metrics": {
+        "gaussianCount": 127887
+      },
+      "notes": "Actual pretrained splatreg + BUFFER-X registration. No prior alignment or calibration supplied to inference. One transform across time; all source Gaussians retained. Seen development pair; unvalidated dynamic fusion, no promotion. Method and known-copy control scores recorded in the experiment package.",
+      "modelBytes": 304600326
+    },
+    {
+      "id": "learned-gaussreg-union",
+      "title": "A+B / GaussReg coarse / diagnostic",
+      "experimentId": "learned-splat-registration",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 127887,
+      "metrics": {
+        "gaussianCount": 127887
+      },
+      "notes": "Actual pretrained GaussReg coarse registration. No prior alignment or calibration supplied to inference. One transform across time; all source Gaussians retained. Seen development pair; unvalidated dynamic fusion, no promotion. Method and known-copy control scores recorded in the experiment package.",
+      "modelBytes": 304600326
+    },
+    {
+      "id": "learned-previous-union",
+      "title": "A+B / previous alignment / rejected",
+      "experimentId": "learned-splat-registration",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 127887,
+      "metrics": {
+        "gaussianCount": 127887
+      },
+      "notes": "Exact-copy frames from the previous edge-registration controls. Shared event clock/cameras with both learned registration candidates; no source changes.",
+      "modelBytes": 304600326
+    },
+    {
+      "id": "mosca-duck-control-20frames",
+      "title": "MoSca \u00b7 author duck control",
+      "experimentId": "mosca-dynamic",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.4,
+      "gaussianCount": null,
+      "metrics": {
+        "nativeFrames": 25,
+        "staticGaussians": 171902,
+        "dynamicGaussians": 57253,
+        "dynamicMedianDisplacementFromStart": [
+          0.0,
+          0.0153940599411726,
+          0.05267662927508354,
+          0.07039755582809448,
+          0.08467847853899002,
+          0.09417357295751572,
+          0.10251329094171524,
+          0.10430539399385452,
+          0.10565854609012604,
+          0.10763444751501083,
+          0.11467837542295456,
+          0.1199076697230339,
+          0.12884457409381866,
+          0.13861972093582153,
+          0.1551026552915573,
+          0.16058260202407837,
+          0.16550765931606293,
+          0.16766662895679474,
+          0.17002172768115997,
+          0.17082196474075317
+        ],
+        "displayedGaussiansPerFrame": 76385,
+        "gaussianIndexStride": 3
+      },
+      "notes": "MoSca fitted this sequence from depth, flow and point tracks; snapshots evaluate a shared moving model. Reconstructed geometry and hidden surfaces are estimates. No UTC calibration or automatic object recognition. Viewer PLY uses DC-only colour; native previews preserve learned local-frame spherical harmonics. Deterministic native Gaussian index stride 3; 76,385 points displayed per state. No position, deformation or camera animation is invented. Author example, not our real-world footage; 10 Hz is a nominal presentation clock, not a verified capture rate. Private research only.",
+      "modelBytes": 103893060
+    },
+    {
+      "id": "mosca-guildhall-20frames",
+      "title": "MoSca \u00b7 Guildhall moving visitors",
+      "experimentId": "mosca-dynamic",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9166666666666665,
+      "gaussianCount": null,
+      "metrics": {
+        "nativeFrames": 36,
+        "staticGaussians": 204190,
+        "dynamicGaussians": 28376,
+        "dynamicMedianDisplacementFromStart": [
+          0.0,
+          0.0011378113413229585,
+          0.002937646582722664,
+          0.00492505170404911,
+          0.00853794440627098,
+          0.022849155589938164,
+          0.03901086002588272,
+          0.049978457391262054,
+          0.05670122429728508,
+          0.06279879063367844,
+          0.06567195802927017,
+          0.07250332832336426,
+          0.08424054831266403,
+          0.09923116117715836,
+          0.10641288012266159,
+          0.10741864889860153,
+          0.10749930143356323,
+          0.10752780735492706,
+          0.10753675550222397,
+          0.10754040628671646
+        ],
+        "displayedGaussiansPerFrame": 77522,
+        "gaussianIndexStride": 3
+      },
+      "notes": "MoSca fitted this sequence from depth, flow and point tracks; snapshots evaluate a shared moving model. Reconstructed geometry and hidden surfaces are estimates. No UTC calibration or automatic object recognition. Viewer PLY uses DC-only colour; native previews preserve learned local-frame spherical harmonics. Deterministic native Gaussian index stride 3; 77,522 points displayed per state. No position, deformation or camera animation is invented. Acabashi / Wikimedia Commons, CC BY-SA 4.0. Prepared clip 8\u201311 s (original 58\u201361 s), 12 fps. Source is preserved separately; replay has its own clock.",
+      "modelBytes": 105439380
+    },
+    {
+      "id": "mosca-h1-aligned",
+      "title": "H1 \u00b7 aligned MoSca parent",
+      "experimentId": "brush-mosca",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9166666666666665,
+      "gaussianCount": 77522,
+      "metrics": {
+        "gaussianCount": 77522
+      },
+      "notes": "Matched DC-only comparisons; native full Brush model retained separately. No per-frame realignment or scripted actor movement. Conservative masks exclude lower architecture/floor; unknown world units; motion-based foreground may contain erroneous background; geometry is reconstructed.",
+      "modelBytes": 105438220
+    },
+    {
+      "id": "mosca-h1-aligned-person-masks",
+      "title": "H1 precise masks \u00b7 aligned MoSca parent",
+      "experimentId": "brush-mosca",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9166666666666665,
+      "gaussianCount": 77522,
+      "metrics": {
+        "gaussianCount": 77522
+      },
+      "notes": "Matched DC-only comparisons; native full Brush model retained separately. No per-frame realignment or scripted actor movement. Per-visitor rectangles preserve visible floor; some occluded surfaces and crowd-mask borders remain uncertain; unknown world units; motion-based foreground may contain erroneous background; geometry is reconstructed.",
+      "modelBytes": 105438220
+    },
+    {
+      "id": "mosca-h1-foreground",
+      "title": "H1 \u00b7 aligned MoSca motion component",
+      "experimentId": "brush-mosca",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9166666666666665,
+      "gaussianCount": 14188,
+      "metrics": {
+        "gaussianCount": 14188
+      },
+      "notes": "Matched DC-only comparisons; native full Brush model retained separately. No per-frame realignment or scripted actor movement. Conservative masks exclude lower architecture/floor; unknown world units; motion-based foreground may contain erroneous background; geometry is reconstructed.",
+      "modelBytes": 19303980
+    },
+    {
+      "id": "mosca-h1-foreground-person-masks",
+      "title": "H1 precise masks \u00b7 aligned MoSca motion component",
+      "experimentId": "brush-mosca",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9166666666666665,
+      "gaussianCount": 14188,
+      "metrics": {
+        "gaussianCount": 14188
+      },
+      "notes": "Matched DC-only comparisons; native full Brush model retained separately. No per-frame realignment or scripted actor movement. Per-visitor rectangles preserve visible floor; some occluded surfaces and crowd-mask borders remain uncertain; unknown world units; motion-based foreground may contain erroneous background; geometry is reconstructed.",
+      "modelBytes": 19303980
+    },
+    {
+      "id": "mosca-register-a",
+      "title": "A / unchanged anchor",
+      "experimentId": "mosca-background-registration",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 65507,
+      "metrics": {
+        "gaussianCount": 65507
+      },
+      "notes": "Saved full MoSca fits, all points; A unchanged. B has one fixed global transform for its whole timeline, with rotation, position and scale adjustable. Compare identical cameras/time with original alignment. Calibration-guided identities of observed wall-camera dots supply stationary background matches; actor/arms excluded. This is a supplied-calibration studio control, not blind phone registration. Background validation uses six previously seen training-camera landmark groups, not independent evaluation. No retraining, per-Gaussian refinement, opacity adjustment, deduplication, thinning or temporal interpolation. B starts at0.5005s; A ends2.9029s; timeline ends3.236567s. Inactive single-video control is intentionally blank. All variants use DC colour and black backfill. Background registration can improve while person shape/ghosting remains. Camera20 RGB stays sealed. Unchanged reference A.",
+      "modelBytes": 160377720
+    },
+    {
+      "id": "mosca-register-balanced",
+      "title": "A+B / scene-balanced registration / experimental",
+      "experimentId": "mosca-background-registration",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 127887,
+      "metrics": {
+        "gaussianCount": 127887
+      },
+      "notes": "Additional single-transform registration diagnostic. Frozen independent full MoSca fits, A unchanged, every B point retained. One global rotation/position/scale balances room and same-moment person correspondences with symmetric source-view reprojection. Previously inspected person data is now explicitly training/development input; not independent evaluation. Six room identities and three seen person observations excluded from this optimizer. Screen-space compromise, not a passed geometry gate: room depth mismatch and body ghosts may remain. No per-Gaussian refit, opacity edit, thinning, hybrid or new paid compute. Same source-valid40-state timeline, matching cameras and black/DC rendering.",
+      "modelBytes": 304600326
+    },
+    {
+      "id": "mosca-register-feature",
+      "title": "A+B / full background registration",
+      "experimentId": "mosca-background-registration",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 127887,
+      "metrics": {
+        "gaussianCount": 127887
+      },
+      "notes": "Saved full MoSca fits, all points; A unchanged. B has one fixed global transform for its whole timeline, with rotation, position and scale adjustable. Compare identical cameras/time with original alignment. Calibration-guided identities of observed wall-camera dots supply stationary background matches; actor/arms excluded. This is a supplied-calibration studio control, not blind phone registration. Background validation uses six previously seen training-camera landmark groups, not independent evaluation. No retraining, per-Gaussian refinement, opacity adjustment, deduplication, thinning or temporal interpolation. B starts at0.5005s; A ends2.9029s; timeline ends3.236567s. Inactive single-video control is intentionally blank. All variants use DC colour and black backfill. Background registration can improve while person shape/ghosting remains. Camera20 RGB stays sealed. Full background-only transform before ICP.",
+      "modelBytes": 304600326
+    },
+    {
+      "id": "mosca-register-icp",
+      "title": "A+B / background registration + local refinement",
+      "experimentId": "mosca-background-registration",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 127887,
+      "metrics": {
+        "gaussianCount": 127887
+      },
+      "notes": "Saved full MoSca fits, all points; A unchanged. B has one fixed global transform for its whole timeline, with rotation, position and scale adjustable. Compare identical cameras/time with original alignment. Calibration-guided identities of observed wall-camera dots supply stationary background matches; actor/arms excluded. This is a supplied-calibration studio control, not blind phone registration. Background validation uses six previously seen training-camera landmark groups, not independent evaluation. No retraining, per-Gaussian refinement, opacity adjustment, deduplication, thinning or temporal interpolation. B starts at0.5005s; A ends2.9029s; timeline ends3.236567s. Inactive single-video control is intentionally blank. All variants use DC colour and black backfill. Background registration can improve while person shape/ghosting remains. Camera20 RGB stays sealed. Full background transform plus bounded local ICP.",
+      "modelBytes": 304600326
+    },
+    {
+      "id": "mosca-register-old",
+      "title": "A+B / original alignment",
+      "experimentId": "mosca-background-registration",
+      "representation": "sequence",
+      "states": 40,
+      "durationSeconds": 3.236567,
+      "gaussianCount": 127887,
+      "metrics": {
+        "gaussianCount": 127887
+      },
+      "notes": "Saved full MoSca fits, all points; A unchanged. B has one fixed global transform for its whole timeline, with rotation, position and scale adjustable. Compare identical cameras/time with original alignment. Calibration-guided identities of observed wall-camera dots supply stationary background matches; actor/arms excluded. This is a supplied-calibration studio control, not blind phone registration. Background validation uses six previously seen training-camera landmark groups, not independent evaluation. No retraining, per-Gaussian refinement, opacity adjustment, deduplication, thinning or temporal interpolation. B starts at0.5005s; A ends2.9029s; timeline ends3.236567s. Inactive single-video control is intentionally blank. All variants use DC colour and black backfill. Background registration can improve while person shape/ghosting remains. Camera20 RGB stays sealed. Original constrained alignment, retained unchanged.",
+      "modelBytes": 304600326
+    },
+    {
+      "id": "multiphone-indoor-exhibition-brush",
+      "title": "Indoors \u00b7 exhibition \u00b7 Brush background (static)",
+      "experimentId": "brush-mosca-multiphone",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 523,
+      "metrics": {
+        "gaussianCount": 523
+      },
+      "notes": "Fresh A40 test: 36 lead frames at 12 Hz. Held-out camera camera_0001 excluded from fitting. Person masks are automated COCO silhouettes, six-pixel padding; missed objects, shadows and fire are not removed. World scale is inferred. Source provenance and original timestamps are in this case's case.json and source-manifest.json. Masked static background only. Untouched native Brush SH export. This run has no reconstructed motion.",
+      "modelBytes": 124976
+    },
+    {
+      "id": "multiphone-indoor-group-conversation-hybrid",
+      "title": "Indoors \u00b7 group conversation \u00b7 hybrid (lead-camera fallback)",
+      "experimentId": "brush-mosca-multiphone",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.92,
+      "gaussianCount": 67649,
+      "metrics": {
+        "gaussianCount": 67649
+      },
+      "notes": "Fresh A40 test: 36 lead frames at 12 Hz. Held-out camera vga_14_03 excluded from fitting. Person masks are automated COCO silhouettes, six-pixel padding; missed objects, shadows and fire are not removed. World scale is inferred. Source provenance and original timestamps are in this case's case.json and source-manifest.json. Brush + fresh monocular MoSca; lead-camera fallback. Motion was fitted from vga_19_14 only, not jointly from simultaneous phones. Snapshots use DC appearance and point subsampling with fixed background; this adapter loses fidelity relative to native SH renders. Different background counts prevent a matched quality comparison with the control. Occlusions and novel views can expose holes and motion artifacts. Standing people may disappear because Brush excludes all detected people while the MoSca foreground is motion-selected, not a complete people layer. Multi-view registration or alignment failed: other cameras do not contribute to this hybrid background. ",
+      "modelBytes": 92010940
+    },
+    {
+      "id": "multiphone-indoor-group-conversation-mosca",
+      "title": "Indoors \u00b7 group conversation \u00b7 MoSca control (lead camera)",
+      "experimentId": "brush-mosca-multiphone",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.92,
+      "gaussianCount": 104087,
+      "metrics": {
+        "gaussianCount": 104087
+      },
+      "notes": "Fresh A40 test: 36 lead frames at 12 Hz. Held-out camera vga_14_03 excluded from fitting. Person masks are automated COCO silhouettes, six-pixel padding; missed objects, shadows and fire are not removed. World scale is inferred. Source provenance and original timestamps are in this case's case.json and source-manifest.json. Fresh monocular MoSca background and motion, DC-only sampled display. Control for comparison with the hybrid; no Brush or joint multi-phone motion fitting.",
+      "modelBytes": 141566640
+    },
+    {
+      "id": "multiphone-indoor-panoptic-person-hybrid",
+      "title": "Indoors \u00b7 single person \u00b7 hybrid (lead-camera fallback)",
+      "experimentId": "brush-mosca-multiphone",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9029,
+      "gaussianCount": 29901,
+      "metrics": {
+        "gaussianCount": 29901
+      },
+      "notes": "Fresh A40 test: 36 lead frames at 12 Hz. Held-out camera hd_00_02 excluded from fitting. Person masks are automated COCO silhouettes, six-pixel padding; missed objects, shadows and fire are not removed. World scale is inferred. Source provenance and original timestamps are in this case's case.json and source-manifest.json. Brush + fresh monocular MoSca; lead-camera fallback. Motion was fitted from hd_00_00 only, not jointly from simultaneous phones. Snapshots use DC appearance and point subsampling with fixed background; this adapter loses fidelity relative to native SH renders. Different background counts prevent a matched quality comparison with the control. Occlusions and novel views can expose holes and motion artifacts. Standing people may disappear because Brush excludes all detected people while the MoSca foreground is motion-selected, not a complete people layer. Multi-view registration or alignment failed: other cameras do not contribute to this hybrid background. ",
+      "modelBytes": 40673660
+    },
+    {
+      "id": "multiphone-indoor-panoptic-person-mosca",
+      "title": "Indoors \u00b7 single person \u00b7 MoSca control (lead camera)",
+      "experimentId": "brush-mosca-multiphone",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9029,
+      "gaussianCount": 65507,
+      "metrics": {
+        "gaussianCount": 65507
+      },
+      "notes": "Fresh A40 test: 36 lead frames at 12 Hz. Held-out camera hd_00_02 excluded from fitting. Person masks are automated COCO silhouettes, six-pixel padding; missed objects, shadows and fire are not removed. World scale is inferred. Source provenance and original timestamps are in this case's case.json and source-manifest.json. Fresh monocular MoSca background and motion, DC-only sampled display. Control for comparison with the hybrid; no Brush or joint multi-phone motion fitting.",
+      "modelBytes": 89097820
+    },
+    {
+      "id": "multiphone-outdoor-day-phones-easy-hybrid",
+      "title": "Day \u00b7 phones, easy \u00b7 hybrid (lead-camera fallback)",
+      "experimentId": "brush-mosca-multiphone",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9,
+      "gaussianCount": 62123,
+      "metrics": {
+        "gaussianCount": 62123
+      },
+      "notes": "Fresh A40 test: 30 lead frames at 10 Hz. Held-out camera 172673834746e6d591b4b00599c98ffa excluded from fitting. Person masks are automated COCO silhouettes, six-pixel padding; missed objects, shadows and fire are not removed. World scale is inferred. Source provenance and original timestamps are in this case's case.json and source-manifest.json. Brush + fresh monocular MoSca; lead-camera fallback. Motion was fitted from 4846a8bc1c6f287a725111d3f60f2385 only, not jointly from simultaneous phones. Snapshots use DC appearance and point subsampling with fixed background; this adapter loses fidelity relative to native SH renders. Different background counts prevent a matched quality comparison with the control. Occlusions and novel views can expose holes and motion artifacts. Standing people may disappear because Brush excludes all detected people while the MoSca foreground is motion-selected, not a complete people layer. Multi-view registration or alignment failed: other cameras do not contribute to this hybrid background. ",
+      "modelBytes": 84495580
+    },
+    {
+      "id": "multiphone-outdoor-day-phones-easy-mosca",
+      "title": "Day \u00b7 phones, easy \u00b7 MoSca control (lead camera)",
+      "experimentId": "brush-mosca-multiphone",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9,
+      "gaussianCount": 91469,
+      "metrics": {
+        "gaussianCount": 91469
+      },
+      "notes": "Fresh A40 test: 30 lead frames at 10 Hz. Held-out camera 172673834746e6d591b4b00599c98ffa excluded from fitting. Person masks are automated COCO silhouettes, six-pixel padding; missed objects, shadows and fire are not removed. World scale is inferred. Source provenance and original timestamps are in this case's case.json and source-manifest.json. Fresh monocular MoSca background and motion, DC-only sampled display. Control for comparison with the hybrid; no Brush or joint multi-phone motion fitting.",
+      "modelBytes": 124406140
+    },
+    {
+      "id": "multiphone-outdoor-day-phones-hard-brush",
+      "title": "Day \u00b7 phones, hard \u00b7 Brush background (static)",
+      "experimentId": "brush-mosca-multiphone",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 4730,
+      "metrics": {
+        "gaussianCount": 4730
+      },
+      "notes": "Fresh A40 test: 30 lead frames at 10 Hz. Held-out camera 172673834746e6d591b4b00599c98ffa excluded from fitting. Person masks are automated COCO silhouettes, six-pixel padding; missed objects, shadows and fire are not removed. World scale is inferred. Source provenance and original timestamps are in this case's case.json and source-manifest.json. Masked static background only. Untouched native Brush SH export. This run has no reconstructed motion.",
+      "modelBytes": 1117829
+    },
+    {
+      "id": "multiphone-outdoor-day-phones-hard-hybrid",
+      "title": "Day \u00b7 phones, hard \u00b7 hybrid (lead-camera fallback)",
+      "experimentId": "brush-mosca-multiphone",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.8999999999999986,
+      "gaussianCount": 65595,
+      "metrics": {
+        "gaussianCount": 65595
+      },
+      "notes": "Fresh A40 test: 30 lead frames at 10 Hz. Held-out camera 172673834746e6d591b4b00599c98ffa excluded from fitting. Person masks are automated COCO silhouettes, six-pixel padding; missed objects, shadows and fire are not removed. World scale is inferred. Source provenance and original timestamps are in this case's case.json and source-manifest.json. Brush + fresh monocular MoSca; lead-camera fallback. Motion was fitted from 4846a8bc1c6f287a725111d3f60f2385 only, not jointly from simultaneous phones. Snapshots use DC appearance and point subsampling with fixed background; this adapter loses fidelity relative to native SH renders. Different background counts prevent a matched quality comparison with the control. Occlusions and novel views can expose holes and motion artifacts. Standing people may disappear because Brush excludes all detected people while the MoSca foreground is motion-selected, not a complete people layer. Multi-view registration or alignment failed: other cameras do not contribute to this hybrid background. ",
+      "modelBytes": 89217500
+    },
+    {
+      "id": "multiphone-outdoor-day-phones-hard-mosca",
+      "title": "Day \u00b7 phones, hard \u00b7 MoSca control (lead camera)",
+      "experimentId": "brush-mosca-multiphone",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.8999999999999986,
+      "gaussianCount": 96666,
+      "metrics": {
+        "gaussianCount": 96666
+      },
+      "notes": "Fresh A40 test: 30 lead frames at 10 Hz. Held-out camera 172673834746e6d591b4b00599c98ffa excluded from fitting. Person masks are automated COCO silhouettes, six-pixel padding; missed objects, shadows and fire are not removed. World scale is inferred. Source provenance and original timestamps are in this case's case.json and source-manifest.json. Fresh monocular MoSca background and motion, DC-only sampled display. Control for comparison with the hybrid; no Brush or joint multi-phone motion fitting.",
+      "modelBytes": 131474060
+    },
+    {
+      "id": "multiphone-outdoor-day-phones-medium-brush",
+      "title": "Day \u00b7 phones, medium \u00b7 Brush background (static)",
+      "experimentId": "brush-mosca-multiphone",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 5725,
+      "metrics": {
+        "gaussianCount": 5725
+      },
+      "notes": "Fresh A40 test: 30 lead frames at 10 Hz. Held-out camera 172673834746e6d591b4b00599c98ffa excluded from fitting. Person masks are automated COCO silhouettes, six-pixel padding; missed objects, shadows and fire are not removed. World scale is inferred. Source provenance and original timestamps are in this case's case.json and source-manifest.json. Masked static background only. Untouched native Brush SH export. This run has no reconstructed motion.",
+      "modelBytes": 1352649
+    },
+    {
+      "id": "multiphone-outdoor-day-phones-medium-hybrid",
+      "title": "Day \u00b7 phones, medium \u00b7 hybrid (multi-view background)",
+      "experimentId": "brush-mosca-multiphone",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.8999999999999986,
+      "gaussianCount": 41904,
+      "metrics": {
+        "gaussianCount": 41904
+      },
+      "notes": "Fresh A40 test: 30 lead frames at 10 Hz. Held-out camera 172673834746e6d591b4b00599c98ffa excluded from fitting. Person masks are automated COCO silhouettes, six-pixel padding; missed objects, shadows and fire are not removed. World scale is inferred. Source provenance and original timestamps are in this case's case.json and source-manifest.json. Brush + fresh monocular MoSca; multi-view background. Motion was fitted from 4846a8bc1c6f287a725111d3f60f2385 only, not jointly from simultaneous phones. Snapshots use DC appearance and point subsampling with fixed background; this adapter loses fidelity relative to native SH renders. Different background counts prevent a matched quality comparison with the control. Occlusions and novel views can expose holes and motion artifacts. Standing people may disappear because Brush excludes all detected people while the MoSca foreground is motion-selected, not a complete people layer. Static context uses 2 of 5 training cameras. Alignment median 2.76 px over 5 withheld static points; this is not held-out-camera accuracy. ",
+      "modelBytes": 56997740
+    },
+    {
+      "id": "multiphone-outdoor-day-phones-medium-mosca",
+      "title": "Day \u00b7 phones, medium \u00b7 MoSca control (lead camera)",
+      "experimentId": "brush-mosca-multiphone",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.8999999999999986,
+      "gaussianCount": 74257,
+      "metrics": {
+        "gaussianCount": 74257
+      },
+      "notes": "Fresh A40 test: 30 lead frames at 10 Hz. Held-out camera 172673834746e6d591b4b00599c98ffa excluded from fitting. Person masks are automated COCO silhouettes, six-pixel padding; missed objects, shadows and fire are not removed. World scale is inferred. Source provenance and original timestamps are in this case's case.json and source-manifest.json. Fresh monocular MoSca background and motion, DC-only sampled display. Control for comparison with the hybrid; no Brush or joint multi-phone motion fitting.",
+      "modelBytes": 100997820
+    },
+    {
+      "id": "multiphone-outdoor-night-flames-brush",
+      "title": "Night \u00b7 fire performer \u00b7 Brush background (static)",
+      "experimentId": "brush-mosca-multiphone",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 483,
+      "metrics": {
+        "gaussianCount": 483
+      },
+      "notes": "Fresh A40 test: 36 lead frames at 12 Hz. Held-out camera camera_0001 excluded from fitting. Person masks are automated COCO silhouettes, six-pixel padding; missed objects, shadows and fire are not removed. World scale is inferred. Source provenance and original timestamps are in this case's case.json and source-manifest.json. Masked static background only. Untouched native Brush SH export. This run has no reconstructed motion.",
+      "modelBytes": 115536
+    },
+    {
+      "id": "people-indoor-panoptic-person-control",
+      "title": "Indoors \u00b7 single person \u00b7 MoSca control \u00b7 all points",
+      "experimentId": "brush-mosca-people",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9029,
+      "gaussianCount": 65507,
+      "metrics": {
+        "gaussianCount": 65507
+      },
+      "notes": "Saved reconstruction, no retraining. Matched DC appearance, no point subsampling. Motion fitted from lead camera only; no joint multi-phone reconstruction. Brush uses the existing lead-camera fallback in the same world. Automatic semantic membership comes from visibility-weighted person-mask contributions across static and moving Gaussians, fixed throughout playback. Masks are imperfect; boundary halos, missing surfaces and novel-view tears remain. Full MoSca static and moving components, without Brush; control for the new split.",
+      "modelBytes": 89097820
+    },
+    {
+      "id": "people-indoor-panoptic-person-hybrid",
+      "title": "Indoors \u00b7 single person \u00b7 whole-person hybrid \u00b7 experimental",
+      "experimentId": "brush-mosca-people",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9029,
+      "gaussianCount": 31211,
+      "metrics": {
+        "gaussianCount": 31211
+      },
+      "notes": "Saved reconstruction, no retraining. Matched DC appearance, no point subsampling. Motion fitted from lead camera only; no joint multi-phone reconstruction. Brush uses the existing lead-camera fallback in the same world. Automatic semantic membership comes from visibility-weighted person-mask contributions across static and moving Gaussians, fixed throughout playback. Masks are imperfect; boundary halos, missing surfaces and novel-view tears remain. Brush plus selected static AND moving people; experimental partition, not guaranteed complete people.",
+      "modelBytes": 42455260
+    },
+    {
+      "id": "people-indoor-panoptic-person-motion-only",
+      "title": "Indoors \u00b7 single person \u00b7 motion-only hybrid \u00b7 baseline",
+      "experimentId": "brush-mosca-people",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9029,
+      "gaussianCount": 29901,
+      "metrics": {
+        "gaussianCount": 29901
+      },
+      "notes": "Saved reconstruction, no retraining. Matched DC appearance, no point subsampling. Motion fitted from lead camera only; no joint multi-phone reconstruction. Brush uses the existing lead-camera fallback in the same world. Automatic semantic membership comes from visibility-weighted person-mask contributions across static and moving Gaussians, fixed throughout playback. Masks are imperfect; boundary halos, missing surfaces and novel-view tears remain. Previous split: Brush plus every moving Gaussian; loses stationary body parts and observers.",
+      "modelBytes": 40673660
+    },
+    {
+      "id": "people-outdoor-day-phones-easy-control",
+      "title": "Day \u00b7 phones, easy \u00b7 MoSca control \u00b7 all points",
+      "experimentId": "brush-mosca-people",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9,
+      "gaussianCount": 186007,
+      "metrics": {
+        "gaussianCount": 186007
+      },
+      "notes": "Saved reconstruction, no retraining. Matched DC appearance, no point subsampling. Motion fitted from lead camera only; no joint multi-phone reconstruction. Brush uses the existing lead-camera fallback in the same world. Automatic semantic membership comes from visibility-weighted person-mask contributions across static and moving Gaussians, fixed throughout playback. Masks are imperfect; boundary halos, missing surfaces and novel-view tears remain. Full MoSca static and moving components, without Brush; control for the new split.",
+      "modelBytes": 252977840
+    },
+    {
+      "id": "people-outdoor-day-phones-easy-hybrid",
+      "title": "Day \u00b7 phones, easy \u00b7 whole-person hybrid \u00b7 experimental",
+      "experimentId": "brush-mosca-people",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9,
+      "gaussianCount": 63031,
+      "metrics": {
+        "gaussianCount": 63031
+      },
+      "notes": "Saved reconstruction, no retraining. Matched DC appearance, no point subsampling. Motion fitted from lead camera only; no joint multi-phone reconstruction. Brush uses the existing lead-camera fallback in the same world. Automatic semantic membership comes from visibility-weighted person-mask contributions across static and moving Gaussians, fixed throughout playback. Masks are imperfect; boundary halos, missing surfaces and novel-view tears remain. Brush plus selected static AND moving people; experimental partition, not guaranteed complete people.",
+      "modelBytes": 85730460
+    },
+    {
+      "id": "people-outdoor-day-phones-easy-motion-only",
+      "title": "Day \u00b7 phones, easy \u00b7 motion-only hybrid \u00b7 baseline",
+      "experimentId": "brush-mosca-people",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9,
+      "gaussianCount": 62123,
+      "metrics": {
+        "gaussianCount": 62123
+      },
+      "notes": "Saved reconstruction, no retraining. Matched DC appearance, no point subsampling. Motion fitted from lead camera only; no joint multi-phone reconstruction. Brush uses the existing lead-camera fallback in the same world. Automatic semantic membership comes from visibility-weighted person-mask contributions across static and moving Gaussians, fixed throughout playback. Masks are imperfect; boundary halos, missing surfaces and novel-view tears remain. Previous split: Brush plus every moving Gaussian; loses stationary body parts and observers.",
+      "modelBytes": 84495580
+    },
+    {
+      "id": "pose-priors-phones-fixed",
+      "title": "Easy \u00b7 supplied SLAM poses",
+      "experimentId": "phone-pose-priors",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 283,
+      "metrics": {
+        "gaussianCount": 283,
+        "crossPhoneLandmarks": 76,
+        "trajectoryGlyphs": 207
+      },
+      "notes": "Camera-prior diagnostic only. 76 background landmarks observed across phones, displayed as Gaussian point glyphs; coloured dots show supported phone trajectories. Fixed camera views are supplied SLAM estimates, not independently recovered calibration; refined views are image-adjusted from those estimates. No reconstructed people, event playback, independent metric accuracy or verified floor/up. Importing 25 poses does not prove five-phone alignment: only three phones pass >=30 cross-landmark support. The sixth phone is excluded. Prior/refined maps do not improve the stricter later-frame localization over the preserved image-only comparison.",
+      "modelBytes": 19657
+    },
+    {
+      "id": "pose-priors-phones-medium-fixed",
+      "title": "Medium \u00b7 supplied SLAM poses",
+      "experimentId": "phone-pose-priors",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 348,
+      "metrics": {
+        "gaussianCount": 348,
+        "crossPhoneLandmarks": 141,
+        "trajectoryGlyphs": 207
+      },
+      "notes": "Camera-prior diagnostic only. 141 background landmarks observed across phones, displayed as Gaussian point glyphs; coloured dots show supported phone trajectories. Fixed camera views are supplied SLAM estimates, not independently recovered calibration; refined views are image-adjusted from those estimates. No reconstructed people, event playback, independent metric accuracy or verified floor/up. Importing 25 poses does not prove five-phone alignment: only three phones pass >=30 cross-landmark support. The sixth phone is excluded. Prior/refined maps do not improve the stricter later-frame localization over the preserved image-only comparison.",
+      "modelBytes": 24077
+    },
+    {
+      "id": "pose-priors-phones-medium-refined",
+      "title": "Medium \u00b7 SLAM-initialized image adjustment",
+      "experimentId": "phone-pose-priors",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 348,
+      "metrics": {
+        "gaussianCount": 348,
+        "crossPhoneLandmarks": 141,
+        "trajectoryGlyphs": 207
+      },
+      "notes": "Camera-prior diagnostic only. 141 background landmarks observed across phones, displayed as Gaussian point glyphs; coloured dots show supported phone trajectories. Fixed camera views are supplied SLAM estimates, not independently recovered calibration; refined views are image-adjusted from those estimates. No reconstructed people, event playback, independent metric accuracy or verified floor/up. Importing 25 poses does not prove five-phone alignment: only three phones pass >=30 cross-landmark support. The sixth phone is excluded. Prior/refined maps do not improve the stricter later-frame localization over the preserved image-only comparison. BA reached its iteration limit without convergence and changed coordinate scale; no metric scale claim.",
+      "modelBytes": 24077
+    },
+    {
+      "id": "runpod-a40-brush-background-20261017",
+      "title": "Runpod A40 \u00b7 precise-mask Brush background",
+      "experimentId": "brush-mosca",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 9817,
+      "metrics": {
+        "gaussianCount": 9817
+      },
+      "notes": "Untouched native SH export from the 3000-step A40 compatibility fit; fixed H1 cameras and masks.",
+      "modelBytes": 2318361
+    },
+    {
+      "id": "runpod-a40-brush-mosca-h1-20261017",
+      "title": "Runpod A40 \u00b7 precise-mask Brush + MoSca hybrid",
+      "experimentId": "brush-mosca",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9166666666666665,
+      "gaussianCount": 24005,
+      "metrics": {
+        "gaussianCount": 24005
+      },
+      "notes": "Brush fitted for 3000 steps on Runpod A40 using the fixed H1 precise-mask dataset. MoSca checkpoint fitted previously on AWS and evaluated/exported on this A40; no new motion fitting. Original camera/alignment retained. Floor geometry and motion artifacts remain.",
+      "modelBytes": 32655100
+    },
+    {
+      "id": "seed-indoor-panoptic-person-hybrid",
+      "title": "Indoors \u00b7 single person \u00b7 clean-seed hybrid \u00b7 candidate",
+      "experimentId": "brush-mosca-people",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9029,
+      "gaussianCount": 30626,
+      "metrics": {
+        "gaussianCount": 30626
+      },
+      "notes": "New controlled Brush background fit: original seed subsample minus static-person seeds. Same source images, masks, learned lead-camera poses and Brush 3000-step profile. Corrected static and moving people copied byte-identically from the prior hybrid. Candidate comparison; no claimed quality win over full MoSca. DC appearance, no subsampling; monocular motion and lead-only environment. Background streaks, silhouette halos and novel-view tearing can remain. See brush-mosca-multiphone/background-seeds/result.md for evaluation.",
+      "modelBytes": 41659660
+    },
+    {
+      "id": "seed-outdoor-day-phones-easy-hybrid",
+      "title": "Day \u00b7 phones, easy \u00b7 clean-seed hybrid \u00b7 candidate",
+      "experimentId": "brush-mosca-people",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9,
+      "gaussianCount": 62086,
+      "metrics": {
+        "gaussianCount": 62086
+      },
+      "notes": "New controlled Brush background fit: original seed subsample minus static-person seeds. Same source images, masks, learned lead-camera poses and Brush 3000-step profile. Corrected static and moving people copied byte-identically from the prior hybrid. Candidate comparison; no claimed quality win over full MoSca. DC appearance, no subsampling; monocular motion and lead-only environment. Background streaks, silhouette halos and novel-view tearing can remain. See brush-mosca-multiphone/background-seeds/result.md for evaluation.",
+      "modelBytes": 84445260
+    },
+    {
+      "id": "seed12k-outdoor-day-phones-easy-hybrid",
+      "title": "Day \u00b7 phones, easy \u00b7 clean-seed hybrid \u00b7 12k candidate",
+      "experimentId": "brush-mosca-people",
+      "representation": "sequence",
+      "states": 20,
+      "durationSeconds": 2.9,
+      "gaussianCount": 62064,
+      "metrics": {
+        "gaussianCount": 62064
+      },
+      "notes": "New controlled Brush background fit: original seed subsample minus static-person seeds. Same source images, masks and learned lead-camera poses; Brush 12000-step profile, growth stop 1800. Corrected static and moving people copied byte-identically from the prior hybrid. Candidate comparison; no claimed quality win over full MoSca. DC appearance, no subsampling; monocular motion and lead-only environment. Background streaks, silhouette halos and novel-view tearing can remain. See brush-mosca-multiphone/background-seeds/result.md for evaluation.",
+      "modelBytes": 84415340
+    },
+    {
+      "id": "shared-coordinates-medium",
+      "title": "Medium \u00b7 three-phone sparse map and paths",
+      "experimentId": "shared-coordinates",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 2182,
+      "metrics": {
+        "gaussianCount": 2182,
+        "observedLandmarks": 1975,
+        "cameraPathGlyphs": 207
+      },
+      "notes": "Camera-alignment diagnostic only: 1,975 triangulated static background landmarks, displayed as Gaussian point glyphs; orange/green/blue dots trace three recovered phone paths in arbitrary SfM units. No people reconstruction, temporal event playback, metric scale or established floor/up. Start/last viewpoints are recovered from image evidence. Two other training phones remain disconnected; the sixth phone is excluded. Compare source reprojection overlays in the experiment report.",
+      "modelBytes": 148790
+    },
+    {
+      "id": "sharp-01-sculpture-orbit-frame-150",
+      "title": "SHARP 01-sculpture-orbit \u00b7 5 s",
+      "experimentId": "sharp-frozen",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 1179648,
+      "metrics": {
+        "cliSeconds": 67.01535668499997,
+        "peakDeviceVramMiB": 10645,
+        "inferenceSeconds": null,
+        "gpuMemorySamplingSeconds": 0.5,
+        "peakHostRssKiB": 6357192,
+        "gaussianCount": 1179648,
+        "modelBytes": 66061086
+      },
+      "notes": "Frozen at clip 5s / original 10s. Uncalibrated 30 mm equivalent focal assumption. Geometry is inferred; this is not 4D playback.",
+      "modelBytes": 66061086
+    },
+    {
+      "id": "sharp-03-guildhall-interior-frame-300",
+      "title": "SHARP 03-guildhall-interior \u00b7 10 s",
+      "experimentId": "sharp-frozen",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 1179648,
+      "metrics": {
+        "cliSeconds": 44.06062971399996,
+        "peakDeviceVramMiB": 10645,
+        "inferenceSeconds": null,
+        "gpuMemorySamplingSeconds": 0.5,
+        "peakHostRssKiB": 6340344,
+        "gaussianCount": 1179648,
+        "modelBytes": 66061086
+      },
+      "notes": "Frozen at clip 10s / original 60s. Uncalibrated 30 mm equivalent focal assumption. Geometry is inferred; this is not 4D playback.",
+      "modelBytes": 66061086
+    },
+    {
+      "id": "mosca-20261028-duck-v00",
+      "title": "Duck / V00 / Metric3D-small + BootsTAPIR",
+      "experimentId": "mosca-variant-tests",
+      "representation": "sequence",
+      "states": 25,
+      "durationSeconds": 2.5,
+      "gaussianCount": 233257,
+      "metrics": {
+        "gaussianCount": 233257,
+        "nativePsnrMedian": 24.214640664219548
+      },
+      "notes": "Native snapshots are held between observed times, including one nominal final sample slot. Fresh single-video MoSca fit. Every static and dynamic Gaussian is retained. Viewer uses DC appearance; native renders preserve full learned SH. Source clock: nominal 10Hz; original capture timing unknown. Fitted-view metrics are development evidence, not held-out fidelity.",
+      "modelBytes": 396547300
+    },
+    {
+      "id": "mosca-20261028-duration-12s-large",
+      "title": "Guildhall / 12s / large depth",
+      "experimentId": "mosca-duration-tests",
+      "representation": "sequence",
+      "states": 144,
+      "durationSeconds": 12,
+      "gaussianCount": 316178,
+      "metrics": {
+        "gaussianCount": 316178,
+        "nativePsnrMedian": 28.963013637396372,
+        "durationGatePassed": true,
+        "staticOnly": false,
+        "durationReviewNote": "People show ghosting; final statue frames smear. Review this12s trial before extending; full interior is on hold.",
+        "photoSteps": 12000,
+        "sourceStartSeconds": 4.0,
+        "nativeComparisonVideo": true,
+        "nativeComparisonVideoSeconds": 12.0
+      },
+      "notes": "Native snapshots are held between observed times, including one nominal final sample slot. Fresh single-video MoSca fit. Every static and dynamic Gaussian is retained. Viewer uses DC appearance; native renders preserve full learned SH. Source clock: actual original-video PTS, event time relative to interval start; nominal12Hz nearest unique frame; index-time training losses unchanged. Fitted-view metrics are development evidence, not held-out fidelity. Original source interval starts at 4.000s. Nominal primary appearance exposure: 12000/144 steps/observation. Duration continuation review: PASS.",
+      "modelBytes": 3096074880
+    },
+    {
+      "id": "mosca-20261028-duration-3s-large",
+      "title": "Guildhall / 3s fresh reference / large depth",
+      "experimentId": "mosca-duration-tests",
+      "representation": "sequence",
+      "states": 36,
+      "durationSeconds": 3,
+      "gaussianCount": 254853,
+      "metrics": {
+        "gaussianCount": 254853,
+        "nativePsnrMedian": 29.15764602775088,
+        "durationGatePassed": true,
+        "staticOnly": false,
+        "durationReviewNote": "Fresh original-source reference. Some actor ghosting and shifted-view edge gaps remain.",
+        "photoSteps": 3000,
+        "sourceStartSeconds": 8.0,
+        "nativeComparisonVideo": true,
+        "nativeComparisonVideoSeconds": 3.0
+      },
+      "notes": "Native snapshots are held between observed times, including one nominal final sample slot. Fresh single-video MoSca fit. Every static and dynamic Gaussian is retained. Viewer uses DC appearance; native renders preserve full learned SH. Source clock: actual original-video PTS, event time relative to interval start; nominal12Hz nearest unique frame; index-time training losses unchanged. Fitted-view metrics are development evidence, not held-out fidelity. Original source interval starts at 8.000s. Nominal primary appearance exposure: 3000/36 steps/observation. Duration continuation review: PASS.",
+      "modelBytes": 623895120
+    },
+    {
+      "id": "mosca-20261028-duration-6s-large",
+      "title": "Guildhall / 6s / large depth",
+      "experimentId": "mosca-duration-tests",
+      "representation": "sequence",
+      "states": 72,
+      "durationSeconds": 6,
+      "gaussianCount": 259561,
+      "metrics": {
+        "gaussianCount": 259561,
+        "nativePsnrMedian": 30.724449888079008,
+        "durationGatePassed": true,
+        "staticOnly": false,
+        "durationReviewNote": "The common short overlap improves by 1.18 dB. Moving-person ghosting and shifted-view edge gaps remain.",
+        "photoSteps": 6000,
+        "sourceStartSeconds": 7.0,
+        "nativeComparisonVideo": true,
+        "nativeComparisonVideoSeconds": 6.0
+      },
+      "notes": "Native snapshots are held between observed times, including one nominal final sample slot. Fresh single-video MoSca fit. Every static and dynamic Gaussian is retained. Viewer uses DC appearance; native renders preserve full learned SH. Source clock: actual original-video PTS, event time relative to interval start; nominal12Hz nearest unique frame; index-time training losses unchanged. Fitted-view metrics are development evidence, not held-out fidelity. Original source interval starts at 7.000s. Nominal primary appearance exposure: 6000/72 steps/observation. Duration continuation review: PASS.",
+      "modelBytes": 1270840608
+    },
+    {
+      "id": "mosca-20261028-duration-6s-small",
+      "title": "Guildhall / 6s control / small depth",
+      "experimentId": "mosca-duration-tests",
+      "representation": "sequence",
+      "states": 72,
+      "durationSeconds": 6,
+      "gaussianCount": 259016,
+      "metrics": {
+        "gaussianCount": 259016,
+        "nativePsnrMedian": 30.498896819030918,
+        "durationGatePassed": true,
+        "staticOnly": false,
+        "durationReviewNote": "Paired small-depth control. Similar shared-overlap fit; moving-person ghosting remains.",
+        "photoSteps": 6000,
+        "sourceStartSeconds": 7.0,
+        "nativeComparisonVideo": true,
+        "nativeComparisonVideoSeconds": 6.0
+      },
+      "notes": "Native snapshots are held between observed times, including one nominal final sample slot. Fresh single-video MoSca fit. Every static and dynamic Gaussian is retained. Viewer uses DC appearance; native renders preserve full learned SH. Source clock: actual original-video PTS, event time relative to interval start; nominal12Hz nearest unique frame; index-time training losses unchanged. Fitted-view metrics are development evidence, not held-out fidelity. Original source interval starts at 7.000s. Nominal primary appearance exposure: 6000/72 steps/observation. Duration continuation review: PASS.",
+      "modelBytes": 1268172288
+    },
+    {
+      "id": "mosca-20261028-fixedworld-exploratory",
+      "title": "Guildhall / full interior / fixed world / exploratory",
+      "experimentId": "mosca-fixed-world-appearance",
+      "representation": "sequence",
+      "states": 305,
+      "durationSeconds": 25.416666666666668,
+      "gaussianCount": 475357,
+      "metrics": {
+        "gaussianCount": 475357,
+        "nativePsnrMedian": 27.98770167113227,
+        "durationGatePassed": false,
+        "staticOnly": false,
+        "durationReviewNote": "Full0\u201325.3s interior with fixed cameras. Exploratory:87 frames have sparse motion support, so people and novel views remain unvalidated. The edited transition and separate outro are not reconstructed.",
+        "photoSteps": 25417,
+        "sourceStartSeconds": 0,
+        "fixedWorldCameras": true,
+        "backgroundTrackMethod": "observed static-map features",
+        "qualityPromotion": false,
+        "originalFullMotionCoveragePassed": false,
+        "exploratorySparseMotion": true,
+        "nativeComparisonVideo": true,
+        "nativeComparisonVideoSeconds": 25.433333333333334
+      },
+      "notes": "Native snapshots are held between observed times, including one nominal final sample slot. Fresh single-video MoSca fit. Every static and dynamic Gaussian is retained. Viewer uses DC appearance; native renders preserve full learned SH. Source clock: actual original-video PTS, event time relative to interval start; nominal12Hz nearest unique frame; index-time training losses unchanged. Fitted-view metrics are development evidence, not held-out fidelity. Qualified static-map cameras remain exactly fixed. Dense background depth corrections applied outside masked visitor regions. Original0\u201325.333s observations; edited transition/outro are separate and not reconstructed.",
+      "modelBytes": 9859031060
+    },
+    {
+      "id": "mosca-20261028-guildhall-matrix-v00",
+      "title": "Guildhall / V00 / same-worker shared-query baseline",
+      "experimentId": "mosca-variant-tests",
+      "representation": "sequence",
+      "states": 36,
+      "durationSeconds": 3.0,
+      "gaussianCount": 233656,
+      "metrics": {
+        "gaussianCount": 233656,
+        "nativePsnrMedian": 29.6571868407931
+      },
+      "notes": "Fresh single-video MoSca fit. Every static and dynamic Gaussian is retained. Viewer uses DC appearance; native renders preserve full learned SH. Source clock: prepared clip 12Hz; original interval58\u201361s. Fitted-view metrics are development evidence, not held-out fidelity.",
+      "modelBytes": 572004864
+    },
+    {
+      "id": "mosca-20261028-guildhall-v00",
+      "title": "Guildhall / V00 / fresh MoSca baseline",
+      "experimentId": "mosca-variant-tests",
+      "representation": "sequence",
+      "states": 36,
+      "durationSeconds": 3.0,
+      "gaussianCount": 233241,
+      "metrics": {
+        "gaussianCount": 233241,
+        "nativePsnrMedian": 29.642594032081647
+      },
+      "notes": "Fresh single-video MoSca fit. Every static and dynamic Gaussian is retained. Viewer uses DC appearance; native renders preserve full learned SH. Source clock: prepared clip 12Hz; original interval58\u201361s. Fitted-view metrics are development evidence, not held-out fidelity.",
+      "modelBytes": 570988944
+    },
+    {
+      "id": "mosca-20261028-guildhall-v01",
+      "title": "Guildhall / V01 / Metric3D-small + CoTracker3",
+      "experimentId": "mosca-variant-tests",
+      "representation": "sequence",
+      "states": 36,
+      "durationSeconds": 3.0,
+      "gaussianCount": 224663,
+      "metrics": {
+        "gaussianCount": 224663,
+        "nativePsnrMedian": 28.97803496181605
+      },
+      "notes": "Native snapshots are held between observed times, including one nominal final sample slot. Fresh single-video MoSca fit. Every static and dynamic Gaussian is retained. Viewer uses DC appearance; native renders preserve full learned SH. Source clock: prepared clip 12Hz; original interval58\u201361s. Fitted-view metrics are development evidence, not held-out fidelity.",
+      "modelBytes": 549990000
+    },
+    {
+      "id": "mosca-20261028-guildhall-v10",
+      "title": "Guildhall / V10 / Metric3D-large + BootsTAPIR",
+      "experimentId": "mosca-variant-tests",
+      "representation": "sequence",
+      "states": 36,
+      "durationSeconds": 3.0,
+      "gaussianCount": 237584,
+      "metrics": {
+        "gaussianCount": 237584,
+        "nativePsnrMedian": 30.939241754961454
+      },
+      "notes": "Native snapshots are held between observed times, including one nominal final sample slot. Fresh single-video MoSca fit. Every static and dynamic Gaussian is retained. Viewer uses DC appearance; native renders preserve full learned SH. Source clock: prepared clip 12Hz; original interval58\u201361s. Fitted-view metrics are development evidence, not held-out fidelity.",
+      "modelBytes": 581620608
+    },
+    {
+      "id": "mosca-20261028-guildhall-v11",
+      "title": "Guildhall / V11 / Metric3D-large + CoTracker3",
+      "experimentId": "mosca-variant-tests",
+      "representation": "sequence",
+      "states": 36,
+      "durationSeconds": 3.0,
+      "gaussianCount": 232503,
+      "metrics": {
+        "gaussianCount": 232503,
+        "nativePsnrMedian": 30.31941156468915
+      },
+      "notes": "Native snapshots are held between observed times, including one nominal final sample slot. Fresh single-video MoSca fit. Every static and dynamic Gaussian is retained. Viewer uses DC appearance; native renders preserve full learned SH. Source clock: prepared clip 12Hz; original interval58\u201361s. Fitted-view metrics are development evidence, not held-out fidelity.",
+      "modelBytes": 569182320
+    },
+    {
+      "id": "mosca-20261028-panoptic00-v00",
+      "title": "Panoptic00 / V00 / Metric3D-small + BootsTAPIR",
+      "experimentId": "mosca-variant-tests",
+      "representation": "sequence",
+      "states": 36,
+      "durationSeconds": 2.9862333333333333,
+      "gaussianCount": 65175,
+      "metrics": {
+        "gaussianCount": 65175,
+        "nativePsnrMedian": 33.848135701388316
+      },
+      "notes": "Native snapshots are held between observed times, including one nominal final sample slot. Fresh single-video MoSca fit. Every static and dynamic Gaussian is retained. Viewer uses DC appearance; native renders preserve full learned SH. Source clock: actual source PTS. Fitted-view metrics are development evidence, not held-out fidelity.",
+      "modelBytes": 159563340
+    },
+    {
+      "id": "mosca-20261028-panoptic00-v10",
+      "title": "Panoptic00 / V10 / Metric3D-large + BootsTAPIR",
+      "experimentId": "mosca-variant-tests",
+      "representation": "sequence",
+      "states": 36,
+      "durationSeconds": 2.9862333333333333,
+      "gaussianCount": 62253,
+      "metrics": {
+        "gaussianCount": 62253,
+        "nativePsnrMedian": 33.27460199676201
+      },
+      "notes": "Native snapshots are held between observed times, including one nominal final sample slot. Fresh single-video MoSca fit. Every static and dynamic Gaussian is retained. Viewer uses DC appearance; native renders preserve full learned SH. Source clock: actual source PTS. Fitted-view metrics are development evidence, not held-out fidelity.",
+      "modelBytes": 152410284
+    },
+    {
+      "id": "mosca-20261029-core-guildhall-detail",
+      "title": "Guild Hall detail 30s / standardized static scene",
+      "experimentId": "core-pipeline-validation",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 515594,
+      "metrics": {
+        "gaussianCount": 515594,
+        "nativePsnrMedian": 27.82836967271588,
+        "nativePsnrMinimum": 24.90616915835917,
+        "registeredCameras": 360,
+        "staticOnly": true,
+        "fixedWorldCameras": true,
+        "depthRefinement": "scale-only",
+        "photoSteps": 30000,
+        "qualityPromotion": false,
+        "pipelineValidation": true,
+        "fitOptimizationCompleted": true,
+        "postfitDiagnosticsOptional": true
+      },
+      "notes": "Original source interval 80\u2013110s, 360 observations with original timestamps. Scale-only background refinement and exactly locked cameras. All appearance steps and required stages completed cleanly. Exploratory quality only; fitted-view metrics do not validate independent geometry or novel views. Native comparison retains learned SH; browser exports DC appearance. Full point density and every observed time retained.",
+      "modelBytes": 35060808
+    },
+    {
+      "id": "mosca-20261029-core-sculpture-clean",
+      "title": "Sculpture / 30s / standardized pipeline / first clean run",
+      "experimentId": "core-pipeline-validation",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 328656,
+      "metrics": {
+        "gaussianCount": 328656,
+        "nativePsnrMedian": 19.647913533589474,
+        "nativePsnrMinimum": 14.669490931695034,
+        "registeredCameras": 360,
+        "staticOnly": true,
+        "fixedWorldCameras": true,
+        "depthRefinement": "scale-only",
+        "photoSteps": 30000,
+        "qualityPromotion": false,
+        "pipelineValidation": true,
+        "fitOptimizationCompleted": true,
+        "postfitDiagnosticsOptional": true
+      },
+      "notes": "Original source interval 5\u201335s, 360 observations with original timestamps. Scale-only background refinement and exactly locked cameras. All appearance steps and required stages completed cleanly. Exploratory quality only; fitted-view metrics do not validate independent geometry or novel views. Native comparison retains learned SH; browser exports DC appearance. Full point density and every observed time retained.",
+      "modelBytes": 22349024
+    },
+    {
+      "id": "mosca-20261029-core-sculpture-repeat",
+      "title": "Sculpture 30s / standardized static repeat",
+      "experimentId": "core-pipeline-validation",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 330657,
+      "metrics": {
+        "gaussianCount": 330657,
+        "nativePsnrMedian": 19.63047379160175,
+        "nativePsnrMinimum": 14.617016622460795,
+        "registeredCameras": 360,
+        "staticOnly": true,
+        "fixedWorldCameras": true,
+        "depthRefinement": "scale-only",
+        "photoSteps": 30000,
+        "qualityPromotion": false,
+        "pipelineValidation": true,
+        "fitOptimizationCompleted": true,
+        "postfitDiagnosticsOptional": true
+      },
+      "notes": "Original source interval 5\u201335s, 360 observations with original timestamps. Scale-only background refinement and exactly locked cameras. All appearance steps and required stages completed cleanly. Exploratory quality only; fitted-view metrics do not validate independent geometry or novel views. Native comparison retains learned SH; browser exports DC appearance. Full point density and every observed time retained.",
+      "modelBytes": 22485092
+    },
+    {
+      "id": "mosca-20261029-sculpture-30s-scale-only",
+      "title": "Sculpture / 30s / fixed world / static timing control",
+      "experimentId": "core-pipeline-validation",
+      "representation": "static",
+      "states": 1,
+      "durationSeconds": null,
+      "gaussianCount": 332079,
+      "metrics": {
+        "gaussianCount": 332079,
+        "modelBytes": 22581788,
+        "nativePsnrMedian": 19.599333816416262,
+        "nativePsnrMinimum": 14.819807151031743,
+        "registeredCameras": 360,
+        "staticOnly": true,
+        "fixedWorldCameras": true,
+        "depthRefinement": "scale-only",
+        "photoSteps": 30000,
+        "qualityPromotion": false,
+        "originalFullDepthDensePropagationPassed": false,
+        "timingBenchmark": true,
+        "fitOptimizationCompleted": true,
+        "postfitDiagnosticsCompleted": false
+      },
+      "notes": "One fresh30s source interval, original Postshot5\u201335s,360 observations. Static-scene timing control, no motion scaffold or dynamic replay. Same qualified cameras remain exactly fixed. Existing scale-only depth control used after full-depth additive propagation failed. All30000appearance steps completed; optional post-fit diagnostic interrupted after checkpoints were verified, then native export completed separately. Full native SH source renders differ from DC browser display. Source-fit metrics are training-view evidence, not independent novel-view quality. All prior results retained.",
+      "modelBytes": 22581788
+    }
+  ]
+}

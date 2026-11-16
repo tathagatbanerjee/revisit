@@ -48,3 +48,11 @@ A useful real reconstruction pack remains a separate release requirement.
 
 No footage, fitted models, pretrained weights, proprietary SDK or credentials are
 included in this initial publication.
+
+## Local preview update — 16 November 2026
+
+Project-owned app, tests, preparation tools and selected native research helpers
+are now included under MIT. Required dependency and adapted-recipe notices are in
+[THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md). The pinned community Houseplant
+sample downloads locally under CC BY4.0 with explicit attribution; it is not
+relicensed under MIT. Historical model/media assets remain excluded.

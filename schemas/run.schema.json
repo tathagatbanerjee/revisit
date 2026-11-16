@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/tathagatbanerjee/revisit/schemas/run.schema.json",
+  "title": "Revisit exported run",
+  "type": "object",
+  "required": ["schemaVersion", "id", "title", "representation"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "id": {"type": "string", "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,79}$"},
+    "title": {"type": "string", "maxLength": 200},
+    "representation": {"enum": ["static", "sequence"]},
+    "coordinateSystem": {"enum": ["y-up", "opencv"]},
+    "model": {"type": "string"},
+    "durationSeconds": {"type": "number", "exclusiveMinimum": 0},
+    "frames": {"type": "array", "minItems": 1, "maxItems": 2000, "items": {"type": "object", "required": ["time", "model"], "properties": {"time": {"type": "number", "minimum": 0}, "model": {"type": "string"}}}},
+    "fileHashes": {"type": "object", "additionalProperties": {"type": "string", "pattern": "^[a-f0-9]{64}$"}},
+    "notes": {"type": "string"}
+  },
+  "allOf": [
+    {"if": {"properties": {"representation": {"const": "static"}}}, "then": {"required": ["model"]}},
+    {"if": {"properties": {"representation": {"const": "sequence"}}}, "then": {"required": ["frames", "durationSeconds"]}}
+  ],
+  "description": "Runtime validation additionally confines paths, checks camera poses/intrinsics, strictly increasing timestamps and duration bounds. Unknown metadata is retained for research provenance."
+}

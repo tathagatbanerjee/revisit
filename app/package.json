@@ -1,0 +1,16 @@
+{
+  "name": "revisit-local",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {"node": ">=24"},
+  "scripts": {
+    "start": "node server.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test test/*.test.mjs",
+    "doctor": "node scripts/doctor.mjs",
+    "sample": "node scripts/sample.mjs"
+  },
+  "dependencies": {"@sparkjsdev/spark": "2.3.1", "three": "0.180.0"}
+}
